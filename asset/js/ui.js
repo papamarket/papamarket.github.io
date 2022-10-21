@@ -60,19 +60,19 @@ const m40 = 40 / 1080 * windowWidth;
 /* gnb - 내주변 슈퍼마켓 */
 const GnbaroundListSlide = new Swiper(".gnb-around-list-slide", {
     loop: false,
-    slidesPerView: 3,
-    spaceBetween: m20,
+    slidesPerView: 2.6,
+    spaceBetween: m30,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     breakpoints: {
         320:  {
-            slidesPerView: 3.4,
-            spaceBetween: m20,
-        },
-        360:  {
-            slidesPerView: 4,
-            spaceBetween: m20,
+            slidesPerView: 3,
+            spaceBetween: m30,
         },
         1080:  {
-            slidesPerView: 4.1452,
+            slidesPerView: 3,
             spaceBetween: 30,
         }
     }
@@ -81,15 +81,19 @@ const GnbaroundListSlide = new Swiper(".gnb-around-list-slide", {
 /* gnb - 이벤트 배너 */
 const gnbBannerSlide = new Swiper(".gnb-banner-slide", {
     loop: true,
-    slidesPerView: 1.5,
-    spaceBetween: m20,
+    slidesPerView: 1,
+    spaceBetween: m30,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     breakpoints: {
-        360:  {
-            slidesPerView: 2.028,
-            spaceBetween: m20,
+        320:  {
+            slidesPerView: 2,
+            spaceBetween: m30,
         },
         1080:  {
-            slidesPerView: 2.028,
+            slidesPerView: 2,
             spaceBetween: 20,
         }
     }
