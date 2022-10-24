@@ -9,11 +9,6 @@ $(window).scroll(function(){
     }
 });
 
-// btn-like
-$(".btn-like").click(function(){
-    $(this).toggleClass("active");
-});
-
 /* gnb-menu open */
 $(".btn-menu").on("click",function(){
 	$("body").addClass("is-open");
