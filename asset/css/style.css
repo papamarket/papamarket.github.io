@@ -986,6 +986,7 @@ footer .cs-info .btn-tel {
 }
 .together-list .product-img .txt-box .txt {
     letter-spacing: -0.06em;
+    word-break: keep-all;
 }
 
 @media screen and (max-width: 320px) {
@@ -1392,7 +1393,7 @@ footer .cs-info .btn-tel {
     }
     .together-list .product-img .txt-box {
         height: 22px;
-        padding: 0 18px;
+        padding: 0 14px;
     }
 }
 
@@ -1401,6 +1402,23 @@ footer .cs-info .btn-tel {
     footer .cs-info p span {
         display: block;
         line-height: 1.5em;
+    }
+
+    /* together-list */
+    .product-list.together-list .basket-box {
+        bottom: 36px;
+    }
+    .together-list .product-img .txt-box {
+        flex-wrap: wrap;
+        height: 30px;
+    }
+    .together-list .product-img .txt-box .participation {
+        width: 60%;
+    }
+    .together-list .product-img .txt-box .txt {
+        width: 40%;
+        text-align: center;
+        line-height: 1.2em;
     }
 }
 
