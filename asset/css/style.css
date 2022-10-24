@@ -591,6 +591,7 @@ footer .cs-info .btn-tel {
 
 /* content */
 .content {
+    min-height: calc(100% - 84.259vw);
     padding-top: 18.704vw;
 }
 
@@ -837,7 +838,7 @@ footer .cs-info .btn-tel {
 /* category-list */
 .category-list {
     flex-wrap: wrap;
-    margin-bottom: 3.519vw;
+    margin-bottom: 1.852vw;
 }
 .category-list li {
     margin-bottom: 0.926vw;
@@ -849,17 +850,22 @@ footer .cs-info .btn-tel {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 6.667vw;
-    padding: 0 2.593vw;
+    height: 6.481vw;
+    padding: 0 2.778vw;
     color: #428c75;
     border: 0.185vw solid #428c75;
-    border-radius: 3.333vw;
+    border-radius: 3.241vw;
     letter-spacing: -0.06em;
     box-sizing: border-box;
 }
 .category-list li a.active {
     color: #fff;
     background-color: #428c75;
+    border: 0;
+}
+.category-list li a.sale {
+    color: #fff;
+    background-color: #e6766a;
     border: 0;
 }
 
@@ -987,6 +993,63 @@ footer .cs-info .btn-tel {
 .together-list .product-img .txt-box .txt {
     letter-spacing: -0.06em;
     word-break: keep-all;
+}
+
+/* 주변 매장 */
+.market-list {
+    flex-wrap: wrap;
+}
+.market-list li {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4.630vw;
+    border-radius: 5.926vw;
+    overflow: hidden;
+}
+.market-list li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.market-list li img {
+    width: 100%;
+}
+.market-list li .txt-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 3.333vw 4.630vw;
+    box-sizing: border-box;
+}
+.market-list li .txt-box a {
+    width: 92%;
+}
+.market-list .name,
+.market-list .address {
+    letter-spacing: -0.06em;
+    word-break: keep-all;
+}
+.market-list .address {
+    line-height: 1.2em;
+}
+.market-list .location:before {
+    display: block;
+    width: 2.963vw;
+    height: 3.241vw;
+    margin-right: 1.111vw;
+    background: url("../images/common/ico_location_w.png") no-repeat center center;
+    background-size: 100%;
+    content: '';
+}
+.market-list .location {
+    display: flex;
+    align-items: center;
+    margin: 0 1.667vw 0 2.778vw;
+}
+.market-list .btn-like {
+    width: 4.444vw;
+    height: 3.981vw;
 }
 
 @media screen and (max-width: 320px) {
@@ -1204,6 +1267,7 @@ footer .cs-info .btn-tel {
 
     /* content */
     .content {
+        min-height: calc(100% - 290px);
         padding-top: 60px;
     }
 
@@ -1324,7 +1388,7 @@ footer .cs-info .btn-tel {
 
     /* category-list */
     .category-list {
-        margin-bottom: 11px;
+        margin-bottom: 6px;
     }
     .category-list li {
         margin-bottom: 3px;
@@ -1334,7 +1398,7 @@ footer .cs-info .btn-tel {
     }
     .category-list li a {
         height: 20px;
-        padding: 0 8px;
+        padding: 0 9px;
         border: 1px solid #428c75;
         border-radius: 10px;
     }
@@ -1394,6 +1458,27 @@ footer .cs-info .btn-tel {
     .together-list .product-img .txt-box {
         height: 22px;
         padding: 0 14px;
+    }
+
+    /* 주변 매장 */
+    .market-list li {
+        margin-bottom: 15px;
+        border-radius: 18px;
+    }
+    .market-list li .txt-box {
+        padding: 10px 15px;
+    }
+    .market-list .location:before {
+        width: 9px;
+        height: 10px;
+        margin-right: 3px;
+    }
+    .market-list .location {
+        margin: 0 5px 0 9px;
+    }
+    .market-list .btn-like {
+        width: 14px;
+        height: 13px;
     }
 }
 
@@ -1688,6 +1773,7 @@ footer .cs-info .btn-tel {
 
     /* content */
     .content {
+        min-height: calc(100% - 910px);
         padding-top: 202px;
     }
 
@@ -1815,7 +1901,7 @@ footer .cs-info .btn-tel {
 
     /* category-list */
     .category-list {
-        margin-bottom: 38px;
+        margin-bottom: 20px;
     }
     .category-list li {
         margin-bottom: 10px;
@@ -1824,10 +1910,10 @@ footer .cs-info .btn-tel {
         margin-right: 10px;
     }
     .category-list li a {
-        height: 72px;
-        padding: 0 28px;
+        height: 70px;
+        padding: 0 30px;
         border: 2px solid #428c75;
-        border-radius: 36px;
+        border-radius: 35px;
     }
 
     /* 상품 list */
@@ -1889,5 +1975,27 @@ footer .cs-info .btn-tel {
     .together-list .product-img .txt-box {
         height: 76px;
         padding: 0 60px;
+    }
+
+    /* 주변 매장 */
+    .market-list li {
+        margin-bottom: 50px;
+        border-radius: 64px;
+    }
+    .market-list li .txt-box {
+        padding: 36px 50px;
+    }
+    .market-list .location:before {
+        width: 32px;
+        height: 35px;
+        margin-right: 12px;
+        background-image: url("../images/common/ico_location_w@2x.png");
+    }
+    .market-list .location {
+        margin: 0 18px 0 30px;
+    }
+    .market-list .btn-like {
+        width: 48px;
+        height: 43px;
     }
 }
