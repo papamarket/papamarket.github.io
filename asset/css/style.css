@@ -1132,7 +1132,6 @@ footer .cs-info .btn-tel {
     max-height: 0;
     background-color: #428c75;
     overflow: hidden;
-    z-index: 0;
 }
 .market-card ul {
     padding: 1.852vw 0 1px;
