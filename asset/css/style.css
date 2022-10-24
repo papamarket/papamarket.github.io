@@ -1135,7 +1135,7 @@ footer .cs-info .btn-tel {
     z-index: 0;
 }
 .market-card ul {
-    padding-top: 1.852vw;
+    padding: 1.852vw 0 1px;
 }
 .market-card ul li:not(:first-child) {
     margin-top: 2.315vw;
