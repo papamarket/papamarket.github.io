@@ -1,6 +1,17 @@
 @charset "utf-8";
 
 /* common */
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 0;
+    height: 0;
+    font-size: 10px;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
 .blind {
     position: absolute;
     width: 1px;
@@ -107,6 +118,9 @@ body.is-open {
 }
 .fs40 {
     font-size: 3.704vw;
+}
+.fs42 {
+    font-size: 3.889vw;
 }
 .fs45 {
     font-size: 4.167vw;
@@ -257,11 +271,26 @@ input[type="checkbox"]:checked + label:before {
     border: 0;
 }
 
+/* bar-list */
+.bar-list li {
+    position: relative;
+    word-break: keep-all;
+}
+.bar-list li:before {
+    display: block;
+    position: absolute;
+    left: 0;
+    content: '-';
+}
+.bar-list .red-txt {
+    color: #f00;
+}
+
 /* counter-box */
 .counter-box {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-width: 14.815vw;
     height: 6.481vw;
     color: #fff;
@@ -939,12 +968,37 @@ footer .cs-info .btn-tel {
     background-color: #edeae2;
     z-index: 10;
 }
+.fixed-btn-wrap .inner {
+    height: 100%;
+}
 .fixed-btn-wrap .btn {
-    width: 42.593%;
     height: 62.500%;
-    margin: 0 0.926vw;
     border-radius: 4.444vw;
     line-height: 13.889vw;
+}
+.fixed-btn-wrap .btn.w460 {
+    width: 48.936%;
+}
+.fixed-btn-wrap .btn-box {
+    width: 70.213%;
+}
+.fixed-btn-wrap .btn.w320 {
+    width: 48.485%;
+}
+.fixed-btn-wrap .counter-box {
+    width: 26.596%;
+    height: auto;
+    border-radius: 0;
+}
+.fixed-btn-wrap .counter-box .minus,
+.fixed-btn-wrap .counter-box .plus {
+    width: 5.926vw;
+    height: 5.926vw;
+    background-size: 3.333vw;
+}
+.fixed-btn-wrap .counter-box .num {
+    color: #222;
+    font-size: 7.407vw;
 }
 
 /* recommend-list */
@@ -1167,6 +1221,15 @@ footer .cs-info .btn-tel {
     background-image: url("../images/common/ico_clock.png");
 }
 
+/* 상품 상세 */
+.product-detail-wrap .bar-list li {
+    padding-left: 13px;
+}
+.desc-detail {
+    height: 122.778vw;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 320px) {
     /* common */
     .inner {
@@ -1210,6 +1273,9 @@ footer .cs-info .btn-tel {
         font-size: 11px;
     }
     .fs40 {
+        font-size: 12px;
+    }
+    .fs42 {
         font-size: 12px;
     }
     .fs45 {
@@ -1545,9 +1611,17 @@ footer .cs-info .btn-tel {
         height: 72px;
     }
     .fixed-btn-wrap .btn {
-        margin: 0 3px;
         border-radius: 14px;
         line-height: 44px;
+    }
+    .fixed-btn-wrap .counter-box .minus,
+    .fixed-btn-wrap .counter-box .plus {
+        width: 18px;
+        height: 18px;
+        background-size: 10px;
+    }
+    .fixed-btn-wrap .counter-box .num {
+        font-size: 24px;
     }
 
     /* recommend-list */
@@ -1709,6 +1783,9 @@ footer .cs-info .btn-tel {
     .fs40 {
         font-size: 40px;
     }
+    .fs42 {
+        font-size: 42px;
+    }
     .fs45 {
         font-size: 45px;
     }
@@ -1813,6 +1890,9 @@ footer .cs-info .btn-tel {
     
     /* header */
     header {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 46px 0;
     }
     header.scroll {
@@ -1841,6 +1921,9 @@ footer .cs-info .btn-tel {
     
     /* footer */
     footer {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 100px 0 356px;
     }
     footer .cs-info p {
@@ -1861,7 +1944,10 @@ footer .cs-info .btn-tel {
         right: 70px;
         bottom: 66px;
         width: calc(100% - 140px);
+        max-width: 940px;
         height: 190px;
+        margin-left: auto;
+        margin-right: auto;
         padding: 0 70px;
         border-radius: 50px;
     }
@@ -1939,7 +2025,10 @@ footer .cs-info .btn-tel {
 
     /* content */
     .content {
+        max-width: 1080px;
         min-height: calc(100% - 910px);
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 202px;
     }
 
@@ -2101,12 +2190,24 @@ footer .cs-info .btn-tel {
 
     /* fixed-btn-wrap */
     .fixed-btn-wrap {
+        right: 0;
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
         height: 240px;
     }
     .fixed-btn-wrap .btn {
-        margin: 0 10px;
         border-radius: 48px;
         line-height: 150px;
+    }
+    .fixed-btn-wrap .counter-box .minus,
+    .fixed-btn-wrap .counter-box .plus {
+        width: 64px;
+        height: 64px;
+        background-size: 36px;
+    }
+    .fixed-btn-wrap .counter-box .num {
+        font-size: 80px;
     }
 
     /* recommend-list */
