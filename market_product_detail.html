@@ -64,14 +64,14 @@
                         <li>
                             <p class="tit ico-benefit fs40">등급혜택</p>
                             <a href="#" class="txt btn-more black fs33">사용 가능한 쿠폰 모두 보기</a>
-                            <div class="more-content">
+                            <div class="more-content" aria-hidden="true">
                                 <div></div>
                             </div>
                         </li>
                         <li>
                             <p class="tit ico-delivery fs40">배송안내</p>
                             <a href="#" class="txt btn-more black fs33">새벽배송 / 일반배송 / 픽업</a>
-                            <div class="more-content">
+                            <div class="more-content" aria-hidden="true">
                                 <div>
                                     <dl>
                                         <dt class="green fs36 fw700">새벽배송</dt>
@@ -85,7 +85,7 @@
                         </li>
                         <li>
                             <a href="#" class="tit ico-receipt btn-more black fs40">교환/환불 안내</a>
-                            <div class="more-content">
+                            <div class="more-content" aria-hidden="true">
                                 <div>
                                     <dl>
                                         <dt class="green fs36 fw700">수령 즉시 상품을 반드시 확인하시기 바랍니다.</dt>
@@ -215,7 +215,7 @@
                 </ul>
                 <div class="tab-content txt-center">
                     <div class="inner">
-                        <div class="holder"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"></div>
+                        <div class="holder"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"></div>
                         <a href="#" class="btn btn-more white fs40 bg-green">상품정보 더보기</a>
                     </div>
                 </div>
@@ -310,26 +310,25 @@
 
         /* 상품정보 더보기 */
         function moreDetailToggle() {
-            const moreToggle = $(".desc-detail .btn-more");
-            const m1340 = 1340 / 1080 * windowWidth;
+            const moreToggleBtn = $(".desc-detail .btn-more");
 
             setTimeout(function() {
-                if ($(".holder").height() >= m1340) {
-                    $(".holder").css("height", m1340);
+                if ($(".holder").height() >= 1200) {
+                    $(".holder").removeClass("active").css("height", "1200px");
                 } else {
-                    $(".holder").addClass("active");
+                    $(".holder").addClass("active").css("height", "auto");
                 }
 
-                moreToggle.on("click", function(e) {
+                moreToggleBtn.on("click", function(e) {
                     e.preventDefault();
                     $(this).toggleClass("active");
                     $(this).parent().find(".holder").toggleClass("active");
-                    if ($(".holder").height() == m1340) {
+                    if ($(".holder").height() == 1200) {
                         $(".holder").css("height", "auto");
-                        moreToggle.text("상품정보 접기");
+                        moreToggleBtn.text("상품정보 접기");
                     } else {
-                        $(".holder").css("height", m1340);
-                        moreToggle.text("상품정보 더보기");
+                        $(".holder").css("height", "1200px");
+                        moreToggleBtn.text("상품정보 더보기");
                     }
                 });
             }, 1000);
