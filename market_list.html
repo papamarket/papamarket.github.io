@@ -40,7 +40,7 @@
                         <p class="name fs48 fw700">부용마트</p>
                         <div>
                             <div class="more-tit flex justify-between"><p class="address fs33">서울시 동작구 신대방1가길 19</p><a href="#" class="btn-more">더보기</a></div>
-                            <div class="more-content">
+                            <div class="more-content" aria-hidden="true">
                                 <ul class="fs33">
                                     <li class="tel"><a href="tel:02-836-5791" class="white">02-836-5791</a></li>
                                     <li class="time">오전 9:00~오후 10:00</li>
@@ -217,7 +217,7 @@
             </div>
         </section>
         <!-- 다른 매장 상품 -->
-        <section class="more-product pb100">
+        <section class="more-product-box pb100">
             <div class="inner">
                 <div class="tit-wrap flex justify-between">
                     <h4 class="fs48 fw300"><b class="fw700">파파마켓</b> 상품도 함께 확인해보세요!</h4>
@@ -282,13 +282,12 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
     <script src="./asset/js/ui.js"></script>
     <script>
         /* 더보기 */
-        var acc = $('.market-card .btn-more');
+        var acc = $(".market-card .btn-more");
         var i;
     
         for (i = 0; i < acc.length; i++) {

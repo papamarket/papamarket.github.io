@@ -196,16 +196,18 @@
             </nav>
         </div>
     </footer>
-    <!-- gnb -->
+    <!-- gnb-menu -->
     <div class="gnb-menu" aria-hidden="true">
         <div class="menu-body">
             <button class="btn-gnb-close">메뉴 닫기</button>
+            <!-- 상품 검색 -->
             <div class="searchbar-box">
                 <div class="input-row bg-white">
                     <button type="button" class="btn btn-search">검색</button>
                     <input type="text" placeholder="원하시는 상품을 검색하세요!" class="inp fs35" title="원하시는 상품을 검색하세요!">
                 </div>
             </div>
+            <!-- gnb -->
             <ul class="gnb">
                 <li>
                     <a href="#" class="gnb-tit after white fs50 fw500">카테고리</a>
@@ -278,53 +280,60 @@
                 <li>
                     <a href="#" class="gnb-tit white fs50 fw500">Mr.공구</a>
                 </li>
-                <li class="margin">
-                    <a href="#" class="gnb-tit white fs50 fw500">FAQ</a>
-                </li>
                 <li>
+                    <a href="#" class="gnb-tit after white fs50 fw500">커뮤니티</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" class="white fs40 fw300">상품문의</a></li>
+                        <li><a href="#" class="white fs40 fw300">구매후기</a></li>
+                        <li><a href="#" class="white fs40 fw300">FAQ</a></li>
+                        <li><a href="#" class="white fs40 fw300">이벤트</a></li>
+                    </ul>
+                </li>
+                <li class="margin">
                     <a href="#" class="gnb-tit white fs50 fw500">고객센터</a>
                     <div class="cs-info flex">
                         <a href="tel:1544-1541" class="btn btn-tel black fs33 bg-white">1544-1541</a>
                         <a href="#" class="btn btn-talk black fs33 bg-white">채널톡 상담</a>
                     </div>
                 </li>
-                <li class="margin">
-                    <a href="#" class="gnb-tit white fs50 fw500">이벤트</a>
-                    <!-- Slider main container -->
-                    <div class="gnb-banner-slide swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="./asset/images/event_banner01_330x150.jpg" alt="친구 초대하고 쿠폰 받아가세요">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="./asset/images/event_banner02_330x150.jpg" alt="파파마켓 신규회원 3,000원 적립금 지급">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="./asset/images/event_banner03_330x150.jpg" alt="친구 초대하고 쿠폰 받아가세요">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="./asset/images/event_banner04_330x150.jpg" alt="파파마켓 신규회원 3,000원 적립금 지급">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="./asset/images/event_banner05_330x150.jpg" alt="친구 초대하고 쿠폰 받아가세요">
-                                </a>
-                            </div>
+            </ul>
+            <!-- gnb-banner -->
+            <div class="gnb-banner-wrap">
+                <!-- Slider main container -->
+                <div class="gnb-banner-slide swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./asset/images/event_banner01_330x150.jpg" alt="친구 초대하고 쿠폰 받아가세요">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./asset/images/event_banner02_330x150.jpg" alt="파파마켓 신규회원 3,000원 적립금 지급">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./asset/images/event_banner03_330x150.jpg" alt="친구 초대하고 쿠폰 받아가세요">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./asset/images/event_banner04_330x150.jpg" alt="파파마켓 신규회원 3,000원 적립금 지급">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./asset/images/event_banner05_330x150.jpg" alt="친구 초대하고 쿠폰 받아가세요">
+                            </a>
                         </div>
                     </div>
-                </li>
-            </ul>
-            <ul class="foot-menu flex align-center">
+                </div>
+            </div>
+            <!-- gnb-foot-menu -->
+            <ul class="gnb-foot-menu flex align-center">
                 <li><a href="#" class="white fs36">파파마켓 소개</a></li>
                 <li><a href="#" class="white fs36">이용 안내</a></li>
                 <li><a href="#" class="white fs36">입점 안내</a></li>
