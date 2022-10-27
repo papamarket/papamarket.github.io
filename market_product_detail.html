@@ -215,7 +215,7 @@
                 </ul>
                 <div class="tab-content txt-center">
                     <div class="inner">
-                        <div class="holder"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"></div>
+                        <div class="holder"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"></div>
                         <a href="#" class="btn btn-more white fs40 bg-green">상품정보 더보기</a>
                     </div>
                 </div>
@@ -305,32 +305,27 @@
         });
 
         /* 상품정보 더보기 */
-        function moreDetailToggle() {
-            const moreToggleBtn = $(".desc-detail .btn-more");
-
-            setTimeout(function() {
-                if ($(".holder").height() >= 1200) {
-                    $(".holder").removeClass("active").css("height", "1200px");
-                } else {
-                    $(".holder").addClass("active").css("height", "auto");
-                }
-
-                moreToggleBtn.on("click", function(e) {
-                    e.preventDefault();
-                    $(this).toggleClass("active");
-                    $(this).parent().find(".holder").toggleClass("active");
-                    if ($(".holder").height() == 1200) {
-                        $(".holder").css("height", "auto");
-                        moreToggleBtn.text("상품정보 접기");
-                    } else {
-                        $(".holder").css("height", "1200px");
-                        moreToggleBtn.text("상품정보 더보기");
-                    }
-                });
-            }, 1000);
+        const m1324 = 1324 / 1080 * windowWidth;
+        const holderH = $(".holder").height() / 1080 * windowWidth;
+        if(holderH > m1324) {
+            $(".holder").css("height", m1324 + "px");
+            $(".desc-detail .btn-more").css("display", "flex");
+        } else {
+            $(".holder").css("height", "auto");
+            $(".desc-detail .btn-more").css("display", "none");
         }
 
-        moreDetailToggle();
+        $(".desc-detail .btn-more").on("click",function(e){
+            e.preventDefault();
+            $(this).toggleClass("active");
+            if($(this).hasClass("active")) {
+                $(this).text("상품정보 접기");
+                $(".holder").css("height", "auto");
+            } else {
+                $(this).text("상품정보 더보기");
+                $(".holder").css("height", m1324 + "px");
+            }
+        });
     </script>
 </body>
 </html>
