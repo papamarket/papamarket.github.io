@@ -288,13 +288,13 @@
         /* detail-tab fixed */
         const headerH = $("header").height();
         const headerOH = $("header").outerHeight();
-        const tabH = $(".detail-tab").height();
-        const tabT = $(".detail-tab").offset().top - tabH - headerH;
+        const detailtabH = $(".detail-tab").height();
+        const detailtabT = $(".detail-tab").offset().top - detailtabH - headerH;
 
         $(window).scroll(function(){
             const scrollT = $(this).scrollTop();
 
-            if(scrollT >= tabT){
+            if(scrollT >= detailtabT){
                 $(".detail-tab").addClass("fixed");
                 $(".detail-tab").css("top", headerOH);
             } else {
