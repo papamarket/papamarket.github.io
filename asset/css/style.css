@@ -59,14 +59,17 @@ body.is-open {
 .flex.justify-between {
     justify-content: space-between;
 }
-.justify-center {
+.flex.justify-center {
     justify-content: center;
 }
-.justify-end {
+.flex.justify-end {
     justify-content: flex-end;
 }
 
 /* padding */
+.pt100 {
+    padding-top: 9.259vw;
+}
 .pb30 {
     padding-bottom: 2.778vw;
 }
@@ -164,6 +167,9 @@ body.is-open {
 }
 .bg-red {
     background-color: #e6766a;
+}
+.bg-yellowish {
+    background-color: #a9e09d;
 }
 
 /* text-align */
@@ -369,7 +375,7 @@ input[type="checkbox"]:checked + label:before {
     left: 50%;
     width: 100%;
     padding-top: 0.648vw;
-    font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansBold';
     font-weight: 700;
     transform: translate(-50%, -50%);
     letter-spacing: -0.06em;
@@ -1250,7 +1256,8 @@ footer .cs-info .btn-tel {
     left: 4.630vw;
     width: 18.889vw;
     height: 18.889vw;
-    font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansBold';
+    font-weight: 700;
     border-radius: 4.630vw;
     z-index: 2;
 }
@@ -1491,6 +1498,109 @@ footer .cs-info .btn-tel {
     font-size: 3.333vw;
 }
 
+/* 마이페이지 */
+.mypage-wrap .profile-info .profile-img {
+    display: block;
+    width: 21.277%;
+    height: 0;
+    padding-bottom: 21.277%;
+    background-color: #edeae2;
+    border-radius: 50%;
+}
+.mypage-wrap .profile-info .profile-txt {
+    width: 74.468%;
+}
+.mypage-wrap .profile-info .profile-txt .name {
+    margin-right: 1.204vw;
+    letter-spacing: -0.06em;
+}
+.mypage-wrap .profile-info .grade {
+    display: block;
+    margin-right: 0.833vw;
+    padding: 0.370vw 1.944vw 0.463vw;
+    border-radius: 1.944vw;
+    letter-spacing: -0.06em;
+}
+.mypage-wrap .profile-info .level-txt {
+    margin-top: 2.778vw;
+    letter-spacing: -0.06em;
+}
+.mypage-wrap .profile-info .progress {
+    width: 100%;
+    height: 1.667vw;
+    margin-top: 2.778vw;
+    border-radius: 0.833vw;
+    overflow: hidden;
+}
+.mypage-wrap .profile-info .progress-bar {
+    width: 69%;
+    height: 100%;
+    border-radius: 0.833vw;
+}
+.mypage-wrap .box-list,
+.mypage-menu {
+    margin-top: 7.407vw;
+}
+.mypage-wrap .box-list li {
+    position: relative;
+    width: 31.915%;
+    height: 0;
+    padding-bottom: 31.915%;
+    border-radius: 5.926vw;
+    overflow: hidden;
+}
+.mypage-wrap .box-list li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.mypage-wrap .box-list .tit {
+    margin-bottom: 5.093vw;
+    letter-spacing: -0.06em;
+}
+.mypage-menu li {
+    width: 100%;
+    height: 11.852vw;
+    background-color: #fff;
+    border-radius: 2.963vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.mypage-menu li:not(:first-child) {
+    margin-top: 1.852vw;
+}
+.mypage-menu li.member-code-box {
+    padding: 0 5.556vw;
+}
+.mypage-menu li > a {
+    width: 100%;
+    height: 100%;
+    padding: 0 5.556vw;
+    box-sizing: border-box;
+}
+.mypage-menu li .tit {
+    letter-spacing: -0.06em;
+}
+.mypage-menu li .ico-more {
+    display: block;
+    width: 1.296vw;
+    height: 2.222vw;
+    background: url("../images/common/ico_more.png") no-repeat center center;
+    background-size: cover;
+}
+.mypage-menu .btn-copy {
+    display: block;
+    margin-left: 1.111vw;
+    padding: 0 1.481vw;
+    background-color: #f5f2e9;
+    border-radius: 1.944vw;
+    letter-spacing: -0.06em;
+    line-height: 3.889vw;
+}
+
 @media screen and (max-width: 320px) {
     /* common */
     .inner {
@@ -1498,6 +1608,9 @@ footer .cs-info .btn-tel {
     }
 
     /* padding */
+    .pt100 {
+        padding-top: 30px;
+    }
     .pb30 {
         padding-bottom: 9px;
     }
@@ -2003,25 +2116,21 @@ footer .cs-info .btn-tel {
         border-bottom: 3px solid #edeae2;
     }
     /* product-info-box */
-    .product-info-box .market-name {
-        margin-bottom: 1.852vw;
+    .product-info-box .market-name,
+    .product-info-box .sub-tit,
+    .product-info-box .cost {
+        margin-bottom: 6px;
     }
     .product-info-box .market-name:after {
-        width: 1.296vw;
-        height: 2.222vw;
-        margin-left: 1.389vw;
-    }
-    .product-info-box .sub-tit {
-        margin-bottom: 1.852vw;
+        width: 4px;
+        height: 7px;
+        margin-left: 4px;
     }
     .product-info-box .name {
-        margin-bottom: 5.556vw;
-    }
-    .product-info-box .cost {
-        margin-bottom: 1.852vw;
+        margin-bottom: 18px;
     }
     .product-info-box .sale {
-        margin-right: 1.389vw;
+        margin-right: 4px;
     }
     /* shop-info-box */
     .shop-info-box .shop-info-list > li:not(:last-child) {
@@ -2031,29 +2140,29 @@ footer .cs-info .btn-tel {
         padding-top: 15px;
     }
     .shop-info-box .tit:before {
-        width: 2.963vw;
-        height: 3.611vw;
+        width: 9px;
+        height: 11px;
     }
     .shop-info-box .tit {
         padding-left: 15px;
     }
     .shop-info-box .txt {
-        margin-top: 1.852vw;
+        margin-top: 6px;
         text-indent: 15px;
     }
     .shop-info-box .tit + .txt {
-        margin-top: 2.778vw;
+        margin-top: 9px;
     }
     .shop-info-box .btn-more:after {
-        width: 2.222vw;
-        height: 3.704vw;
-        margin-left: 1.389vw;
-        background-size: 2.222vw;
+        width: 7px;
+        height: 12px;
+        margin-left: 4px;
+        background-size: 7px;
     }
     .shop-info-box .more-content > div {
-        margin-top: 1.852vw;
+        margin-top: 6px;
         padding: 15px;
-        border-radius: 4.444vw;
+        border-radius: 14px;
     }
     .shop-info-box .more-content dd + dt {
         margin-top: 15px;
@@ -2062,53 +2171,105 @@ footer .cs-info .btn-tel {
         margin-top: 0.926vw;
     }
     .shop-info-box .bar-list {
-        margin-top: 1.852vw;
+        margin-top: 6px;
     }
     .shop-info-box .bar-list li {
-        padding-left: 1.204vw;
+        padding-left: 4px;
     }
     .shop-info-box .img-list {
-        margin-top: 2.778vw;
+        margin-top: 9px;
     }
     .shop-info-box .img-list li:not(:last-child) {
-        margin-right: 2.778vw;
+        margin-right: 9px;
     }
     /* desc-detail */
     .desc-detail {
-        padding-bottom: 7.407vw;
+        padding-bottom: 24px;
     }
     .desc-detail .detail-tab {
-        height: 12.593vw;
+        height: 40px;
     }
     .desc-detail .detail-tab.fixed {
-        top: 18.519vw;
+        top: 60px;
     }
     .desc-detail .detail-tab li a {
-        padding: 0 3.519vw;
+        padding: 0 11px;
     }
     .desc-detail .detail-tab li span {
-        font-size: 2.778vw;
+        font-size: 10px;
     }
     .desc-detail .tab-content .btn-more {
-        height: 11.852vw;
-        border-radius: 2.963vw;
+        height: 38px;
+        border-radius: 8px;
     }
     .desc-detail .tab-content .btn-more:after {
-        width: 3.519vw;
-        height: 3.519vw;
-        margin-left: 1.667vw;
+        width: 11px;
+        height: 11px;
+        margin-left: 5px;
     }
     .product-detail-wrap .tab-btn-box,
     .product-detail-wrap .tab-btn-box li:not(:first-child) {
-        border-top: 0.926vw solid #edeae2;
+        border-top: 3px solid #edeae2;
     }
     .product-detail-wrap .tab-btn-box a {
-        padding: 7.407vw 6.481vw;
-        background-position: center right 6.481vw;
-        background-size: 2.222vw 3.796vw;
+        padding: 24px 20px;
+        background-position: center right 20px;
+        background-size: 7px 12px;
     }
     .product-detail-wrap .tab-btn-box a span {
-        font-size: 3.333vw;
+        font-size: 11px;
+    }
+
+    /* 마이페이지 */
+    .mypage-wrap .profile-info .profile-txt .name {
+        margin-right: 4px;
+    }
+    .mypage-wrap .profile-info .grade {
+        margin-right: 3px;
+        padding: 2px 6px;
+        border-radius: 7px;
+    }
+    .mypage-wrap .profile-info .level-txt {
+        margin-top: 9px;
+    }
+    .mypage-wrap .profile-info .progress {
+        height: 5px;
+        margin-top: 9px;
+        border-radius: 3px;
+    }
+    .mypage-wrap .profile-info .progress-bar {
+        border-radius: 3px;
+    }
+    .mypage-wrap .box-list,
+    .mypage-menu {
+        margin-top: 24px;
+    }
+    .mypage-wrap .box-list li {
+        border-radius: 18px;
+    }
+    .mypage-wrap .box-list .tit {
+        margin-bottom: 16px;
+    }
+    .mypage-menu li {
+        height: 38px;
+        border-radius: 8px;
+    }
+    .mypage-menu li:not(:first-child) {
+        margin-top: 6px;
+    }
+    .mypage-menu li.member-code-box,
+    .mypage-menu li > a {
+        padding: 0 18px;
+    }
+    .mypage-menu li .ico-more {
+        width: 4px;
+        height: 7px;
+    }
+    .mypage-menu .btn-copy {
+        margin-left: 4px;
+        padding: 0 5px;
+        border-radius: 6px;
+        line-height: 12px;
     }
 }
 
@@ -2149,6 +2310,9 @@ footer .cs-info .btn-tel {
     }
 
     /* padding */
+    .pt100 {
+        padding-top: 100px;
+    }
     .pb30 {
         padding-bottom: 30px;
     }
@@ -2746,7 +2910,9 @@ footer .cs-info .btn-tel {
         border-bottom: 10px solid #edeae2;
     }
     /* product-info-box */
-    .product-info-box .market-name {
+    .product-info-box .market-name,
+    .product-info-box .sub-tit,
+    .product-info-box .cost {
         margin-bottom: 20px;
     }
     .product-info-box .market-name:after {
@@ -2755,14 +2921,8 @@ footer .cs-info .btn-tel {
         margin-left: 15px;
         background-image: url("../images/common/ico_more_g@2x.png");
     }
-    .product-info-box .sub-tit {
-        margin-bottom: 20px;
-    }
     .product-info-box .name {
         margin-bottom: 60px;
-    }
-    .product-info-box .cost {
-        margin-bottom: 20px;
     }
     .product-info-box .sale {
         margin-right: 15px;
@@ -2872,5 +3032,58 @@ footer .cs-info .btn-tel {
     }
     .product-detail-wrap .tab-btn-box a span {
         font-size: 36px;
+    }
+
+    /* 마이페이지 */
+    .mypage-wrap .profile-info .profile-txt .name {
+        margin-right: 13px;
+    }
+    .mypage-wrap .profile-info .grade {
+        margin-right: 9px;
+        padding: 4px 21px 5px;
+        border-radius: 21px;
+    }
+    .mypage-wrap .profile-info .level-txt {
+        margin-top: 30px;
+    }
+    .mypage-wrap .profile-info .progress {
+        height: 18px;
+        margin-top: 30px;
+        border-radius: 9px;
+    }
+    .mypage-wrap .profile-info .progress-bar {
+        border-radius: 9px;
+    }
+    .mypage-wrap .box-list,
+    .mypage-menu {
+        margin-top: 80px;
+    }
+    .mypage-wrap .box-list li {
+        border-radius: 64px;
+    }
+    .mypage-wrap .box-list .tit {
+        margin-bottom: 55px;
+    }
+    .mypage-menu li {
+        height: 128px;
+        border-radius: 32px;
+    }
+    .mypage-menu li:not(:first-child) {
+        margin-top: 20px;
+    }
+    .mypage-menu li.member-code-box,
+    .mypage-menu li > a {
+        padding: 0 60px;
+    }
+    .mypage-menu li .ico-more {
+        width: 14px;
+        height: 24px;
+        background-image: url("../images/common/ico_more@2x.png");
+    }
+    .mypage-menu .btn-copy {
+        margin-left: 12px;
+        padding: 0 16px;
+        border-radius: 21px;
+        line-height: 42px;
     }
 }
