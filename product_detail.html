@@ -48,7 +48,7 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <div class="product-info-box">
+            <div class="product-info-box pt80 pb80">
                 <div class="inner">
                     <p class="sub-tit gray fs36">찬 바람이 불면 생각나는 새콤달콤한 감귤</p>
                     <p class="name fs54">[물가안정 행사] 감귤 500g*2SET</p>
@@ -56,7 +56,7 @@
                     <div class="flex fs54 fw700"><p class="sale green">30%</p><p class="price">5,600원</p></div>
                 </div>
             </div>
-            <div class="shop-info-box">
+            <div class="shop-info-box pt80 pb80 bt10-edeae2">
                 <div class="inner">
                     <ul class="shop-info-list">
                         <li>
@@ -122,7 +122,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="product-detail-box">
+            <div class="product-detail-box pt80 pb80 bt10-edeae2">
                 <div class="inner">
                     <dl class="flex fs33">
                         <dt>용량</dt>
@@ -139,7 +139,7 @@
                 </div>
             </div>
             <!-- 함께 본 상품 -->
-            <div class="more-product-box">
+            <div class="more-product-box pt80 pb80 bt10-edeae2">
                 <div class="inner">
                     <div class="tit-wrap flex justify-between">
                         <h4 class="fs42 fw300">함께 본 상품</h4>
@@ -205,7 +205,7 @@
                     </div>
                 </div>
             </div>
-            <div class="desc-detail">
+            <div class="desc-detail pb80 bt10-edeae2">
                 <ul class="detail-tab flex align-center justify-center fs36">
                     <li><a href="#" class="active">상품정보</a></li>
                     <li><a href="#">후기<span>(76)</span></a></li>
@@ -218,7 +218,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="tab-btn-box fs48">
+            <ul class="tab-btn-box fs48 bt10-edeae2">
                 <li><a href="#">후기<span>(76)</span></a></li>
                 <li><a href="#">문의<span>(12)</span></a></li>
             </ul>
@@ -287,7 +287,6 @@
 
         /* detail-tab fixed */
         const headerH = $("header").height();
-        const headerOH = $("header").outerHeight();
         const detailtabH = $(".detail-tab").height();
         const detailtabT = $(".detail-tab").offset().top - detailtabH - headerH;
 
@@ -296,7 +295,6 @@
 
             if(scrollT >= detailtabT){
                 $(".detail-tab").addClass("fixed");
-                $(".detail-tab").css("top", headerOH);
             } else {
                 $(".detail-tab").removeClass("fixed");
             }
