@@ -1800,6 +1800,105 @@ footer .cs-info .btn-tel {
     border-radius: 3.519vw;
     letter-spacing: -0.06em;
 }
+/* 리뷰 작성 */
+.review-write .score-area {
+    margin: 4.630vw auto 6.481vw;
+}
+.score-area .btn-star {
+    width: 8.333vw;
+    height: 7.870vw;
+    margin: 0 0.648vw;
+    font-size: 0;
+    background: url("../images/common/ico_star.png") no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+}
+.score-area .btn-star.active {
+    background-image: url("../images/common/ico_star_active.png");
+}
+.review-write .write-box {
+    position: relative;
+    width: 100%;
+    height: 72.222vw;
+    padding: 8.056vw 7.500vw;
+    background-color: #f7f7f7;
+    border-radius: 5.926vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.review-write .write-box textarea {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    outline: 0;
+}
+.review-write .write-box .txt-total {
+    position: absolute;
+    right: 7.778vw;
+    bottom: 5vw;
+    color: #9e9e9e;
+}
+.review-write .write-box .txt-total em {
+    font-style: normal;
+}
+.review-write .photo-upload {
+    flex-wrap: wrap;
+    padding-top: 4.630vw;
+}
+.review-write .photo-upload li {
+    position: relative;
+    width: 21.489%;
+    height: 0;
+    padding-bottom: 21.489%;
+}
+.review-write .photo-upload li:not(:nth-child(4)) {
+    margin-right: 4.681%;
+}
+.review-write .photo-upload li > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4.444vw;
+    overflow: hidden;
+}
+.review-write .photo-upload .inp-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    text-indent: -9999px;
+    z-index: -1;
+}
+.review-write .photo-upload .label-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #edeae2 url("../images/common/ico_plus.png") no-repeat center center;
+    background-size: 3.704vw;
+}
+.review-write .photo-upload .btn-delete {
+    position: absolute;
+    top: -1.389vw;
+    right: -1.667vw;
+    width: 6.111vw;
+    height: 6.111vw;
+    font-size: 0;
+    background: #fff url("../images/common/ico_delete.png") no-repeat center center;
+    background-size: 50%;
+    border-radius: 50%;
+    text-indent: -9999px;
+    z-index: 2;
+}
+.review-write .photo-upload img {
+    position: relative;
+    z-index: 1;
+}
 
 @media screen and (max-width: 320px) {
     /* common */
@@ -2575,6 +2674,40 @@ footer .cs-info .btn-tel {
     .order-box .box .btn {
         height: 22px;
         border-radius: 10px;
+    }
+
+    /* 리뷰 작성 */
+    .review-write .score-area {
+        margin: 15px auto 20px;
+    }
+    .score-area .btn-star {
+        width: 26px;
+        height: 25px;
+        margin: 0 2px;
+    }
+    .review-write .write-box {
+        height: 230px;
+        padding: 25px 24px;
+        border-radius: 18px;
+    }
+    .review-write .write-box .txt-total {
+        right: 25px;
+        bottom: 16px;
+    }
+    .review-write .photo-upload {
+        padding-top: 15px;
+    }
+    .review-write .photo-upload li > div {
+        border-radius: 14px;
+    }
+    .review-write .photo-upload .label-btn {
+        background-size: 12px;
+    }
+    .review-write .photo-upload .btn-delete {
+        top: -4px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -3514,5 +3647,45 @@ footer .cs-info .btn-tel {
     .order-box .box .btn {
         height: 76px;
         border-radius: 38px;
+    }
+
+    /* 리뷰 작성 */
+    .review-write .score-area {
+        margin: 50px auto 70px;
+    }
+    .score-area .btn-star {
+        width: 90px;
+        height: 85px;
+        margin: 0 7px;
+        background-image: url("../images/common/ico_star@2x.png");
+    }
+    .score-area .btn-star.active {
+        background-image: url("../images/common/ico_star_active@2x.png");
+    }
+    .review-write .write-box {
+        height: 780px;
+        padding: 87px 81px;
+        border-radius: 64px;
+    }
+    .review-write .write-box .txt-total {
+        right: 84px;
+        bottom: 54px;
+    }
+    .review-write .photo-upload {
+        padding-top: 50px;
+    }
+    .review-write .photo-upload li > div {
+        border-radius: 48px;
+    }
+    .review-write .photo-upload .label-btn {
+        background-image: url("../images/common/ico_plus@2x.png");
+        background-size: 40px;
+    }
+    .review-write .photo-upload .btn-delete {
+        top: -15px;
+        right: -18px;
+        width: 66px;
+        height: 66px;
+        background-image: url("../images/common/ico_delete.png");
     }
 }
