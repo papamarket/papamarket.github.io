@@ -79,6 +79,15 @@ body {
 .pt100 {
     padding-top: 9.259vw;
 }
+.pt108 {
+    padding-top: 10vw;
+}
+.pt136 {
+    padding-top: 12.593vw;
+}
+.pt475 {
+    padding-top: 43.981vw;
+}
 .pb30 {
     padding-bottom: 2.778vw;
 }
@@ -776,6 +785,9 @@ footer .cs-info .btn-tel {
     min-height: calc(100% - 84.259vw);
     padding-top: 18.704vw;
 }
+.content section {
+    position: relative;
+}
 
 /* 상품 검색 */
 .searchbar-box {
@@ -804,6 +816,9 @@ footer .cs-info .btn-tel {
 
 /* sub-header */
 .sub-header {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: #f5f2e9;
     border-bottom: 0.926vw solid #edeae2;
@@ -812,7 +827,6 @@ footer .cs-info .btn-tel {
 .sub-header.fixed {
     position: fixed;
     top: 18.519vw;
-    left: 0;
     z-index: 15;
 }
 .sub-header h3,
@@ -1583,7 +1597,13 @@ footer .cs-info .btn-tel {
     width: 15.532%;
 }
 /* desc-detail */
+.desc-detail {
+    position: relative;
+}
 .desc-detail .detail-tab {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 12.593vw;
     background-color: #f5f2e9;
@@ -1591,7 +1611,6 @@ footer .cs-info .btn-tel {
 .desc-detail .detail-tab.fixed {
     position: fixed;
     top: 18.519vw;
-    left: 0;
 	z-index: 15;
 }
 .desc-detail .detail-tab li {
@@ -1765,6 +1784,9 @@ footer .cs-info .btn-tel {
 
 /* 후기 */
 .review-photo-list {
+    position: absolute;
+    top: 10vw;
+    left: 0;
     width: 100%;
     padding: 7.407vw 0;
     background-color: #f5f2e9;
@@ -1773,7 +1795,6 @@ footer .cs-info .btn-tel {
 .review-photo-list.fixed {
     position: fixed;
     top: 28.519vw;
-    left: 0;
     z-index: 15;
 }
 .review-photo-list .review-photo-slide a {
@@ -1798,9 +1819,6 @@ footer .cs-info .btn-tel {
     max-width: 100%;
     max-height: 100%;
     margin: auto;
-}
-.review-list.on {
-    padding-top: 43.981vw;
 }
 .review-list li {
     position: relative;
@@ -2089,6 +2107,15 @@ footer .cs-info .btn-tel {
     }
     .pt100 {
         padding-top: 30px;
+    }
+    .pt108 {
+        padding-top: 60px;
+    }
+    .pt136 {
+        padding-top: 40px;
+    }
+    .pt475 {
+        padding-top: 140px;
     }
     .pb30 {
         padding-bottom: 9px;
@@ -2824,6 +2851,7 @@ footer .cs-info .btn-tel {
 
     /* 후기 */
     .review-photo-list {
+        top: 32px;
         padding: 24px 0;
         border-bottom: 1px solid #edeae2;
     }
@@ -2832,9 +2860,6 @@ footer .cs-info .btn-tel {
     }
     .review-photo-list .review-photo-slide a {
         border-radius: 14px;
-    }
-    .review-list.on {
-        padding-top: 140px;
     }
     .review-list li {
         padding: 15px 20px;
@@ -3000,6 +3025,15 @@ footer .cs-info .btn-tel {
     }
     .pt100 {
         padding-top: 100px;
+    }
+    .pt108 {
+        padding-top: 108px;
+    }
+    .pt136 {
+        padding-top: 136px;
+    }
+    .pt475 {
+        padding-top: 475px;
     }
     .pb30 {
         padding-bottom: 30px;
@@ -3381,6 +3415,7 @@ footer .cs-info .btn-tel {
     .sub-header.fixed {
         top: 200px;
         right: 0;
+        max-width: 1080px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -3855,20 +3890,19 @@ footer .cs-info .btn-tel {
 
     /* 후기 */
     .review-photo-list {
+        top: 108px;
         padding: 80px 0;
         border-bottom: 2px solid #edeae2;
     }
     .review-photo-list.fixed {
         top: 308px;
         right: 0;
+        max-width: 1080px;
         margin-left: auto;
         margin-right: auto;
     }
     .review-photo-list .review-photo-slide a {
         border-radius: 48px;
-    }
-    .review-list.on {
-        padding-top: 475px;
     }
     .review-list li {
         padding: 50px 70px;
