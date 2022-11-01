@@ -11,12 +11,12 @@ $(window).scroll(function(){
 
 /* gnb-menu open */
 $(".btn-menu").on("click",function(){
-	$("body").addClass("no-scroll");
+	$("html, body").addClass("no-scroll");
 	$(".gnb-menu").addClass("active").attr("aria-hidden", "false");
 	$(document).on("keyup", function(evt){
 		var keycode = evt.which;
 		if(keycode == 27){
-			$("body").removeClass("no-scroll");
+			$("html, body").removeClass("no-scroll");
 			$(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
 		}
 	});
@@ -24,12 +24,12 @@ $(".btn-menu").on("click",function(){
 
 /* gnb-menu close */
 $(".btn-gnb-close").on("click",function(){
-	$("body").removeClass("no-scroll");
+	$("html, body").removeClass("no-scroll");
 	$(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
 });
 $(".gnb-menu").click(function(e){
     if( !$(".gnb-menu").has(e.target).length ) $(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
-    if( !$(".gnb-menu").has(e.target).length ) $("body").removeClass("no-scroll");
+    if( !$(".gnb-menu").has(e.target).length ) $("html, body").removeClass("no-scroll");
 });
 
 /* gnb-menu > sub-menu open */
