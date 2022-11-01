@@ -1857,6 +1857,10 @@ footer .cs-info .btn-tel {
 .review-list .review-txt {
     width: 71.277%;
 }
+.review-list .no-review-img .review-txt,
+.review-list .active .review-txt {
+    width: 100%;
+}
 .normal-list .normal-txt p {
     line-height: 1.194em;
 }
