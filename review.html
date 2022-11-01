@@ -79,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            <!-- 리뷰 리스트 -->
+            <!-- 리스트 -->
             <ul class="review-list">
                 <li>
                     <div class="review-head flex justify-between">
@@ -549,9 +549,9 @@
         });
 
         /* 리뷰 더보기 클릭 시 */
-        const reviewMoreBtn = $(".review-list .btn-more");
+        const moreBtn = $(".review-list .btn-more");
 
-        reviewMoreBtn.on("click", function(e) {
+        moreBtn.on("click", function(e) {
             e.preventDefault();
 
             const $parent = $(this).parents(".review-body");
@@ -571,11 +571,11 @@
             e.preventDefault();
 
             const $parent = $(this).parents(".review-body");
-            const $reviewMoreBtn = $(this).parent().siblings(".review-txt").children(".btn-more");
+            const $moreBtn = $(this).parent().siblings(".review-txt").children(".btn-more");
             const $img = $(this).parents(".review-img");
             const $target = $parent.children(".review-img-view");
             
-            $reviewMoreBtn.hide();
+            $moreBtn.hide();
             $img.hide();
             $parent.addClass("active");
             $target.show();
