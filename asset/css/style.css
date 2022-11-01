@@ -276,8 +276,13 @@ body {
 }
 
 /* input */
+.input-row {
+    background-color: #edeae2;
+}
 .input-row .inp {
     color: #222;
+    background-color: transparent;
+    outline: 0;
 }
 .input-row .inp::placeholder {
     color: #9e9e9e;
@@ -798,6 +803,7 @@ footer .cs-info .btn-tel {
     align-items: center;
     height: 12.037vw;
     padding: 0 5vw;
+    background-color: #fff;
     border-radius: 4.630vw;
     -webkit-box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
     box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
@@ -811,7 +817,6 @@ footer .cs-info .btn-tel {
 .searchbar-box .inp {
     width: calc(100% - 7.407vw);
     letter-spacing: -0.06em;
-    outline: 0;
 }
 
 /* sub-header */
@@ -868,6 +873,81 @@ footer .cs-info .btn-tel {
     padding: 31.481vw 0;
     color: #9e9e9e;
     text-align: center;
+}
+
+/* 로그인 */
+.login-box {
+    width: 55.556%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 19.444vw 0;
+}
+.login-box .logo img {
+    width: 76.333%;
+    max-width: 458px;
+}
+.login-box .input-row,
+.login-box .btn-login {
+    width: 100%;
+    height: 8.148vw;
+    border-radius: 2.222vw;
+}
+.login-box .input-row {
+    overflow: hidden;
+}
+.login-box .input-row + .input-row {
+    margin-top: 0.926vw;
+}
+.login-box .input-row .inp {
+    width: 100%;
+    height: 100%;
+    padding: 0 2.778vw;
+    box-sizing: border-box;
+}
+.login-box .btn-login {
+    margin: 2.778vw 0;
+}
+.login-box .info-user-menu .bar {
+    display: block;
+    width: 1px;
+    height: 2.222vw;
+    background-color: #222;
+}
+.login-box .social-login {
+    margin-top: 7.222vw;
+}
+.login-box .social-login .btn {
+    width: 100%;
+    height: 8.333vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1.111vw;
+    text-align: left;
+    text-indent: 40%;
+}
+.login-box .social-login .btn + .btn {
+    margin-top: 0.926vw;
+}
+.login-box .btn-kakao {
+    color: #191919;
+    background-color: #fee500;
+    background-image: url("../images/common/logo_kakao.png");
+    letter-spacing: -0.01em;
+}
+.login-box .btn-naver {
+    color: #fff;
+    background-color: #03c75a;
+    background-image: url("../images/common/logo_naver.png");
+}
+.login-box .btn-google {
+    color: #000;
+    background-color: #fff;
+    background-image: url("../images/common/logo_google.png");
+}
+.login-box .btn-apple {
+    color: #fff;
+    background-color: #000;
+    background-image: url("../images/common/logo_apple.png");
 }
 
 /* main */
@@ -2089,8 +2169,6 @@ footer .cs-info .btn-tel {
 .review-write .write-box textarea {
     width: 100%;
     height: 100%;
-    background-color: #f7f7f7;
-    outline: 0;
 }
 .review-write .write-box .txt-total {
     position: absolute;
@@ -2518,6 +2596,39 @@ footer .cs-info .btn-tel {
     /* no-list */
     .no-list {
         padding: 100px 0;
+    }
+
+    /* 로그인 */
+    .login-box {
+        padding: 62px 0;
+    }
+    .login-box .input-row,
+    .login-box .btn-login {
+        height: 26px;
+        border-radius: 8px;
+    }
+    .login-box .input-row + .input-row {
+        margin-top: 3px;
+    }
+    .login-box .input-row .inp {
+        padding: 0 9px;
+    }
+    .login-box .btn-login {
+        margin: 9px 0;
+    }
+    .login-box .info-user-menu .bar {
+        height: 7px;
+    }
+    .login-box .social-login {
+        margin-top: 23px;
+    }
+    .login-box .social-login .btn {
+        height: 26px;
+        border-radius: 4px;
+        text-indent: 37%;
+    }
+    .login-box .social-login .btn + .btn {
+        margin-top: 3px;
     }
 
     /* main */
@@ -3081,6 +3192,11 @@ footer .cs-info .btn-tel {
         line-height: 1.5em;
     }
 
+    /* 로그인 */
+    .login-box .info-user-menu a {
+        letter-spacing: -0.06em;
+    }
+
     /* fixed-btn-wrap */
     .fixed-btn-wrap .counter-box .num {
         font-size: 20px;
@@ -3200,18 +3316,16 @@ footer .cs-info .btn-tel {
         font-size: 55px;
     }
 
-    /* btn */
-    .btn-wide {
-        height: 130px;
-        border-radius: 50px;
-    }
-
     /* border */
     .bt10-edeae2 {
         border-top: 10px solid #edeae2;
     }
 
     /* btn */
+    .btn-wide {
+        height: 130px;
+        border-radius: 50px;
+    }
     .menu-b {
         background-image: url("../images/common/ico_menu@2x.png");
     }
@@ -3534,6 +3648,50 @@ footer .cs-info .btn-tel {
     /* no-list */
     .no-list {
         padding: 340px 0;
+    }
+
+    /* 로그인 */
+    .login-box {
+        padding: 210px 0;
+    }
+    .login-box .input-row,
+    .login-box .btn-login {
+        height: 88px;
+        border-radius: 24px;
+    }
+    .login-box .input-row + .input-row {
+        margin-top: 10px;
+    }
+    .login-box .input-row .inp {
+        padding: 0 30px;
+    }
+    .login-box .btn-login {
+        margin: 30px 0;
+    }
+    .login-box .info-user-menu .bar {
+        height: 24px;
+    }
+    .login-box .social-login {
+        margin-top: 78px;
+    }
+    .login-box .social-login .btn {
+        height: 90px;
+        border-radius: 12px;
+    }
+    .login-box .social-login .btn + .btn {
+        margin-top: 10px;
+    }
+    .login-box .btn-kakao {
+        background-image: url("../images/common/logo_kakao@2x.png");
+    }
+    .login-box .btn-naver {
+        background-image: url("../images/common/logo_naver@2x.png");
+    }
+    .login-box .btn-google {
+        background-image: url("../images/common/logo_google@2x.png");
+    }
+    .login-box .btn-apple {
+        background-image: url("../images/common/logo_apple@2x.png");
     }
     
     /* main */
