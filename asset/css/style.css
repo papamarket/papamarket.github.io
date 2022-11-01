@@ -1891,8 +1891,6 @@ footer .cs-info .btn-tel {
     display: none;
     width: 100%;
     margin-top: 4.630vw;
-    border-radius: 5.926vw;
-    overflow: hidden;
 }
 .review-list .review-img-view .swiper-pagination-bullets {
     bottom: 2.778vw;
@@ -1904,6 +1902,7 @@ footer .cs-info .btn-tel {
 }
 .review-list .review-img-view img {
     width: 100%;
+    border-radius: 5.926vw;
 }
 
 /* 나의 리뷰 */
@@ -2862,7 +2861,6 @@ footer .cs-info .btn-tel {
     }
     .review-list .review-img-view {
         margin-top: 15px;
-        border-radius: 18px;
     }
     .review-list .review-img-view .swiper-pagination-bullets {
         bottom: 9px;
@@ -2871,6 +2869,9 @@ footer .cs-info .btn-tel {
         width: 5px;
         height: 5px;
         margin: 0 2px;
+    }
+    .review-list .review-img-view img {
+        border-radius: 18px;
     }
 
     /* 나의 리뷰 */
@@ -3910,7 +3911,6 @@ footer .cs-info .btn-tel {
     }
     .review-list .review-img-view {
         margin-top: 50px;
-        border-radius: 64px;
     }
     .review-list .review-img-view .swiper-pagination-bullets {
         bottom: 30px;
@@ -3919,6 +3919,9 @@ footer .cs-info .btn-tel {
         width: 16px;
         height: 16px;
         margin: 0 5px;
+    }
+    .review-list .review-img-view img {
+        border-radius: 64px;
     }
 
     /* 나의 리뷰 */
