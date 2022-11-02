@@ -214,34 +214,5 @@
         </div>
     </div>
     <script src="./asset/js/ui.js"></script>
-    <script>
-        /* detail-tab fixed */
-        const headerH = $("header").height();
-        const headerOH = $("header").outerHeight();
-        const subHeaderOH = $(".sub-header").outerHeight();
-        const subHeaderT = $(".sub-header").offset().top - subHeaderOH - headerH;
-
-        $(window).scroll(function(){
-            const scrollT = $(this).scrollTop();
-
-            if(scrollT >= subHeaderT){
-                $(".sub-header").addClass("fixed");
-            } else {
-                $(".sub-header").removeClass("fixed");
-            }
-        });
-
-        /* 더보기 클릭 시 */
-        const moreBtn = $(".qna-list .btn-more");
-
-        moreBtn.on("click", function(e) {
-            e.preventDefault();
-
-            const $parent = $(this).parents(".qna-body");
-            
-            $(this).hide();
-            $parent.addClass("active");
-        });
-    </script>
 </body>
 </html>
