@@ -2613,6 +2613,9 @@ footer .cs-info .btn-tel {
     .login-box .input-row .inp {
         padding: 0 9px;
     }
+    .login-box .input-row .inp::placeholder {
+        font-size: 2.778vw;
+    }
     .login-box .btn-login {
         margin: 9px 0;
     }
