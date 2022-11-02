@@ -877,10 +877,10 @@ footer .cs-info .btn-tel {
 
 /* 로그인 */
 .login-box {
-    width: 55.556%;
-    max-width: 600px;
+    width: 64.815%;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 19.444vw 0;
+    padding: 14.167vw 0;
 }
 .login-box .logo img {
     width: 76.333%;
@@ -896,7 +896,7 @@ footer .cs-info .btn-tel {
     overflow: hidden;
 }
 .login-box .input-row + .input-row {
-    margin-top: 0.926vw;
+    margin-top: 1.852vw;
 }
 .login-box .input-row .inp {
     width: 100%;
@@ -905,16 +905,28 @@ footer .cs-info .btn-tel {
     box-sizing: border-box;
 }
 .login-box .btn-login {
-    margin: 2.778vw 0;
+    margin: 3.704vw 0 4.630vw;
 }
-.login-box .info-user-menu .bar {
+.login-box .info-user-menu li {
+    position: relative;
+    padding: 0 1.852vw;
+}
+.login-box .info-user-menu li:not(:first-child) {
+    margin-left: 1px;
+}
+.login-box .info-user-menu li:not(:first-child):after {
     display: block;
+    position: absolute;
+    top: 50%;
+    left: -1px;
     width: 1px;
     height: 2.222vw;
     background-color: #222;
+    transform: translate(0, -50%);
+    content: '';
 }
 .login-box .social-login {
-    margin-top: 7.222vw;
+    margin-top: 6.481vw;
 }
 .login-box .social-login .btn {
     width: 100%;
@@ -923,10 +935,10 @@ footer .cs-info .btn-tel {
     background-repeat: no-repeat;
     border-radius: 1.111vw;
     text-align: left;
-    text-indent: 40%;
+    text-indent: 41.429%;
 }
 .login-box .social-login .btn + .btn {
-    margin-top: 0.926vw;
+    margin-top: 1.852vw;
 }
 .login-box .btn-kakao {
     color: #191919;
@@ -2600,35 +2612,39 @@ footer .cs-info .btn-tel {
 
     /* 로그인 */
     .login-box {
+        min-width: 240px;
         padding: 62px 0;
     }
     .login-box .input-row,
     .login-box .btn-login {
-        height: 26px;
+        height: 30px;
         border-radius: 8px;
     }
     .login-box .input-row + .input-row {
-        margin-top: 3px;
+        margin-top: 6px;
     }
     .login-box .input-row .inp {
         padding: 0 9px;
     }
     .login-box .btn-login {
-        margin: 9px 0;
+        margin: 12px 0 15px;
     }
-    .login-box .info-user-menu .bar {
+    .login-box .info-user-menu li {
+        padding: 0 6px;
+    }
+    .login-box .info-user-menu li:not(:first-child):after {
         height: 7px;
     }
     .login-box .social-login {
-        margin-top: 23px;
+        margin-top: 21px;
     }
     .login-box .social-login .btn {
-        height: 26px;
+        height: 30px;
         border-radius: 4px;
-        text-indent: 37%;
+        text-indent: 38%;
     }
     .login-box .social-login .btn + .btn {
-        margin-top: 3px;
+        margin-top: 6px;
     }
 
     /* main */
@@ -3660,26 +3676,29 @@ footer .cs-info .btn-tel {
         border-radius: 24px;
     }
     .login-box .input-row + .input-row {
-        margin-top: 10px;
+        margin-top: 20px;
     }
     .login-box .input-row .inp {
         padding: 0 30px;
     }
     .login-box .btn-login {
-        margin: 30px 0;
+        margin: 40px 0 50px;
     }
-    .login-box .info-user-menu .bar {
+    .login-box .info-user-menu li {
+        padding: 0 20px;
+    }
+    .login-box .info-user-menu li:not(:first-child):after {
         height: 24px;
     }
     .login-box .social-login {
-        margin-top: 78px;
+        margin-top: 70px;
     }
     .login-box .social-login .btn {
         height: 90px;
         border-radius: 12px;
     }
     .login-box .social-login .btn + .btn {
-        margin-top: 10px;
+        margin-top: 20px;
     }
     .login-box .btn-kakao {
         background-image: url("../images/common/logo_kakao@2x.png");
