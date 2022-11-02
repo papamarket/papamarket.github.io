@@ -155,6 +155,9 @@ body {
 .fs45 {
     font-size: 4.167vw;
 }
+.fs46 {
+    font-size: 4.259vw;
+}
 .fs48 {
     font-size: 4.444vw;
 }
@@ -227,7 +230,7 @@ body {
 .btn-wide {
     width: 100%;
     height: 12.037vw;
-    border-radius: 4vw;
+    border-radius: 2.222vw;
 }
 .btn-menu,
 .btn-basket,
@@ -2320,6 +2323,9 @@ footer .cs-info .btn-tel {
     .fs45 {
         font-size: 13px;
     }
+    .fs46 {
+        font-size: 14px;
+    }
     .fs48 {
         font-size: 14px;
     }
@@ -2336,7 +2342,7 @@ footer .cs-info .btn-tel {
     /* btn */
     .btn-wide {
         height: 38px;
-        border-radius: 12px;
+        border-radius: 8px;
     }
 
     /* border */
@@ -3302,6 +3308,9 @@ footer .cs-info .btn-tel {
     }
     .fs45 {
         font-size: 45px;
+    }
+    .fs46 {
+        font-size: 46px;
     }
     .fs48 {
         font-size: 48px;
