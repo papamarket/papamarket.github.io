@@ -400,7 +400,7 @@
                 <p class="txt white fs50 fw500">삭제하시겠습니까?</p>
             </div>
             <div class="btn-wrap flex justify-between">
-                <button class="btn white fs42">취소</button>
+                <button class="btn white fs42 btn-close">취소</button>
                 <button class="btn white fs42">확인</button>
             </div>
         </div>
@@ -469,7 +469,7 @@
         });
 
         /* 팝업 닫기 */
-        $(".btn-popup-close").click(function () {
+        $(".btn-popup-close, .btn-close").click(function () {
             $(this).parents(".popup").hide();
             $("html, body").removeClass("no-scroll");
         });
