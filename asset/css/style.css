@@ -92,6 +92,9 @@ body {
 .pt136 {
     padding-top: 12.593vw;
 }
+.pt213 {
+    padding-top: 19.722vw;
+}
 .pt475 {
     padding-top: 43.981vw;
 }
@@ -1066,7 +1069,15 @@ footer .cs-info .btn-tel {
     background-image: url("../images/common/logo_apple.png");
 }
 
-/* 회원가입 */
+/* 회원가입, 아이디 찾기, 비밀번호 찾기 */
+.member-join h4,
+.member-find h4 {
+    letter-spacing: -0.06em;
+}
+.member-join div + h4,
+.member-find div + h4 {
+    margin-top: 9.259vw;
+}
 .member-join .member-info-box,
 .agree-wrap .more-content > div {
     width: 100%;
@@ -1087,9 +1098,6 @@ footer .cs-info .btn-tel {
 .agree-wrap .more-content dd {
     line-height: 1.121em;
 }
-.member-join div + h4 {
-    margin-top: 9.259vw;
-}
 .agree-wrap .btn-more {
     display: block;
     width: 2.222vw;
@@ -1109,6 +1117,9 @@ footer .cs-info .btn-tel {
 }
 .agree-wrap .more-content dd + dt {
     margin-top: 1.852vw;
+}
+.member-find .ml68 {
+    margin-left: 6.296vw;
 }
 
 /* main */
@@ -2422,6 +2433,9 @@ footer .cs-info .btn-tel {
     .pt136 {
         padding-top: 40px;
     }
+    .pt213 {
+        padding-top: 63px;
+    }
     .pt475 {
         padding-top: 140px;
     }
@@ -2847,7 +2861,11 @@ footer .cs-info .btn-tel {
         text-indent: 38%;
     }
 
-    /* 회원가입 */
+    /* 회원가입, 아이디 찾기, 비밀번호 찾기 */
+    .member-join div + h4,
+    .member-find div + h4 {
+        margin-top: 30px;
+    }
     .member-join .member-info-box,
     .agree-wrap .more-content > div {
         height: 60px;
@@ -2857,9 +2875,6 @@ footer .cs-info .btn-tel {
     .member-join .member-info-box dt,
     .agree-wrap .more-content dt {
         margin-bottom: 3px;
-    }
-    .member-join div + h4 {
-        margin-top: 30px;
     }
     .agree-wrap .btn-more {
         width: 2.222vw;
@@ -2871,6 +2886,9 @@ footer .cs-info .btn-tel {
     }
     .agree-wrap .more-content dd + dt {
         margin-top: 6px;
+    }
+    .member-find .ml68 {
+        margin-left: 24px;
     }
 
     /* main */
@@ -3499,6 +3517,9 @@ footer .cs-info .btn-tel {
     .pt136 {
         padding-top: 136px;
     }
+    .pt213 {
+        padding-top: 213px;
+    }
     .pt475 {
         padding-top: 475px;
     }
@@ -4004,7 +4025,11 @@ footer .cs-info .btn-tel {
         background-image: url("../images/common/logo_apple@2x.png");
     }
 
-    /* 회원가입 */
+    /* 회원가입, 아이디 찾기, 비밀번호 찾기 */
+    .member-join div + h4,
+    .member-find div + h4 {
+        margin-top: 100px;
+    }
     .member-join .member-info-box,
     .agree-wrap .more-content > div {
         height: 200px;
@@ -4014,9 +4039,6 @@ footer .cs-info .btn-tel {
     .member-join .member-info-box dt,
     .agree-wrap .more-content dt {
         margin-bottom: 10px;
-    }
-    .member-join div + h4 {
-        margin-top: 100px;
     }
     .agree-wrap .btn-more {
         width: 24px;
@@ -4029,6 +4051,9 @@ footer .cs-info .btn-tel {
     }
     .agree-wrap .more-content dd + dt {
         margin-top: 20px;
+    }
+    .member-find .ml68 {
+        margin-left: 68px;
     }
     
     /* main */
