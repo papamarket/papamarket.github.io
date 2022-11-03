@@ -1069,13 +1069,15 @@ footer .cs-info .btn-tel {
     background-image: url("../images/common/logo_apple.png");
 }
 
-/* 회원가입, 아이디 찾기, 비밀번호 찾기 */
+/* 회원가입, 아이디 찾기, 비밀번호 찾기, 비밀번호 변경 */
 .member-join h4,
-.member-find h4 {
+.member-find h4,
+.change-pw h4 {
     letter-spacing: -0.06em;
 }
 .member-join div + h4,
-.member-find div + h4 {
+.member-find div + h4,
+.change-pw div + h4 {
     margin-top: 9.259vw;
 }
 .member-join .member-info-box,
@@ -2865,9 +2867,10 @@ footer .cs-info .btn-tel {
         text-indent: 38%;
     }
 
-    /* 회원가입, 아이디 찾기, 비밀번호 찾기 */
+    /* 회원가입, 아이디 찾기, 비밀번호 찾기, 비밀번호 변경 */
     .member-join div + h4,
-    .member-find div + h4 {
+    .member-find div + h4,
+    .change-pw div + h4 {
         margin-top: 30px;
     }
     .member-join .member-info-box,
@@ -4032,9 +4035,10 @@ footer .cs-info .btn-tel {
         background-image: url("../images/common/logo_apple@2x.png");
     }
 
-    /* 회원가입, 아이디 찾기, 비밀번호 찾기 */
+    /* 회원가입, 아이디 찾기, 비밀번호 찾기, 비밀번호 변경 */
     .member-join div + h4,
-    .member-find div + h4 {
+    .member-find div + h4,
+    .change-pw div + h4 {
         margin-top: 100px;
     }
     .member-join .member-info-box,
