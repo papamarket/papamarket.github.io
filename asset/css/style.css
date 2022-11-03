@@ -1121,6 +1121,10 @@ footer .cs-info .btn-tel {
 .member-find .ml68 {
     margin-left: 6.296vw;
 }
+.member-find .info-txt {
+    margin-top: 2.778vw;
+    line-height: 1.2em;
+}
 
 /* main */
 .main-tit-wrap,
@@ -2877,9 +2881,9 @@ footer .cs-info .btn-tel {
         margin-bottom: 3px;
     }
     .agree-wrap .btn-more {
-        width: 2.222vw;
-        height: 2.222vw;
-        margin-left: 1.389vw;
+        width: 7px;
+        height: 7px;
+        margin-left: 4px;
     }
     .agree-wrap .more-content > div {
         margin-top: 9px;
@@ -2889,6 +2893,9 @@ footer .cs-info .btn-tel {
     }
     .member-find .ml68 {
         margin-left: 24px;
+    }
+    .member-find .info-txt {
+        margin-top: 9px;
     }
 
     /* main */
@@ -4054,6 +4061,9 @@ footer .cs-info .btn-tel {
     }
     .member-find .ml68 {
         margin-left: 68px;
+    }
+    .member-find .info-txt {
+        margin-top: 30px;
     }
     
     /* main */
