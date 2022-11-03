@@ -235,6 +235,7 @@ body {
     width: 100%;
     height: 12.037vw;
     border-radius: 2.222vw;
+    line-height: 12.037vw;
 }
 .btn-menu,
 .btn-basket,
@@ -280,6 +281,17 @@ body {
 }
 .btn-back {
     background-image: url("../images/common/ico_back.png");
+}
+
+/* select */
+select {
+    height: 11.111vw;
+    padding: 0 2.778vw;
+    background: #edeae2 url("../images/common/ico_arrow_gy.png") no-repeat center right 2.778vw;
+    background-size: 2.222vw;
+    border: 0;
+    border-radius: 2.222vw;
+    outline: 0;
 }
 
 /* input */
@@ -396,6 +408,20 @@ input[type="checkbox"]:checked + label:before {
     background-color: #edeae2;
     border-radius: 2.222vw;
     letter-spacing: -0.06em;
+    line-height: 11.111vw;
+}
+.input-area select {
+    width: 16.389vw;
+}
+.input-area .bar {
+    display: block;
+    align-self: center;
+    width: 1.481vw;
+    height: 0.185vw;
+    background-color: #808080;
+}
+.input-area .bar + .input-row {
+    width: calc(100% - 19.722vw);
 }
 .input-area.zip-code-area {
     width: 70.851%;
@@ -2469,11 +2495,21 @@ footer .cs-info .btn-tel {
     .btn-wide {
         height: 38px;
         border-radius: 8px;
+        line-height: 38px;
     }
 
     /* border */
     .bt10-edeae2 {
         border-top: 3px solid #edeae2;
+    }
+
+    /* select */
+    select {
+        height: 36px;
+        padding: 0 9px;
+        background-position: center right 9px;
+        background-size: 6px;
+        border-radius: 6px;
     }
 
     /* input */
@@ -2519,6 +2555,17 @@ footer .cs-info .btn-tel {
         width: 52px;
         height: 36px;
         border-radius: 6px;
+        line-height: 36px;
+    }
+    .input-area select {
+        width: 52px;
+    }
+    .input-area .bar {
+        width: 5px;
+        height: 1px;
+    }
+    .input-area .bar + .input-row {
+        width: calc(100% - 63px);
     }
     .input-area + .input-area,
     .input-area + .input-row,
@@ -3530,6 +3577,7 @@ footer .cs-info .btn-tel {
     .btn-wide {
         height: 130px;
         border-radius: 24px;
+        line-height: 130px;
     }
     .menu-b {
         background-image: url("../images/common/ico_menu@2x.png");
@@ -3561,6 +3609,16 @@ footer .cs-info .btn-tel {
     }
     .btn-back {
         background-image: url("../images/common/ico_back@2x.png");
+    }
+
+    /* select */
+    select {
+        height: 120px;
+        padding: 0 30px;
+        background-image: url("../images/common/ico_arrow_gy@2x.png");
+        background-position:  center right 30px;
+        background-size: 24px;
+        border-radius: 24px;
     }
 
     /* input */
@@ -3612,6 +3670,17 @@ footer .cs-info .btn-tel {
         width: 177px;
         height: 120px;
         border-radius: 24px;
+        line-height: 120px;
+    }
+    .input-area select {
+        width: 177px;
+    }
+    .input-area .bar {
+        width: 16px;
+        height: 2px;
+    }
+    .input-area .bar + .input-row {
+        width: calc(100% - 213px);
     }
     .input-area + .input-area,
     .input-area + .input-row,
