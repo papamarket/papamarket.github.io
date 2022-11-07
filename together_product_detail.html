@@ -17,7 +17,7 @@
     <header>
         <div class="inner flex align-center justify-between">
             <a href="#" class="btn btn-back bg-white">뒤로 가기</a>
-            <p class="black fs50 fw700">과일</p>
+            <p class="black fs50 fw700">상품정보</p>
             <a href="#" class="btn btn-basket basket-b bg-white">장바구니 <span>25</span></a>
         </div>
     </header>
@@ -33,17 +33,18 @@
             </div>
         </div>
         <!-- 상품 상세 정보 -->
-        <h3 class="hidden">상품 상세 정보</h3>
-        <section class="product-detail-wrap">
+        <h3 class="hidden">공구 상품 상세 정보</h3>
+        <section class="product-detail-wrap together-detail-wrap">
             <!-- 상품 이미지 -->
             <div class="product-img">
+                <p class="product-label fs55 fw700 bg-yellow">3일 후<br>종료</p>
                 <!-- Slider main container -->
                 <div class="product-img-slide swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide"><img src="./asset/images/product_img05_big.jpg" alt="[물가안정 행사] 감귤 500g*2SET"></div>
-                        <div class="swiper-slide"><img src="./asset/images/product_img05.jpg" alt="감귤 500g"></div>
+                        <div class="swiper-slide"><img src="./asset/images/product_img24.jpg" alt="만나 마운틴 바나나 1kg"></div>
+                        <div class="swiper-slide"><img src="./asset/images/product_img05.jpg" alt=""></div>
                         <div class="swiper-slide"><img src="./asset/images/product_img06.jpg" alt=""></div>
                     </div>
                     <!-- If we need pagination -->
@@ -53,10 +54,36 @@
             <!-- 상품 이름, 가격 등 -->
             <div class="product-info-box pt80 pb80">
                 <div class="inner">
-                    <p class="sub-tit gray fs36">찬 바람이 불면 생각나는 새콤달콤한 감귤</p>
-                    <p class="name fs54">[물가안정 행사] 감귤 500g*2SET</p>
+                    <a href="#" class="link green fs36 fw700">Mr.공구</a>
+                    <p class="sub-tit gray fs36">우리집 필수 과일, Mr.공구 단독가로 만나보세요!</p>
+                    <p class="name fs54">만나 마운틴 바나나 1kg</p>
                     <p class="cost gray fs36 line-through">8,000원</p>
-                    <div class="flex fs54 fw700"><p class="sale mr15 green">30%</p><p class="price">5,600원</p></div>
+                    <div class="flex justify-between fs54 fw700">
+                        <div class="flex">
+                            <p class="mr15 green">Mr.공구가</p><p class="price">5,600원</p>
+                        </div>
+                        <p class="sale green">30%</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 발송 예정일, 공구달성률 -->
+            <div class="together-info-box pt80 pb80 bt10-edeae2">
+                <div class="inner">
+                    <dl class="flex align-center justify-between fs40">
+                        <dt class="ico-box">발송 예정일</dt>
+                        <dd class="green">11월 21일 (월)</dd>
+                    </dl>
+                    <div class="pt50">
+                        <dl class="flex align-center justify-between mb30">
+                            <dt class="ico-flag fs40">공구 달성률</dt>
+                            <dd class="flex align-center">
+                                <span class="box mr15 white fs36 fw700 bg-green">70%</span><span class="gray fs33">77/100개</span>
+                            </dd>
+                        </dl>
+                        <div class="progress bg-yellowish">
+                            <div class="progress-bar bg-green"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 등급혜택, 배송안내, 교환/환불 안내 -->
@@ -95,7 +122,7 @@
                         </li>
                         <li>
                             <p class="tit ico-delivery fs40">배송안내</p>
-                            <a href="#" class="txt btn-more black fs33">새벽배송 / 일반배송</a>
+                            <a href="#" class="txt btn-more black fs33">새벽배송 / 일반배송 / 픽업</a>
                             <div class="more-content" aria-hidden="true">
                                 <div>
                                     <dl>
@@ -103,6 +130,8 @@
                                         <dd class="fs33"><b class="fw700">오늘 오후 2시</b>까지 주문 완료하시면<br><b class="fw700">다음날 오전 7시</b> 이전에 배송해드립니다.</dt>
                                         <dt class="green fs36 fw700">일반배송</p>
                                         <dd class="fs33"><b class="fw700">오늘 오후 2시</b>까지 주문 완료하시면<br><b class="fw700">다음날 저녁</b>에 배송해드립니다.</dd>
+                                        <dt class="green fs36 fw700">픽업</p>
+                                        <dd class="fs33">주문 후 상품이 준비되면 <b class="fw700">문자로 주문서를 발송해 드립니다.</b><br>주문서 확인 후 매장에 방문하여 상품을 픽업해 주세요.</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -154,7 +183,7 @@
                 <div class="inner">
                     <dl class="flex fs33">
                         <dt>용량</dt>
-                        <dd>500g</dd>
+                        <dd>1kg</dd>
                     </dl>
                     <dl class="flex fs33">
                         <dt>원산지</dt>
@@ -162,7 +191,7 @@
                     </dl>
                     <dl class="flex fs33">
                         <dt>보관방법</dt>
-                        <dd>상온보관/냉장보관</dd>
+                        <dd>실온보관</dd>
                     </dl>
                 </div>
             </div>
@@ -170,7 +199,7 @@
             <div class="more-product-box pt80 pb80 bt10-edeae2">
                 <div class="inner">
                     <div class="tit-wrap flex justify-between">
-                        <h4 class="fs42 fw300">함께 본 상품</h4>
+                        <h4 class="fs42 fw300">다른 공구도 확인해보세요!</h4>
                         <a href="#" class="btn-more black fs36">전체보기</a>
                     </div>
                     <!-- Slider main container -->
@@ -181,51 +210,63 @@
                             <div class="swiper-slide">
                                 <div class="product-img">
                                     <a href="#">
-                                        <img src="./asset/images/product_img01.jpg" alt="[제스프리] 골드키위 8-10입">
+                                        <img src="./asset/images/product_img22.jpg" alt="국내산 창녕 햇양파 1kg">
                                     </a>
                                     <div class="basket-box flex">
                                         <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
                                         <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
                                     </div>
+                                    <div class="txt-box flex align-center justify-between bg-yellow">
+                                        <p class="participation fs24"><span class="fs30 fw700">25</span>/<span>1,000개</span></p>
+                                        <p class="txt fs24 fw700">10일 후 종료</p>
+                                    </div>
                                 </div>
                                 <div class="product-txt">
                                     <a href="#">
-                                        <p class="name black fs36">[제스프리] 골드키위 8-10입</p>
-                                        <p class="price black fs36 fw700">10,700원</p>
+                                        <p class="name black fs36">국내산 창녕 햇양파 1kg</p>
+                                        <p class="price black fs36 fw700">2,900원 <span class="cost gray fs30 fw400 line-through">3,700원</span></p>
                                     </a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="product-img">
                                     <a href="#">
-                                        <img src="./asset/images/product_img02.jpg" alt="국내산 대추 방울 토마토 500g">
+                                        <img src="./asset/images/product_img13.jpg" alt="황토밭 밤고구마 (특사이즈) 2kg">
                                     </a>
                                     <div class="basket-box flex">
                                         <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
                                         <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
                                     </div>
+                                    <div class="txt-box flex align-center justify-between bg-green">
+                                        <p class="participation fs24"><span class="fs30 fw700">32</span>/<span>500개</span></p>
+                                        <p class="txt fs24 fw700">11일 후 종료</p>
+                                    </div>
                                 </div>
                                 <div class="product-txt">
                                     <a href="#">
-                                        <p class="name black fs36">국내산 대추 방울 토마토 500g</p>
-                                        <p class="price black fs36 fw700">6,900원</p>
+                                        <p class="name black fs36">황토밭 밤고구마 (특사이즈) 2kg</p>
+                                        <p class="price black fs36 fw700">11,300원 <span class="cost gray fs30 fw400 line-through">12,300원</span></p>
                                     </a>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide end">
                                 <div class="product-img">
                                     <a href="#">
-                                        <img src="./asset/images/product_img03.jpg" alt="국내산 한돈 갈매기살 300g">
+                                        <img src="./asset/images/product_img10.jpg" alt="국내산 부산 강동 대파 1단 900g">
                                     </a>
                                     <div class="basket-box flex">
                                         <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
                                         <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
                                     </div>
+                                    <div class="txt-box flex align-center justify-between bg-green">
+                                        <p class="participation fs24"><span class="fs30 fw700">27</span>/<span>50개</span></p>
+                                        <p class="txt fs24 fw700">공구 종료</p>
+                                    </div>
                                 </div>
                                 <div class="product-txt">
                                     <a href="#">
-                                        <p class="name black fs36">국내산 한돈 갈매기살 300g</p>
-                                        <p class="price black fs36 fw700">15,800원</p>
+                                        <p class="name black fs36">국내산 부산 강동 대파 1단 900g</p>
+                                        <p class="price black fs36 fw700">2,500원 <span class="cost gray fs30 fw400 line-through">4,900원</span></p>
                                     </a>
                                 </div>
                             </div>
@@ -242,12 +283,12 @@
                 </ul>
                 <div class="tab-content txt-center">
                     <div class="inner">
-                        <div class="holder"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"></div>
+                        <div class="holder"><img src="./asset/images/product_detail.jpg" alt="언제 먹어도 맛있는 새콤달콤 감귤"></div>
                         <a href="#" class="btn btn-more white fs40 bg-green">상품정보 더보기</a>
                     </div>
                 </div>
             </div>
-            <ul class="tab-btn-box fs48 bt10-edeae2">
+            <ul class="tab-btn-box fs48 tab-btn-box">
                 <li><a href="#">후기<span>(76)</span></a></li>
                 <li><a href="#">문의<span>(12)</span></a></li>
             </ul>
@@ -344,7 +385,7 @@
         /* 상품정보 더보기 */
         const m1324 = 1324 / 1080 * windowWidth;
         const holderH = $(".holder").height();
-        
+
         if(holderH > m1324) {
             $(".holder").css("height", m1324 + "px");
             $(".desc-detail .btn-more").css("display", "flex");
