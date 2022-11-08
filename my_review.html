@@ -407,6 +407,22 @@
     </div>
     <script src="./asset/js/ui.js"></script>
     <script>
+        /* sub-header fixed */
+        const headerH = $("header").height();
+        const headerOH = $("header").outerHeight();
+        const subHeaderOH = $(".sub-header").outerHeight();
+        const subHeaderT = $(".sub-header").offset().top - subHeaderOH - headerH;
+
+        $(window).scroll(function(){
+            const scrollT = $(this).scrollTop();
+
+            if(scrollT >= subHeaderT){
+                $(".sub-header").addClass("fixed");
+            } else {
+                $(".sub-header").removeClass("fixed");
+            }
+        });
+        
         /* tab */
         $(".tab a").click(function(e){
             e.preventDefault();
