@@ -8,61 +8,109 @@
     <title>PAPAMARKET</title>
     <link rel="stylesheet" href="./asset/css/reset.css">
     <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./asset/css/jquery.selectBox.css">
     <link rel="stylesheet" href="./asset/css/style.css">
     <script src="./asset/js/jquery-3.6.1.js"></script>
     <script src="./asset/js/swiper-bundle.min.js"></script>
+    <script src="./asset/js/jquery.selectBox.js"></script>
 </head>
 <body>
     <!-- header -->
     <header>
         <div class="inner flex align-center justify-between">
             <a href="#" class="btn btn-back bg-white">뒤로 가기</a>
-            <p class="black fs50 fw700">아이디 찾기</p>
+            <p class="black fs50 fw700">문의하기</p>
+            <a href="#" class="btn btn-basket basket-b bg-white">장바구니 <span>25</span></a>
         </div>
     </header>
     <!-- content -->
     <div class="content">
-        <!-- 아이디 찾기 -->
-        <h3 class="hidden">아이디 찾기</h3>
-        <section class="member-find pt213 pb100">
+        <!-- 상품 검색 -->
+        <div class="searchbar-box">
             <div class="inner">
-                <label for="memberP" class="input-label mb30 fs42">회원구분</label>
-                <div class="flex align-center justify-between mb30">
-                    <span class="radio-row"><input type="radio" name="member" id="memberP" class="design-inp" title="개인회원"><label for="memberP" class="label-radio fs42">개인회원</label></span>
-                    <span class="radio-row"><input type="radio" name="member" id="memberB" class="design-inp" title="사업자회원" checked><label for="memberB" class="label-radio fs42">사업자회원</label></span>
-                    <span class="radio-row"><input type="radio" name="member" id="memberM" class="design-inp" title="입점마켓"><label for="memberM" class="label-radio fs42">입점마켓</label></span>
+                <div class="input-row">
+                    <button type="button" class="btn btn-search">검색</button>
+                    <input type="text" placeholder="원하시는 상품을 검색하세요!" class="inp fs35" title="원하시는 상품을 검색하세요!">
                 </div>
-                <!-- 인증구분 -->
-                <label for="certcMPN" class="input-label mt100 mb30 fs42">인증구분</label>
-                <div class="flex align-center mb30">
-                    <span class="radio-row"><input type="radio" name="certc" id="certcMPN" class="design-inp" title="휴대전화번호"><label for="certcMPN" class="label-radio fs42">휴대전화번호</label></span>
-                    <span class="radio-row ml68"><input type="radio" name="certc" id="certcBLN" class="design-inp" title="사업자등록번호" checked><label for="certcBLN" class="label-radio fs42">사업자등록번호</label></span>
-                </div>
-                <!-- 휴대전화번호로 찾기 -->
-                <!-- <label for="tel" class="input-label mt100 mb30 fs42">휴대전화번호로 찾기</label>
-                <div class="input-area flex justify-between">
-                    <div class="input-row">
-                        <input type="tel" id="tel" class="inp fs36" placeholder="휴대전화번호를 입력해주세요.">
+            </div>
+        </div>
+        <!-- 문의하기 -->
+        <section>
+            <!-- 상품 정보 -->
+            <div class="order-box bt10-edeae2">
+                <dl class="box-head flex align-center fs42">
+                    <dt>주문번호</dt>
+                    <dd>20221025-000671</dd>
+                </dl>
+                <div class="box-body">
+                    <div class="box">
+                        <div class="product-info flex align-center">
+                            <div class="product-img"><img src="./asset/images/product_img05.jpg" alt="[물가안정 행사] 감귤 500g*2SET"></div>
+                            <div class="product-txt">
+                                <p class="sub fs33 fw500">미스터아빠</p>
+                                <p class="name fs36">[물가안정 행사] 감귤 500g*2SET</p>
+                                <p class="option fs36">기본옵션<span class="slash">/</span>1개</p>
+                            </div>
+                        </div>
                     </div>
-                    <button class="btn gray fs36">전송</button>
                 </div>
-                <div class="input-area flex justify-between">
-                    <div class="input-row">
-                        <input type="tel" class="inp fs36" placeholder="인증번호를 입력해주세요.">
+            </div>
+            <div class="write-form qna-write pt100 pb100 bt10-edeae2">
+                <div class="inner">
+                    <!-- 문의 유형 -->
+                    <label for="select-faq" class="input-label mb30 fs48">문의 유형</label>
+                    <!-- select -->
+                    <select id="select-faq" name="select-faq" class="select-custom fs36">
+                        <option value="">문의 유형을 선택해 주세요.</option>
+                        <option value="">상품</option>
+                        <option value="">주문취소</option>
+                        <option value="">반품/교환</option>
+                        <option value="">배송</option>
+                        <option value="">기타</option>
+                    </select>
+                    <!-- 문의 내용 -->
+                    <label for="contents" class="input-label mt100 mb30 fs48">문의 내용</label>
+                    <div class="write-box input-row mb30">
+                        <textarea name="contents" id="contents" class="inp fs36" cols="30" rows="10" placeholder="문의 내용을 입력해주세요."></textarea>
                     </div>
-                    <button class="btn gray fs36">확인</button>
-                </div> -->
-                <!-- 사업자등록번호로 찾기 -->
-                <label for="bsnsLcnmb" class="input-label mt100 mb30 fs42">사업자등록번호로 찾기</label>
-                <div class="input-area flex justify-between">
-                    <div class="input-row">
-                        <input type="text" id="bsnsLcnmb" class="inp fs36" placeholder="사업자등록번호를 입력해주세요.">
+                    <span class="checkbox-row"><input type="checkbox" name="secretLetter" id="secretLetter" class="design-inp" title="비밀글로 문의하기"><label for="secretLetter" class="fs36">비밀글로 문의하기</label></span>
+                    <!-- 사진 -->
+                    <label for="btnPhoto" class="input-label mt100 mb30 fs48">사진</label>
+                    <ul class="photo-upload flex pb100">
+                        <li>
+                            <button class="btn btn-delete">첨부 파일 삭제</button>
+                            <div>
+                                <img src="./asset/images/product_img05.jpg" alt="">
+                                <input type="file" name="" id="btnPhoto" class="inp-file">
+                                <label for="btnPhoto" class="label-btn"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input type="file" name="" id="btnPhoto" class="inp-file">
+                                <label for="btnPhoto" class="label-btn"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input type="file" name="" id="btnPhoto" class="inp-file">
+                                <label for="btnPhoto" class="label-btn"></label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input type="file" name="" id="btnPhoto" class="inp-file">
+                                <label for="btnPhoto" class="label-btn"></label>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 안내사항 -->
+                    <div class="bar-list fs33">
+                        <li>문의 내용에 대한 답변은 ‘마이페이지 > 문의내역’ 또는 ‘상품 상세페이지’에서 확인할 수 있습니다.</li>
+                        <li>상품과 관련 없거나 부적합한 내용을 기재하시는 경우, 사전 고지 없이 삭제 또는 차단될 수 있습니다.</li>
                     </div>
-                    <button class="btn gray fs36">전송</button>
-                </div>
-                <!-- 버튼 영역 -->
-                <div class="btn-wrap mt100">
-                    <button class="btn btn-wide white fs50 fw400 bg-green">확인</button>
+                    <!-- 버튼 -->
+                    <button class="btn btn-wide mt100 white fs50 fw400 bg-green">등록하기</button>
                 </div>
             </div>
         </section>
@@ -233,5 +281,11 @@
         </div>
     </div>
     <script src="./asset/js/ui.js"></script>
+    <script>
+        /* select custom */
+        $(".select-custom").selectBox({
+            mobile: true
+        });
+    </script>
 </body>
 </html>

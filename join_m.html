@@ -26,7 +26,7 @@
         <h3 class="hidden">회원가입</h3>
         <section class="member-join pt36 pb100">
             <div class="inner">
-                <h4 class="mb30 fs42 fw400">회원인증</h4>
+                <label for="memberP" class="input-label mb30 fs42">회원인증</label>
                 <div class="flex align-center justify-between mb30">
                     <span class="radio-row"><input type="radio" name="member" id="memberP" class="design-inp" title="개인회원"><label for="memberP" class="label-radio fs42">개인회원</label></span>
                     <span class="radio-row"><input type="radio" name="member" id="memberB" class="design-inp" title="사업자회원"><label for="memberB" class="label-radio fs42">사업자회원</label></span>
@@ -40,43 +40,43 @@
                     </dl>
                 </div>
                 <!-- 추천코드 입력 -->
-                <h4 class="mb30 fs42 fw400">추천코드 입력</h4>
+                <label for="rcmndCode" class="input-label mt100 mb30 fs42">추천코드 입력</label>
                 <div class="input-row">
-                    <input type="text" class="inp fs36" placeholder="추천코드를 입력해주세요.">
+                    <input type="text" id="rcmndCode" class="inp fs36" placeholder="추천코드를 입력해주세요.">
                 </div>
                 <!-- 사업자등록번호 입력 -->
-                <h4 class="mb30 fs42 fw400">사업자등록번호 입력</h4>
+                <label for="bsnsLcnmb" class="input-label mt100 mb30 fs42">사업자등록번호 입력</label>
                 <div class="input-area flex justify-between">
                     <div class="input-row">
-                        <input type="text" class="inp fs36" placeholder="사업자등록번호를 입력해주세요.">
+                        <input type="text" id="bsnsLcnmb" class="inp fs36" placeholder="사업자등록번호를 입력해주세요.">
                     </div>
                     <button class="btn gray fs36">확인</button>
                 </div>
                 <!-- 아이디 -->
-                <h4 class="mb30 fs42 fw400">아이디</h4>
+                <label for="id" class="input-label mt100 mb30 fs42">아이디</label>
                 <div class="input-area flex justify-between">
                     <div class="input-row">
-                        <input type="text" class="inp fs36" placeholder="아이디를 입력해주세요.">
+                        <input type="text" id="id" class="inp fs36" placeholder="아이디를 입력해주세요.">
                     </div>
                     <button class="btn gray fs36">중복확인</button>
                 </div>
                 <!-- 비밀번호 -->
-                <h4 class="mb30 fs42 fw400">비밀번호</h4>
+                <label for="pw" class="input-label mt100 mb30 fs42">비밀번호</label>
                 <div class="input-row">
-                    <input type="password" class="inp fs36" placeholder="숫자, 영문, 특수문자 조합 최소 6자~16자">
+                    <input type="password" id="pw" class="inp fs36" placeholder="숫자, 영문, 특수문자 조합 최소 6자~16자">
                 </div>
                 <div class="input-row">
                     <input type="password" class="inp fs36" placeholder="비밀번호 재입력">
                 </div>
                 <!-- 이름 -->
-                <h4 class="mb30 fs42 fw400">이름</h4>
+                <label for="name" class="input-label mt100 mb30 fs42">이름</label>
                 <div class="input-row">
-                    <input type="text" class="inp fs36" placeholder="이름을 입력해주세요.">
+                    <input type="text" id="name" class="inp fs36" placeholder="이름을 입력해주세요.">
                 </div>
                 <!-- 사업장 전화번호 -->
-                <h4 class="mb30 fs42 fw400">사업장 전화번호</h4>
+                <label for="bsnsNmbr" class="input-label mt100 mb30 fs42">사업장 전화번호</label>
                 <div class="input-area flex justify-between">
-                    <select name="" id="" class="gray fs36">
+                    <select name="" id="bsnsNmbr" class="gray fs36">
                         <option value="">02</option>
                         <option value="">051</option>
                         <option value="">053</option>
@@ -101,10 +101,10 @@
                     </div>
                 </div>
                 <!-- 사업자대표 휴대전화번호 -->
-                <h4 class="mb30 fs42 fw400">사업자대표 휴대전화번호</h4>
+                <label for="bsnsTel" class="input-label mt100 mb30 fs42">사업자대표 휴대전화번호</label>
                 <div class="input-area flex justify-between">
                     <div class="input-row">
-                        <input type="tel" class="inp fs36" placeholder="휴대전화번호를 입력해주세요.">
+                        <input type="tel" id="bsnsTel" class="inp fs36" placeholder="휴대전화번호를 입력해주세요.">
                     </div>
                     <button class="btn gray fs36">전송</button>
                 </div>
@@ -115,10 +115,10 @@
                     <button class="btn gray fs36">확인</button>
                 </div>
                 <!-- 주소 -->
-                <h4 class="mb30 fs42 fw400">주소</h4>
+                <label for="address" class="input-label mt100 mb30 fs42">주소</label>
                 <div class="zip-code-area input-area flex justify-between">
                     <div class="input-row">
-                        <input type="text" class="inp fs36" placeholder="우편번호">
+                        <input type="text" id="address" class="inp fs36" placeholder="우편번호">
                     </div>
                     <button class="btn gray fs36">주소검색</button>
                 </div>
@@ -129,7 +129,7 @@
                     <input type="text" class="inp fs36" placeholder="상세주소를 입력해주세요.">
                 </div>
                 <!-- 약관 동의 -->
-                <div class="agree-wrap pt100">
+                <div class="agree-wrap mt100">
                     <span class="checkbox-row mb30"><input type="checkbox" name="chkAll" id="chkAll" class="design-inp" title="전체동의"><label for="chkAll" class="fs36">전체동의</label></span>
                     <div class="mb30">
                         <span class="checkbox-row"><input type="checkbox" name="termsService" id="termsService" class="design-inp" title="(필수) 이용약관 동의"><label for="termsService" class="fs36">(필수) 이용약관 동의</label><a href="#" class="btn-more">이용약관 내용 보기</a></span>
@@ -178,7 +178,7 @@
                     </div>
                 </div>
                 <!-- 버튼 영역 -->
-                <div class="btn-wrap pt100">
+                <div class="btn-wrap mt100">
                     <button class="btn btn-wide white fs50 fw400 bg-green">확인</button>
                 </div>
             </div>
