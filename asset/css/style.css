@@ -343,10 +343,11 @@ select {
     border-left: 0;
 }
 .select-custom-selectBox-dropdown-menu.selectBox-options {
-    max-height: 21.296vw;
+    max-height: 43.333vw;
     background: #428c75;
     border: 0;
     border-radius: 2.963vw;
+    z-index: 0;
 }
 .select-custom-selectBox-dropdown-menu.selectBox-options li:not(:first-child) {
     border-top: 1px solid #f5f2e9;
@@ -2410,6 +2411,64 @@ footer .cs-info .btn-tel {
     word-break: keep-all;
 }
 
+/* 자주 묻는 질문 */
+.faq-list li {
+    padding: 4.630vw 6.481vw;
+    border-bottom: 0.185vw solid #edeae2;
+}
+.faq-list .tit {
+    display: block;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+.faq-list .tit:after {
+    display: block;
+    position: absolute;
+    top: 0.926vw;
+    right: 0;
+    width: 2.222vw;
+    height: 2.222vw;
+    background: url("../images/common/ico_arrow.png") no-repeat center center;
+    background-size: cover;
+    transform: rotate(0);
+    transition: .3s transform;
+    content: '';
+}
+.faq-list .active .tit:after {
+    transform: rotate(-180deg);
+}
+.faq-list .question:before {
+    display: block;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    content: 'Q.';
+}
+.faq-list .question {
+    position: relative;
+    width: 93.191%;
+    padding-left: 4.167vw;
+    box-sizing: border-box;
+    letter-spacing: -0.06em;
+    line-height: 1.208em;
+}
+.faq-list .more-content > div {
+    margin-top: 2.778vw;
+    padding: 4.63vw;
+    background-color: #edeae2;
+    border-radius: 4.444vw;
+}
+.faq-list .answer:before {
+    display: block;
+    font-weight: 700;
+    content: 'A.';
+}
+.faq-list .answer {
+    letter-spacing: -0.06em;
+    line-height: 1.208em;
+}
+
 /* 내 문의 내역 */
 .my-qna-list {
     border-top: 0.185vw solid #edeae2;
@@ -2794,7 +2853,7 @@ footer .cs-info .btn-tel {
         background-size: 6px;
     }
     .select-custom-selectBox-dropdown-menu.selectBox-options {
-        max-height: 68px;
+        max-height: 139px;
         border-radius: 10px;
     }
     .select-custom-selectBox-dropdown-menu.selectBox-options li a {
@@ -3706,6 +3765,26 @@ footer .cs-info .btn-tel {
         border-bottom: 1px solid #edeae2;
     }
 
+    /* 자주 묻는 질문 */
+    .faq-list li {
+        padding: 15px 20px;
+        border-bottom: 1px solid #edeae2;
+    }
+    .faq-list .tit:after {
+        top: 3px;
+        right: 0;
+        width: 7px;
+        height: 7px;
+    }
+    .faq-list .question {
+        padding-left: 13px;
+    }
+    .faq-list .more-content > div {
+        margin-top: 9px;
+        padding: 15px;
+        border-radius: 14px;
+    }
+
     /* 내 문의 내역 */
     .my-qna-list {
         border-top: 1px solid #edeae2;
@@ -4031,7 +4110,7 @@ footer .cs-info .btn-tel {
         background-size: 24px;
     }
     .select-custom-selectBox-dropdown-menu.selectBox-options {
-        max-height: 230px;
+        max-height: 468px;
         border-radius: 32px;
     }
     .select-custom-selectBox-dropdown-menu.selectBox-options li a {
@@ -5054,6 +5133,26 @@ footer .cs-info .btn-tel {
     /* 공지사항 상세 */
     .notice-view .view-head {
         border-bottom: 2px solid #edeae2;
+    }
+
+    /* 자주 묻는 질문 */
+    .faq-list li {
+        padding: 50px 70px;
+        border-bottom: 2px solid #edeae2;
+    }
+    .faq-list .tit:after {
+        top: 10px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/common/ico_arrow@2x.png");
+    }
+    .faq-list .question {
+        padding-left: 45px;
+    }
+    .faq-list .more-content > div {
+        margin-top: 30px;
+        padding: 50px;
+        border-radius: 48px;
     }
 
     /* 내 문의 내역 */
