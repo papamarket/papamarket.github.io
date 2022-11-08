@@ -255,7 +255,7 @@ body {
 .btn-wide {
     width: 100%;
     height: 12.037vw;
-    border-radius: 2.222vw;
+    border-radius: 3.333vw;
     line-height: 12.037vw;
 }
 .btn-menu,
@@ -311,25 +311,66 @@ body {
 /* select */
 select {
     height: 11.111vw;
-    padding: 0 2.778vw;
+    padding: 0 4.167vw;
     background: #edeae2 url("../images/common/ico_arrow_gy.png") no-repeat center right 2.778vw;
     background-size: 2.222vw;
     border: 0;
-    border-radius: 2.222vw;
-    outline: 0;
+    border-radius: 3.333vw;
+}
+/* select custom */
+.select-custom {
+    width: 100%;
+}
+.select-custom.selectBox-dropdown {
+    height: 11.111vw;
+    color: #222;
+    background: #fff;
+    border: 0;
+    border-radius: 3.333vw;
+    line-height: 1;
+    outline: initial;
+}
+.select-custom.selectBox-dropdown .selectBox-label {
+    padding: 0 4.167vw;
+    letter-spacing: -0.06em;
+    line-height: 11.111vw;
+}
+.select-custom.selectBox-dropdown .selectBox-arrow {
+    width: 12.128%;
+    height: 100%;
+    background: url("../images/common/ico_arrow.png") no-repeat center center;
+    background-size: 2.222vw;
+    border-left: 0;
+}
+.select-custom-selectBox-dropdown-menu.selectBox-options {
+    max-height: 21.296vw;
+    background: #428c75;
+    border: 0;
+    border-radius: 2.963vw;
+}
+.select-custom-selectBox-dropdown-menu.selectBox-options li:not(:first-child) {
+    border-top: 1px solid #f5f2e9;
+}
+.select-custom-selectBox-dropdown-menu.selectBox-options li a {
+    padding: 0 4.167vw;
+    color: #fff;
+    font-size: 3.333vw;
+    background: none;
+    letter-spacing: -0.06em;
+    line-height: 8.333vw;
 }
 
 /* input */
 .input-row {
     height: 11.111vw;
     background-color: #edeae2;
-    border-radius: 2.222vw;
+    border-radius: 3.333vw;
     overflow: hidden;
 }
 .input-row .inp {
     width: 100%;
     height: 100%;
-    padding: 0 2.778vw;
+    padding: 0 4.167vw;
     color: #222;
     background-color: transparent;
     box-sizing: border-box;
@@ -354,89 +395,71 @@ select {
 }
 input[type="radio"],
 input[type="checkbox"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    clip: rect(0 0 0 0);
+    background-color: transparent;
+    box-sizing: border-box;
+    -webkit-appearance: none;
     overflow: hidden;
+}
+input[type="checkbox"] {
+    border: 0.185vw solid #428c75;
 }
 input[type="radio"] + label,
 input[type="checkbox"] + label {
     cursor: pointer;
 }
-input[type="radio"] + label:before,
-input[type="checkbox"] + label:before {
-	display: block;
-    position: absolute;
-    left: 0;
-    background-color: transparent;
-    box-sizing: border-box;
-    overflow: hidden;
-    content: ' ';
-}
-input[type="checkbox"] + label:before {
-    border: 0.185vw solid #428c75;
-}
-input[type="radio"]:checked + label:before,
-input[type="checkbox"]:checked + label:before {
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
     background-color: #428c75;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 0;
 }
 /* design-inp */
-.design-inp + label {
-    position: relative;
-    letter-spacing: -0.06em;
-}
-.design-inp[type="radio"] + label {
-    padding-left: 5.833vw;
-}
-.design-inp[type="checkbox"] + label {
-    padding-left: 5.556vw;
-}
-.design-inp + label:before {
-    top: 50%;
-    transform: translate(0, -50%);
-}
-.design-inp[type="radio"] + label:before {
+.design-inp[type="radio"] {
     width: 4.167vw;
     height: 4.167vw;
     border: 0.278vw solid #428c75;
     border-radius: 1.111vw;
 }
-.design-inp[type="checkbox"] + label:before {
+.design-inp[type="checkbox"] {
     width: 3.889vw;
     height: 3.889vw;
     border-radius: 0.741vw;
 }
-.design-inp:checked + label:before {
+.design-inp:checked {
     background-image: url("../images/common/ico_check.png");
 }
+.design-inp + label {
+    letter-spacing: -0.06em;
+}
+.design-inp[type="radio"] + label {
+    margin-left: 1.111vw;
+}
+.design-inp[type="checkbox"] + label {
+    margin-left: 1.574vw;
+}
 /* select-inp */
-.select-inp + label:before {
+.select-inp {
     width: 6.111vw;
     height: 6.111vw;
     border-radius: 50%;
 }
-.select-inp:checked + label:before {
+.select-inp:checked {
     background-image: url("../images/common/ico_select.png");
 }
 /* input-area */
 .input-area .input-row {
-    width: calc(100% - 18.241vw);
+    width: calc(100% - 21.296vw);
 }
 .input-area .btn {
-    width: 16.389vw;
+    width: 19.444vw;
     height: 11.111vw;
     background-color: #edeae2;
-    border-radius: 2.222vw;
+    border-radius: 3.333vw;
     letter-spacing: -0.06em;
     line-height: 11.111vw;
 }
 .input-area select {
-    width: 16.389vw;
+    width: 19.444vw;
 }
 .input-area .bar {
     display: block;
@@ -446,7 +469,7 @@ input[type="checkbox"]:checked + label:before {
     background-color: #808080;
 }
 .input-area .bar + .input-row {
-    width: calc(100% - 19.722vw);
+    width: calc(100% - 22.778vw);
 }
 .input-area.zip-code-area {
     width: 70.851%;
@@ -1020,7 +1043,8 @@ footer .cs-info .btn-tel {
     font-weight: 400;
     letter-spacing: 0;
 }
-.sub-header a.after:after {
+.sub-header a.after:after,
+.btn-after:after {
     display: inline-block;
     width: 1.667vw;
     height: 2.778vw;
@@ -1071,7 +1095,6 @@ footer .cs-info .btn-tel {
 .login-box .btn {
     width: 100%;
     height: 11.111vw;
-    border-radius: 2.222vw;
 }
 .login-box .input-row + .input-row,
 .login-box .social-login .btn + .btn {
@@ -1079,6 +1102,7 @@ footer .cs-info .btn-tel {
 }
 .login-box .btn-login {
     margin: 4.630vw 0;
+    border-radius: 3.333vw;
 }
 .login-box .info-user-menu li {
     position: relative;
@@ -1101,6 +1125,7 @@ footer .cs-info .btn-tel {
 .login-box .social-login .btn {
     background-size: contain;
     background-repeat: no-repeat;
+    border-radius: 2.222vw;
     text-align: left;
     text-indent: 41.429%;
 }
@@ -1141,9 +1166,9 @@ footer .cs-info .btn-tel {
 .agree-wrap .more-content > div {
     width: 100%;
     height: 18.519vw;
-    padding: 2.778vw;
+    padding: 4.167vw;
     background-color: #edeae2;
-    border-radius: 2.222vw;
+    border-radius: 3.333vw;
     box-sizing: border-box;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -1444,10 +1469,13 @@ footer .cs-info .btn-tel {
     border-radius: 5.926vw;
     overflow: hidden;
 }
-.product-list .product-img .select-inp + label {
+.product-list .product-img .select-inp {
     position: absolute;
     top: 2.778vw;
     left: 2.778vw;
+}
+.product-list .product-img .select-inp + label {
+    position: absolute;
     font-size: 0;
     text-indent: -9999px;
 }
@@ -2382,6 +2410,47 @@ footer .cs-info .btn-tel {
     word-break: keep-all;
 }
 
+/* 내 문의 내역 */
+.my-qna-list {
+    border-top: 0.185vw solid #edeae2;
+}
+.my-qna-list li {
+    border-bottom: 0.185vw solid #edeae2;
+}
+.my-qna-list .product-info {
+    flex-wrap: wrap;
+    width: 71.277%;
+}
+.my-qna-list .box .product-txt {
+    width: calc(100% - 21.667vw);
+}
+.my-qna-list .box .product-info + div {
+    flex-wrap: wrap;
+    align-self: flex-start;
+    width: 24.894%;
+    height: 18.889vw;
+}
+.my-qna-list .box .btn-wrap {
+    width: 100%;
+}
+.my-qna-list .box .btn-wrap .btn {
+    width: 46.154%;
+    height: 4.444vw;
+    background-color: #edeae2;
+    border-radius: 2.222vw;
+}
+.my-qna-list .box .state {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: center;
+    width: 85.897%;
+    height: 7.037vw;
+    margin-left: auto;
+    border-radius: 3.519vw;
+    letter-spacing: -0.06em;
+}
+
 /* 나의 리뷰 */
 .review-to-write-list li:not(:first-child),
 .review-written-list li:not(:first-child) {
@@ -2419,7 +2488,7 @@ footer .cs-info .btn-tel {
     width: 100%;
 }
 .review-to-write-list .box .product-txt {
-    width: 66.476%;
+    width: calc(100% - 21.667vw);
 }
 .order-box .box .product-txt p {
     letter-spacing: -0.06em;
@@ -2695,7 +2764,7 @@ footer .cs-info .btn-tel {
     /* btn */
     .btn-wide {
         height: 38px;
-        border-radius: 8px;
+        border-radius: 10px;
         line-height: 38px;
     }
 
@@ -2707,66 +2776,87 @@ footer .cs-info .btn-tel {
     /* select */
     select {
         height: 36px;
-        padding: 0 9px;
+        padding: 0 13px;
         background-position: center right 9px;
         background-size: 6px;
-        border-radius: 6px;
+        border-radius: 10px;
+    }
+    /* select custom */
+    .select-custom.selectBox-dropdown {
+        height: 36px;
+        border-radius: 10px;
+    }
+    .select-custom.selectBox-dropdown .selectBox-label {
+        padding: 0 13px;
+        line-height: 36px;
+    }
+    .select-custom.selectBox-dropdown .selectBox-arrow {
+        background-size: 6px;
+    }
+    .select-custom-selectBox-dropdown-menu.selectBox-options {
+        max-height: 68px;
+        border-radius: 10px;
+    }
+    .select-custom-selectBox-dropdown-menu.selectBox-options li a {
+        padding: 0 13px;
+        font-size: 10px;
+        line-height: 26px;
     }
 
     /* input */
     .input-row {
         height: 36px;
-        border-radius: 6px;
+        border-radius: 10px;
     }
     .input-row .inp {
-        padding: 0 9px;
+        padding: 0 13px;
     }
     /* radio, checkbox */
-    input[type="checkbox"] + label:before {
+    input[type="checkbox"] {
         border: 1px solid #428c75;
     }
     /* design-inp */
-    .design-inp[type="radio"] + label {
-        padding-left: 19px;
-    }
-    .design-inp[type="checkbox"] + label {
-        padding-left: 18px;
-    }
-    .design-inp[type="radio"] + label:before {
+    .design-inp[type="radio"] {
         width: 13px;
         height: 13px;
         border: 1px solid #428c75;
         border-radius: 4px;
     }
-    .design-inp[type="checkbox"] + label:before {
+    .design-inp[type="checkbox"] {
         width: 12px;
         height: 12px;
         border-radius: 2px;
     }
+    .design-inp[type="radio"] + label {
+        margin-left: 4px;
+    }
+    .design-inp[type="checkbox"] + label {
+        margin-left: 5px;
+    }
     /* select-inp */
-    .select-inp + label:before {
+    .select-inp {
         width: 20px;
         height: 20px;
     }
     /* input-area */
     .input-area .input-row {
-        width: calc(100% - 58px);
+        width: calc(100% - 68px);
     }
     .input-area .btn {
-        width: 52px;
+        width: 62px;
         height: 36px;
-        border-radius: 6px;
+        border-radius: 10px;
         line-height: 36px;
     }
     .input-area select {
-        width: 52px;
+        width: 62px;
     }
     .input-area .bar {
         width: 5px;
         height: 1px;
     }
     .input-area .bar + .input-row {
-        width: calc(100% - 63px);
+        width: calc(100% - 73px);
     }
     .input-area + .input-area,
     .input-area + .input-row,
@@ -3029,7 +3119,8 @@ footer .cs-info .btn-tel {
     .sub-header h3 span {
         font-size: 12px;
     }
-    .sub-header a.after:after {
+    .sub-header a.after:after,
+    .btn-after:after {
         width: 5px;
         height: 9px;
         margin-left: 4px;
@@ -3050,7 +3141,6 @@ footer .cs-info .btn-tel {
     }
     .login-box .btn {
         height: 36px;
-        border-radius: 8px;
     }
     .login-box .input-row + .input-row,
     .login-box .social-login .btn + .btn {
@@ -3058,6 +3148,7 @@ footer .cs-info .btn-tel {
     }
     .login-box .btn-login {
         margin: 15px 0;
+        border-radius: 10px;
     }
     .login-box .info-user-menu li {
         padding: 0 6px;
@@ -3066,6 +3157,7 @@ footer .cs-info .btn-tel {
         height: 7px;
     }
     .login-box .social-login .btn {
+        border-radius: 8px;
         text-indent: 38%;
     }
 
@@ -3078,7 +3170,7 @@ footer .cs-info .btn-tel {
     .member-join .member-info-box,
     .agree-wrap .more-content > div {
         height: 60px;
-        padding: 9px;
+        padding: 13px;
         border-radius: 6px;
     }
     .member-join .member-info-box dt,
@@ -3217,7 +3309,7 @@ footer .cs-info .btn-tel {
     .product-list .product-img {
         border-radius: 18px;
     }
-    .product-list .product-img input[type="checkbox"] + label {
+    .product-list .product-img .select-inp {
         top: 9px;
         left: 9px;
     }
@@ -3609,6 +3701,32 @@ footer .cs-info .btn-tel {
     .notice-list {
         border-top: 1px solid #edeae2;
     }
+    /* 공지사항 상세 */
+    .notice-view .view-head {
+        border-bottom: 1px solid #edeae2;
+    }
+
+    /* 내 문의 내역 */
+    .my-qna-list {
+        border-top: 1px solid #edeae2;
+    }
+    .my-qna-list li {
+        border-bottom: 1px solid #edeae2;
+    }
+    .my-qna-list .box .product-txt {
+        width: calc(100% - 69px);
+    }
+    .my-qna-list .box .product-info + div {
+        height: 60px;
+    }
+    .my-qna-list .box .btn-wrap .btn {
+        height: 14px;
+        border-radius: 7px;
+    }
+    .my-qna-list .box .state {
+        height: 22px;
+        border-radius: 11px;
+    }
 
     /* 나의 리뷰 */
     .review-to-write-list li:not(:first-child),
@@ -3852,7 +3970,7 @@ footer .cs-info .btn-tel {
     /* btn */
     .btn-wide {
         height: 130px;
-        border-radius: 24px;
+        border-radius: 36px;
         line-height: 130px;
     }
     .menu-b {
@@ -3893,73 +4011,95 @@ footer .cs-info .btn-tel {
     /* select */
     select {
         height: 120px;
-        padding: 0 30px;
+        padding: 0 45px;
         background-image: url("../images/common/ico_arrow_gy@2x.png");
-        background-position:  center right 30px;
+        background-position:  center right 45px;
         background-size: 24px;
-        border-radius: 24px;
+        border-radius: 36px;
+    }
+    /* select custom */
+    .select-custom.selectBox-dropdown {
+        height: 120px;
+        border-radius: 36px;
+    }
+    .select-custom.selectBox-dropdown .selectBox-label {
+        padding: 0 45px;
+        line-height: 120px;
+    }
+    .select-custom.selectBox-dropdown .selectBox-arrow {
+        background-image: url("../images/common/ico_arrow@2x.png");
+        background-size: 24px;
+    }
+    .select-custom-selectBox-dropdown-menu.selectBox-options {
+        max-height: 230px;
+        border-radius: 32px;
+    }
+    .select-custom-selectBox-dropdown-menu.selectBox-options li a {
+        padding: 0 45px;
+        font-size: 36px;
+        line-height: 90px;
     }
 
     /* input */
     .input-row {
         height: 120px;
-        border-radius: 24px;
+        border-radius: 36px;
     }
     .input-row .inp {
-        padding: 0 30px;
+        padding: 0 45px;
     }
     /* radio, checkbox */
-    input[type="checkbox"] + label:before {
+    input[type="checkbox"] {
         border: 2px solid #428c75;
     }
     /* design-inp */
-    .design-inp[type="radio"] + label {
-        padding-left: 63px;
-    }
-    .design-inp[type="checkbox"] + label {
-        padding-left: 60px;
-    }
-    .design-inp[type="radio"] + label:before {
+    .design-inp[type="radio"] {
         width: 45px;
         height: 45px;
         border: 3px solid #428c75;
         border-radius: 12px;
     }
-    .design-inp[type="checkbox"] + label:before {
+    .design-inp[type="checkbox"] {
         width: 42px;
         height: 42px;
         border-radius: 8px;
     }
-    .design-inp:checked + label:before {
+    .design-inp:checked {
         background-image: url("../images/common/ico_check@2x.png");
     }
+    .design-inp[type="radio"] + label {
+        margin-left: 12px;
+    }
+    .design-inp[type="checkbox"] + label {
+        margin-left: 17px;
+    }
     /* select-inp */
-    .select-inp + label:before {
+    .select-inp {
         width: 66px;
         height: 66px;
     }
-    .select-inp:checked + label:before {
+    .select-inp:checked {
         background-image: url("../images/common/ico_select@2x.png");
     }
     /* input-area */
     .input-area .input-row {
-        width: calc(100% - 197px);
+        width: calc(100% - 230px);
     }
     .input-area .btn {
-        width: 177px;
+        width: 210px;
         height: 120px;
-        border-radius: 24px;
+        border-radius: 36px;
         line-height: 120px;
     }
     .input-area select {
-        width: 177px;
+        width: 210px;
     }
     .input-area .bar {
         width: 16px;
         height: 2px;
     }
     .input-area .bar + .input-row {
-        width: calc(100% - 213px);
+        width: calc(100% - 246px);
     }
     .input-area + .input-area,
     .input-area + .input-row,
@@ -4255,7 +4395,8 @@ footer .cs-info .btn-tel {
     .sub-header h3 span {
         font-size: 42px;
     }
-    .sub-header a.after:after {
+    .sub-header a.after:after,
+    .btn-after:after {
         width: 18px;
         height: 30px;
         margin-left: 15px;
@@ -4276,7 +4417,6 @@ footer .cs-info .btn-tel {
     }
     .login-box .btn {
         height: 120px;
-        border-radius: 24px;
     }
     .login-box .input-row + .input-row,
     .login-box .social-login .btn + .btn {
@@ -4284,12 +4424,16 @@ footer .cs-info .btn-tel {
     }
     .login-box .btn-login {
         margin: 50px 0;
+        border-radius: 36px;
     }
     .login-box .info-user-menu li {
         padding: 0 20px;
     }
     .login-box .info-user-menu li:not(:first-child):after {
         height: 24px;
+    }
+    .login-box .social-login .btn {
+        border-radius: 24px;
     }
     .login-box .btn-kakao {
         background-image: url("../images/common/logo_kakao@2x.png");
@@ -4313,8 +4457,8 @@ footer .cs-info .btn-tel {
     .member-join .member-info-box,
     .agree-wrap .more-content > div {
         height: 200px;
-        padding: 30px;
-        border-radius: 24px;
+        padding: 45px;
+        border-radius: 36px;
     }
     .member-join .member-info-box dt,
     .agree-wrap .more-content dt {
@@ -4460,7 +4604,7 @@ footer .cs-info .btn-tel {
     .product-list .product-img {
         border-radius: 64px;
     }
-    .product-list .product-img input[type="checkbox"] + label {
+    .product-list .product-img .select-inp {
         top: 30px;
         left: 30px;
     }
@@ -4907,6 +5051,32 @@ footer .cs-info .btn-tel {
     .notice-list {
         border-top: 2px solid #edeae2;
     }
+    /* 공지사항 상세 */
+    .notice-view .view-head {
+        border-bottom: 2px solid #edeae2;
+    }
+
+    /* 내 문의 내역 */
+    .my-qna-list {
+        border-top: 2px solid #edeae2;
+    }
+    .my-qna-list li {
+        border-bottom: 2px solid #edeae2;
+    }
+    .my-qna-list .box .product-txt {
+        width: calc(100% - 234px);
+    }
+    .my-qna-list .box .product-info + div {
+        height: 204px;
+    }
+    .my-qna-list .box .btn-wrap .btn {
+        height: 48px;
+        border-radius: 24px;
+    }
+    .my-qna-list .box .state {
+        height: 76px;
+        border-radius: 38px;
+    }
 
     /* 나의 리뷰 */
     .review-to-write-list li:not(:first-child),
@@ -4935,6 +5105,9 @@ footer .cs-info .btn-tel {
         height: 204px;
         margin-right: 30px;
         border-radius: 50px;
+    }
+    .review-to-write-list .box .product-txt {
+        width: calc(100% - 234px);
     }
     .order-box .box .product-txt .sub {
         margin-bottom: 15px;
