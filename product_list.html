@@ -32,9 +32,10 @@
                 </div>
             </div>
         </div>
-        <!-- 상품 list -->
+        <!-- 상품 목록 -->
         <section class="pb30">
             <div class="inner">
+                <!-- 카테고리 -->
                 <ul class="category-list flex fs33">
                     <li><a href="#">전체보기</a></li>
                     <li><a href="#" class="active">과일</a></li>
@@ -43,6 +44,7 @@
                     <li><a href="#">수산물</a></li>
                     <li><a href="#">가공식품</a></li>
                 </ul>
+                <!-- 상품 리스트 -->
                 <ul class="product-list flex justify-between">
                     <li>
                         <div class="product-img">
@@ -316,5 +318,24 @@
         </div>
     </div>
     <script src="./asset/js/ui.js"></script>
+    <script>
+        /* category-list fixed */
+        const headerH = $("header").height();
+        const headerOH = $("header").outerHeight();
+        const categoryOH = $(".category-list").outerHeight();
+        const categoryT = $(".category-list").offset().top - categoryOH - headerH;
+
+        $(window).scroll(function(){
+            const scrollT = $(this).scrollTop();
+
+            if(scrollT >= categoryT){
+                $(".category-list").addClass("fixed");
+                $(".category-list + .product-list").css("padding-top", categoryOH);
+            } else {
+                $(".category-list").removeClass("fixed");
+                $(".category-list + .product-list").css("padding-top", "0px");
+            }
+        });
+    </script>
 </body>
 </html>
