@@ -411,9 +411,6 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     overflow: hidden;
 }
-input[type="checkbox"] {
-    border: 0.185vw solid #428c75;
-}
 input[type="radio"] + label,
 input[type="checkbox"] + label {
     cursor: pointer;
@@ -434,6 +431,7 @@ input[type="checkbox"]:checked {
 .design-inp[type="checkbox"] {
     width: 3.889vw;
     height: 3.889vw;
+    border: 0.185vw solid #428c75;
     border-radius: 0.741vw;
 }
 .design-inp:checked {
@@ -452,6 +450,7 @@ input[type="checkbox"]:checked {
 .select-inp {
     width: 6.111vw;
     height: 6.111vw;
+    border: 0.556vw solid #428c75;
     border-radius: 50%;
 }
 .select-inp:checked {
@@ -2909,9 +2908,6 @@ footer .cs-info .btn-tel {
         padding: 0 13px;
     }
     /* radio, checkbox */
-    input[type="checkbox"] {
-        border: 1px solid #428c75;
-    }
     /* design-inp */
     .design-inp[type="radio"] {
         width: 13px;
@@ -2923,6 +2919,7 @@ footer .cs-info .btn-tel {
         width: 12px;
         height: 12px;
         border-radius: 2px;
+        border: 1px solid #428c75;
     }
     .design-inp[type="radio"] + label {
         margin-left: 4px;
@@ -2934,6 +2931,7 @@ footer .cs-info .btn-tel {
     .select-inp {
         width: 20px;
         height: 20px;
+        border: 2px solid #428c75;
     }
     /* input-area */
     .input-area .input-row {
@@ -4193,9 +4191,6 @@ footer .cs-info .btn-tel {
         padding: 0 45px;
     }
     /* radio, checkbox */
-    input[type="checkbox"] {
-        border: 2px solid #428c75;
-    }
     /* design-inp */
     .design-inp[type="radio"] {
         width: 45px;
@@ -4207,6 +4202,7 @@ footer .cs-info .btn-tel {
         width: 42px;
         height: 42px;
         border-radius: 8px;
+        border: 3px solid #428c75;
     }
     .design-inp:checked {
         background-image: url("../images/common/ico_check@2x.png");
@@ -4221,6 +4217,7 @@ footer .cs-info .btn-tel {
     .select-inp {
         width: 66px;
         height: 66px;
+        border: 6px solid #428c75;
     }
     .select-inp:checked {
         background-image: url("../images/common/ico_select@2x.png");
