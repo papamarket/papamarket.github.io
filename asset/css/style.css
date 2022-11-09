@@ -2658,14 +2658,14 @@ footer .cs-info .btn-tel {
 }
 .review-write .write-box {
     height: 72.222vw;
-    padding: 8.056vw 7.500vw;
+    padding: 4.630vw 4.167vw 8.056vw;
 }
 .write-form .write-box textarea {
     padding: 0;
 }
 .write-form .write-box .txt-total {
     position: absolute;
-    right: 7.778vw;
+    right: 4.444vw;
     bottom: 5vw;
     color: #9e9e9e;
 }
@@ -3937,10 +3937,10 @@ footer .cs-info .btn-tel {
     }
     .review-write .write-box {
         height: 230px;
-        padding: 25px 24px;
+        padding: 15px 13px 25px;
     }
     .write-form .write-box .txt-total {
-        right: 25px;
+        right: 14px;
         bottom: 16px;
     }
     .write-form .photo-upload li > div {
@@ -5342,10 +5342,10 @@ footer .cs-info .btn-tel {
     }
     .review-write .write-box {
         height: 780px;
-        padding: 87px 81px;
+        padding: 50px 45px 87px;
     }
     .write-form .write-box .txt-total {
-        right: 84px;
+        right: 48px;
         bottom: 54px;
     }
     .write-form .photo-upload li > div {
