@@ -267,6 +267,7 @@ body {
     border-radius: 3.333vw;
     line-height: 12.037vw;
 }
+.btn-home,
 .btn-menu,
 .btn-basket,
 .btn-customer,
@@ -281,6 +282,9 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     text-indent: -9999px;
+}
+.home-w {
+    background-image: url("../images/common/ico_home_w.png");
 }
 .menu-b {
     background-image: url("../images/common/ico_menu.png");
@@ -407,8 +411,8 @@ select {
     align-items: center;
     position: relative;
 }
-input[type="radio"],
-input[type="checkbox"] {
+.design-inp,
+.select-inp {
     background-color: transparent;
     box-sizing: border-box;
     -webkit-appearance: none;
@@ -418,8 +422,8 @@ input[type="radio"] + label,
 input[type="checkbox"] + label {
     cursor: pointer;
 }
-input[type="radio"]:checked,
-input[type="checkbox"]:checked {
+.design-inp:checked,
+.select-inp:checked {
     background-color: #428c75;
     background-size: cover;
     background-repeat: no-repeat;
@@ -857,27 +861,53 @@ footer .cs-info .btn-tel {
     bottom: 6.111vw;
     width: calc(100% - 12.962vw);
     height: 17.593vw;
-    padding: 0 6.481vw;
+    padding: 0 7.407vw;
     border-radius: 4.630vw;
     box-sizing: border-box;
     z-index: 20;
 }
-.footer-menu .logo a {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.footer-menu .btn {
+    width: 4.630vw;
+    height: 4.815vw;
 }
-.footer-menu .logo img {
-    width: 25.093vw;
+.footer-menu .switch {
+    width: 14.352vw;
+    height: 4.630vw;
+    border: 0.463vw solid #fff;
+    border-radius: 2.778vw;
 }
-.footer-menu nav {
-    width: 50%;
-    margin-left: 12.5%;
+.footer-menu .slider {
+    border-radius: 2.315vw;
 }
-.footer-menu nav .btn {
-    width: 5vw;
-    height: 5vw;
+.footer-menu .slider:before {
+    top: 50%;
+    left: 0.648vw;
+    width: 3.519vw;
+    height: 3.519vw;
+    margin-top: -1.7595vw;
+    background-color: #a9e09d;
+}
+.footer-menu input:checked + .slider:before {
+    -webkit-transform: translateX(9.537vw);
+    -ms-transform: translateX(9.537vw);
+    transform: translateX(9.537vw);
+}
+.footer-menu .slider:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 2.500vw;
+    color: #fff;
+    font-size: 3.056vw;
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    transform: translate(0, -50%);
+    content: '배송';
+}
+.footer-menu input:checked + .slider:after {
+    left: 2.500vw;
+    right: auto;
+    content: '픽업';
 }
 
 /* gnb-menu */
@@ -2217,7 +2247,7 @@ footer .cs-info .btn-tel {
 }
 /* switch */
 .mypage-wrap .switch {
-    width: 9.630vw;
+    width: 9.722vw;
     height: 4.630vw;
 }
 .mypage-wrap .slider {
@@ -3166,15 +3196,39 @@ footer .cs-info .btn-tel {
         bottom: 20px;
         width: calc(100% - 40px);
         height: 56px;
-        padding: 0 20px;
+        padding: 0 24px;
         border-radius: 15px;
     }
-    .footer-menu .logo img {
-        width: 80px;
-    }
-    .footer-menu nav .btn {
-        width: 16px;
+    .footer-menu .btn {
+        width: 15px;
         height: 16px;
+    }
+    .footer-menu .switch {
+        width: 46px;
+        height: 16px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+    }
+    .footer-menu .slider {
+        border-radius: 7px;
+    }
+    .footer-menu .slider:before {
+        left: 3px;
+        width: 10px;
+        height: 10px;
+        margin-top: -5px;
+    }
+    .footer-menu input:checked + .slider:before {
+        -webkit-transform: translateX(30px);
+        -ms-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    .footer-menu .slider:after {
+        right: 8px;
+        font-size: 10px;
+    }
+    .footer-menu input:checked + .slider:after {
+        left: 8px;
     }
 
     /* gnb-menu */
@@ -4194,6 +4248,9 @@ footer .cs-info .btn-tel {
         border-radius: 36px;
         line-height: 130px;
     }
+    .home-w {
+        background-image: url("../images/common/ico_home_w@2x.png");
+    }
     .menu-b {
         background-image: url("../images/common/ico_menu@2x.png");
     }
@@ -4494,15 +4551,39 @@ footer .cs-info .btn-tel {
         height: 190px;
         margin-left: auto;
         margin-right: auto;
-        padding: 0 70px;
+        padding: 0 80px;
         border-radius: 50px;
     }
-    .footer-menu .logo img {
-        width: 271px;
+    .footer-menu .btn {
+        width: 50px;
+        height: 52px;
     }
-    .footer-menu nav .btn {
-        width: 54px;
-        height: 54px;
+    .footer-menu .switch {
+        width: 155px;
+        height: 50px;
+        border: 5px solid #fff;
+        border-radius: 30px;
+    }
+    .footer-menu .slider {
+        border-radius: 25px;
+    }
+    .footer-menu .slider:before {
+        left: 7px;
+        width: 38px;
+        height: 38px;
+        margin-top: -19px;
+    }
+    .footer-menu input:checked + .slider:before {
+        -webkit-transform: translateX(103px);
+        -ms-transform: translateX(103px);
+        transform: translateX(103px);
+    }
+    .footer-menu .slider:after {
+        right: 27px;
+        font-size: 33px;
+    }
+    .footer-menu input:checked + .slider:after {
+        left: 27px;
     }
 
     /* gnb-menu */
@@ -5181,7 +5262,7 @@ footer .cs-info .btn-tel {
     }
     /* switch */
     .mypage-wrap .switch {
-        width: 104px;
+        width: 105px;
         height: 50px;
     }
     .mypage-wrap .slider {
