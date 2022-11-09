@@ -2151,6 +2151,11 @@ footer .cs-info .btn-tel {
     color: #808080;
     font-size: 3.333vw;
 }
+/* fixed-btn-wrap */
+.product-detail-wrap .fixed-btn-wrap {
+    bottom: 0;
+    background-color: #edeae2;
+}
 
 /* 마이페이지 */
 .mypage-wrap .profile-info .profile-img {
