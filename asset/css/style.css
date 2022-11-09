@@ -495,6 +495,34 @@ input[type="checkbox"]:checked {
     margin-top: 1.852vw;
 }
 
+/* input switch */
+.switch {
+    display: inline-block;
+    position: relative;
+}
+.switch input { 
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+    content: "";
+}
+
 /* bar-list */
 .bar-list li {
     position: relative;
@@ -2187,6 +2215,31 @@ footer .cs-info .btn-tel {
     letter-spacing: -0.06em;
     line-height: 3.889vw;
 }
+/* switch */
+.mypage-wrap .switch {
+    width: 9.630vw;
+    height: 4.630vw;
+}
+.mypage-wrap .slider {
+    background-color: #edeae2;
+    border-radius: 2.315vw;
+}
+.mypage-wrap .slider:before {
+    left: 0.463vw;
+    bottom: 0.463vw;
+    width: 3.704vw;
+    height: 3.704vw;
+    background-color: #fff;
+}
+.mypage-wrap input:checked + .slider {
+    background-color: #408d75;
+}
+.mypage-wrap input:checked + .slider:before {
+    background-color: #f3f6f8;
+    -webkit-transform: translateX(5.093vw);
+    -ms-transform: translateX(5.093vw);
+    transform: translateX(5.093vw);
+}
 
 /* 후기, 문의, 공지사항 */
 .review-photo-list {
@@ -3725,6 +3778,25 @@ footer .cs-info .btn-tel {
         border-radius: 6px;
         line-height: 12px;
     }
+    /* switch */
+    .mypage-wrap .switch {
+        width: 32px;
+        height: 16px;
+    }
+    .mypage-wrap .slider {
+        border-radius: 8px;
+    }
+    .mypage-wrap .slider:before {
+        left: 2px;
+        bottom: 2px;
+        width: 12px;
+        height: 12px;
+    }
+    .mypage-wrap input:checked + .slider:before {
+        -webkit-transform: translateX(16px);
+        -ms-transform: translateX(16px);
+        transform: translateX(16px);
+    }
 
     /* 후기, 문의, 공지사항 */
     .review-photo-list {
@@ -5106,6 +5178,25 @@ footer .cs-info .btn-tel {
         padding: 0 16px;
         border-radius: 21px;
         line-height: 42px;
+    }
+    /* switch */
+    .mypage-wrap .switch {
+        width: 104px;
+        height: 50px;
+    }
+    .mypage-wrap .slider {
+        border-radius: 25px;
+    }
+    .mypage-wrap .slider:before {
+        left: 5px;
+        bottom: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    .mypage-wrap input:checked + .slider:before {
+        -webkit-transform: translateX(55px);
+        -ms-transform: translateX(55px);
+        transform: translateX(55px);
     }
 
     /* 후기, 문의, 공지사항 */
