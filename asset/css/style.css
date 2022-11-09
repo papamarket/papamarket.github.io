@@ -2154,6 +2154,7 @@ footer .cs-info .btn-tel {
 /* fixed-btn-wrap */
 .product-detail-wrap .fixed-btn-wrap {
     bottom: 0;
+    height: 22.222vw;
     background-color: #edeae2;
 }
 
@@ -3538,7 +3539,6 @@ footer .cs-info .btn-tel {
     /* fixed-btn-wrap */
     .fixed-btn-wrap {
         bottom: 82px;
-        height: 72px;
     }
     .fixed-btn-wrap .btn {
         border-radius: 14px;
@@ -3789,6 +3789,10 @@ footer .cs-info .btn-tel {
     }
     .product-detail-wrap .tab-btn-box a span {
         font-size: 11px;
+    }
+    /* fixed-btn-wrap */
+    .product-detail-wrap .fixed-btn-wrap {
+        height: 72px;
     }
 
     /* 마이페이지 */
@@ -5216,6 +5220,10 @@ footer .cs-info .btn-tel {
     }
     .product-detail-wrap .tab-btn-box a span {
         font-size: 36px;
+    }
+    /* fixed-btn-wrap */
+    .product-detail-wrap .fixed-btn-wrap {
+        height: 240px;
     }
 
     /* 마이페이지 */
