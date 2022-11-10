@@ -1703,6 +1703,48 @@ footer .cs-info .btn-tel {
 .together-detail-wrap .product-slide .end .txt-box {
     background-color: #808080;
 }
+/* 공구 참여 인원 */
+.together-person {
+    position: absolute;
+    right: 4.630vw;
+    bottom: 8.704vw;
+    z-index: 2;
+}
+.together-person .person-list {
+    width: 26.852vw;
+    margin: 0 auto 1.667vw;
+}
+.together-person .person-list .swiper-slide {
+    background-color: #edeae2;
+    border-radius: 50%;
+    transition: opacity .15s linear;
+    overflow: hidden;
+}
+.together-person .person-list .swiper-slide-prev,
+.together-person .person-list .swiper-slide-duplicate-active {
+    opacity: 0;
+}
+.together-person .person-list img {
+    border-radius: 50%;
+}
+.together-person .txt:before {
+    display: block;
+    width: 3.704vw;
+    height: 2.500vw;
+    margin-right: 0.741vw;
+    background: url("../images/common/ico_person.png") no-repeat center center;
+    background-size: contain;
+    content: '';
+}
+.together-person .txt {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.111vw;
+    padding: 0 1.944vw;
+    border-radius: 2.315vw;
+    letter-spacing: -0.06em;
+}
 
 /* 주변 매장 */
 .market-list {
@@ -3599,6 +3641,25 @@ footer .cs-info .btn-tel {
         text-align: center;
         line-height: 1.2em;
     }
+    /* 공구 참여 인원 */
+    .together-person {
+        right: 15px;
+        bottom: 28px;
+    }
+    .together-person .person-list {
+        width: 86px;
+        margin-bottom: 5px;
+    }
+    .together-person .txt:before {
+        width: 12px;
+        height: 8px;
+        margin-right: 2px;
+    }
+    .together-person .txt {
+        height: 20px;
+        padding: 0 6px;
+        border-radius: 6px;
+    }
 
     /* 주변 매장 */
     .market-list li {
@@ -4989,6 +5050,26 @@ footer .cs-info .btn-tel {
     }
     .together-detail-wrap .product-slide .txt-box {
         padding: 0 40px;
+    }
+    /* 공구 참여 인원 */
+    .together-person {
+        right: 50px;
+        bottom: 94px;
+    }
+    .together-person .person-list {
+        width: 290px;
+        margin-bottom: 18px;
+    }
+    .together-person .txt:before {
+        width: 40px;
+        height: 27px;
+        margin-right: 8px;
+        background-image: url("../images/common/ico_person@2x.png");
+    }
+    .together-person .txt {
+        height: 66px;
+        padding: 0 21px;
+        border-radius: 25px;
     }
 
     /* 주변 매장 */
