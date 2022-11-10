@@ -902,12 +902,12 @@ footer .cs-info .btn-tel {
     font-weight: 500;
     letter-spacing: -0.06em;
     transform: translate(0, -50%);
-    content: '배송';
+    content: '픽업';
 }
 .footer-menu input:checked + .slider:after {
     left: 2.500vw;
     right: auto;
-    content: '픽업';
+    content: '배송';
 }
 
 /* gnb-menu */
@@ -1433,6 +1433,7 @@ footer .cs-info .btn-tel {
     bottom: 2.778vw;
 }
 .product-slide .product-txt {
+    position: relative;
     margin-top: 1.852vw;
 }
 .product-slide .product-txt p {
@@ -1561,6 +1562,7 @@ footer .cs-info .btn-tel {
     z-index: 1;
 }
 .product-list .product-txt {
+    position: relative;
     margin-top: 1.852vw;
 }
 .product-list .product-txt p {
@@ -1574,6 +1576,19 @@ footer .cs-info .btn-tel {
 }
 .product-list .product-txt .price {
     margin-top: 0.278vw;
+}
+.product-slide .product-txt .label,
+.product-list .product-txt .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3.889vw;
+    padding: 0 1.944vw;
+    border-radius: 1.944vw;
+    z-index: -1;
 }
 
 /* fixed-btn-wrap */
@@ -3577,6 +3592,12 @@ footer .cs-info .btn-tel {
     .product-list .product-txt .price {
         margin-top: 1px;
     }
+    .product-slide .product-txt .label,
+    .product-list .product-txt .label {
+        height: 12px;
+        padding: 0 6px;
+        border-radius: 6px;
+    }
 
     /* fixed-btn-wrap */
     .fixed-btn-wrap {
@@ -4993,6 +5014,12 @@ footer .cs-info .btn-tel {
     }
     .product-list .product-txt .price {
         margin-top: 3px;
+    }
+    .product-slide .product-txt .label,
+    .product-list .product-txt .label {
+        height: 42px;
+        padding: 0 21px;
+        border-radius: 21px;
     }
 
     /* fixed-btn-wrap */
