@@ -98,6 +98,9 @@ body {
 .pt20 {
     padding-top: 1.852vw;
 }
+.pt27 {
+    padding-top: 2.500vw;
+}
 .pt36 {
     padding-top: 3.333vw;
 }
@@ -165,6 +168,9 @@ body {
 }
 .gray2 {
     color: #a9a69c;
+}
+.gray3 {
+    color: #9e9e9e;
 }
 .green {
     color: #428c75;
@@ -2343,7 +2349,8 @@ footer .cs-info .btn-tel {
     padding: 0 5.556vw;
     box-sizing: border-box;
 }
-.mypage-menu li .tit {
+.mypage-menu li .tit,
+.mypage-menu .txt-box .txt {
     letter-spacing: -0.06em;
 }
 .mypage-menu li .ico-more {
@@ -2399,11 +2406,15 @@ footer .cs-info .btn-tel {
 .mypage-menu.setting-menu li:not(:first-child) {
     margin-top: 0;
 }
-.mypage-menu.setting-menu li:not(.bb10-edeae2) {
+.mypage-menu.setting-menu li:not(.bb10-edeae2, .bb0) {
     border-bottom: 0.185vw solid #edeae2;
 }
 .mypage-menu.setting-menu li > a {
     padding: 0 12.037vw;
+}
+/* 알림설정 */
+.mypage-menu.notification-menu li {
+    height: 15.556vw;
 }
 
 /* 후기, 문의, 공지사항 */
@@ -3056,6 +3067,9 @@ footer .cs-info .btn-tel {
     /* padding */
     .pt20 {
         padding-top: 6px;
+    }
+    .pt27 {
+        padding-top: 8px;
     }
     .pt36 {
         padding-top: 11px;
@@ -4117,11 +4131,15 @@ footer .cs-info .btn-tel {
     .mypage-menu.setting-menu li {
         height: 40px;
     }
-    .mypage-menu.setting-menu li:not(.bb10-edeae2) {
+    .mypage-menu.setting-menu li:not(.bb10-edeae2, .bb0) {
         border-bottom: 1px solid #edeae2;
     }
     .mypage-menu.setting-menu li > a {
         padding: 0 38px;
+    }
+    /* 알림설정 */
+    .mypage-menu.notification-menu li {
+        height: 50px;
     }
 
     /* 후기, 문의, 공지사항 */
@@ -4445,6 +4463,9 @@ footer .cs-info .btn-tel {
     /* padding */
     .pt20 {
         padding-top: 20px;
+    }
+    .pt27 {
+        padding-top: 27px;
     }
     .pt36 {
         padding-top: 36px;
@@ -5646,11 +5667,15 @@ footer .cs-info .btn-tel {
     .mypage-menu.setting-menu li {
         height: 138px;
     }
-    .mypage-menu.setting-menu li:not(.bb10-edeae2) {
+    .mypage-menu.setting-menu li:not(.bb10-edeae2, .bb0) {
         border-bottom: 2px solid #edeae2;
     }
     .mypage-menu.setting-menu li > a {
         padding: 0 130px;
+    }
+    /* 알림설정 */
+    .mypage-menu.notification-menu li {
+        height: 168px;
     }
 
     /* 후기, 문의, 공지사항 */
