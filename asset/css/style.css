@@ -2303,10 +2303,6 @@ footer .cs-info .btn-tel {
 .mypage-wrap .profile-info .progress {
     margin-top: 2.778vw;
 }
-.mypage-wrap .box-list,
-.mypage-menu {
-    margin-top: 7.407vw;
-}
 .mypage-wrap .box-list li {
     position: relative;
     width: 31.915%;
@@ -2390,6 +2386,24 @@ footer .cs-info .btn-tel {
     -webkit-transform: translateX(5.093vw);
     -ms-transform: translateX(5.093vw);
     transform: translateX(5.093vw);
+}
+/* 내 정보 수정 */
+.mypage-menu.setting-menu {
+    margin-top: 0;
+}
+.mypage-menu.setting-menu li {
+    height: 138px;
+    background-color: transparent;
+    border-radius: 0;
+}
+.mypage-menu.setting-menu li:not(:first-child) {
+    margin-top: 0;
+}
+.mypage-menu.setting-menu li:not(.bb10-edeae2) {
+    border-bottom: 2px solid #edeae2;
+}
+.mypage-menu.setting-menu li > a {
+    padding: 0 130px;
 }
 
 /* 후기, 문의, 공지사항 */
@@ -4053,10 +4067,6 @@ footer .cs-info .btn-tel {
     .mypage-wrap .profile-info .progress {
         margin-top: 9px;
     }
-    .mypage-wrap .box-list,
-    .mypage-menu {
-        margin-top: 24px;
-    }
     .mypage-wrap .box-list li {
         border-radius: 18px;
     }
@@ -5574,10 +5584,6 @@ footer .cs-info .btn-tel {
     }
     .mypage-wrap .profile-info .progress {
         margin-top: 30px;
-    }
-    .mypage-wrap .box-list,
-    .mypage-menu {
-        margin-top: 80px;
     }
     .mypage-wrap .box-list li {
         border-radius: 64px;
