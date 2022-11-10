@@ -41,6 +41,9 @@ body {
     margin-right: auto;
     padding: 0 6.481vw;
 }
+.block {
+    display: block;
+}
 
 /* flex */
 .flex {
@@ -2893,6 +2896,7 @@ footer .cs-info .btn-tel {
 }
 .member-leave .logo {
     height: 4.907vw;
+    vertical-align: baseline;
 }
 .member-leave h5:before {
     display: block;
@@ -2921,9 +2925,14 @@ footer .cs-info .btn-tel {
 .member-leave h5 {
     letter-spacing: -0.06em;
 }
+.member-leave .img {
+    width: 97.021%;
+    max-width: 912px;
+}
 .member-leave .txt {
     letter-spacing: -0.06em;
     line-height: 1.528em;
+    word-break: keep-all;
 }
 .member-leave .btn-wrap .btn {
     width: 19.444vw;
@@ -4257,6 +4266,14 @@ footer .cs-info .btn-tel {
 }
 
 @media screen and (max-width: 280px) {
+    /* common */
+    .block {
+        display: none;
+    }
+    .ms-block {
+        display: block;
+    }
+
     /* footer */
     footer .cs-info p span {
         display: block;
