@@ -72,6 +72,9 @@ body {
 .mt100 {
     margin-top: 9.259vw;
 }
+.mt200 {
+    margin-top: 18.519vw;
+}
 .mr15 {
     margin-right: 1.389vw;
 }
@@ -219,6 +222,9 @@ body {
 /* background-color */
 .bg-white {
     background-color: #fff;
+}
+.bg-lightgray {
+    background-color: #edeae2;
 }
 .bg-gray2 {
     background-color: #a9a69c;
@@ -2880,6 +2886,55 @@ footer .cs-info .btn-tel {
     line-height: 1.212em;
 }
 
+/* 회원탈퇴 */
+.member-leave h4 {
+    letter-spacing: -0.06em;
+    line-height: 1.440em;
+}
+.member-leave .logo {
+    height: 4.907vw;
+}
+.member-leave h5:before {
+    display: block;
+    width: 6.296vw;
+    height: 6.296vw;
+    margin: 0 auto 2.315vw;
+    background-color: #fff;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    content: '';
+}
+.member-leave .ico-list:before {
+    background-image: url("../images/leave/ico_list.png");
+}
+.member-leave .ico-group:before {
+    background-image: url("../images/leave/ico_group.png");
+}
+.member-leave .ico-point:before {
+    background-image: url("../images/leave/ico_point.png");
+}
+.member-leave .ico-coupon:before {
+    background-image: url("../images/leave/ico_coupon.png");
+}
+.member-leave h5 {
+    letter-spacing: -0.06em;
+}
+.member-leave .txt {
+    letter-spacing: -0.06em;
+    line-height: 1.528em;
+}
+.member-leave .btn-wrap .btn {
+    width: 19.444vw;
+    height: 11.111vw;
+    border-radius: 3.333vw;
+    line-height: 11.111vw;
+}
+.member-leave .btn-wrap .btn + .btn {
+    margin-left: 1.852vw;
+}
+
 @media screen and (max-width: 320px) {
     /* common */
     .inner {
@@ -2892,6 +2947,9 @@ footer .cs-info .btn-tel {
     }
     .mt100 {
         margin-top: 30px;
+    }
+    .mt200 {
+        margin-top: 59px;
     }
     .mr15 {
         margin-right: 4px;
@@ -4177,6 +4235,25 @@ footer .cs-info .btn-tel {
     .write-form .bar-list li {
         padding-left: 6px;
     }
+
+    /* 회원탈퇴 */
+    .member-leave .logo {
+        height: 16px;
+    }
+    .member-leave h5:before {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 7px;
+    }
+    .member-leave .btn-wrap .btn {
+        width: 62px;
+        height: 36px;
+        border-radius: 10px;
+        line-height: 36px;
+    }
+    .member-leave .btn-wrap .btn + .btn {
+        margin-left: 6px;
+    }
 }
 
 @media screen and (max-width: 280px) {
@@ -4214,6 +4291,9 @@ footer .cs-info .btn-tel {
     }
     .mt100 {
         margin-top: 100px;
+    }
+    .mt200 {
+        margin-top: 200px;
     }
     .mr15 {
         margin-right: 15px;
@@ -5661,5 +5741,36 @@ footer .cs-info .btn-tel {
     }
     .write-form .bar-list li {
         padding-left: 20px;
+    }
+
+    /* 회원탈퇴 */
+    .member-leave .logo {
+        height: 53px;
+    }
+    .member-leave h5:before {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 25px;
+    }
+    .member-leave .ico-list:before {
+        background-image: url("../images/leave/ico_list@2x.png");
+    }
+    .member-leave .ico-group:before {
+        background-image: url("../images/leave/ico_group@2x.png");
+    }
+    .member-leave .ico-point:before {
+        background-image: url("../images/leave/ico_point@2x.png");
+    }
+    .member-leave .ico-coupon:before {
+        background-image: url("../images/leave/ico_coupon@2x.png");
+    }
+    .member-leave .btn-wrap .btn {
+        width: 210px;
+        height: 120px;
+        border-radius: 36px;
+        line-height: 120px;
+    }
+    .member-leave .btn-wrap .btn + .btn {
+        margin-left: 20px;
     }
 }
