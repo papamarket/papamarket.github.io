@@ -2392,7 +2392,7 @@ footer .cs-info .btn-tel {
     margin-top: 0;
 }
 .mypage-menu.setting-menu li {
-    height: 138px;
+    height: 12.778vw;
     background-color: transparent;
     border-radius: 0;
 }
@@ -2400,10 +2400,10 @@ footer .cs-info .btn-tel {
     margin-top: 0;
 }
 .mypage-menu.setting-menu li:not(.bb10-edeae2) {
-    border-bottom: 2px solid #edeae2;
+    border-bottom: 0.185vw solid #edeae2;
 }
 .mypage-menu.setting-menu li > a {
-    padding: 0 130px;
+    padding: 0 12.037vw;
 }
 
 /* 후기, 문의, 공지사항 */
@@ -4113,6 +4113,16 @@ footer .cs-info .btn-tel {
         -ms-transform: translateX(16px);
         transform: translateX(16px);
     }
+    /* 내 정보 수정 */
+    .mypage-menu.setting-menu li {
+        height: 40px;
+    }
+    .mypage-menu.setting-menu li:not(.bb10-edeae2) {
+        border-bottom: 1px solid #edeae2;
+    }
+    .mypage-menu.setting-menu li > a {
+        padding: 0 38px;
+    }
 
     /* 후기, 문의, 공지사항 */
     .review-photo-list {
@@ -5631,6 +5641,16 @@ footer .cs-info .btn-tel {
         -webkit-transform: translateX(55px);
         -ms-transform: translateX(55px);
         transform: translateX(55px);
+    }
+    /* 내 정보 수정 */
+    .mypage-menu.setting-menu li {
+        height: 138px;
+    }
+    .mypage-menu.setting-menu li:not(.bb10-edeae2) {
+        border-bottom: 2px solid #edeae2;
+    }
+    .mypage-menu.setting-menu li > a {
+        padding: 0 130px;
     }
 
     /* 후기, 문의, 공지사항 */
