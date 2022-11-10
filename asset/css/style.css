@@ -306,7 +306,8 @@ body {
 .btn-like,
 .btn-gnb-close,
 .btn-popup-close,
-.btn-back {
+.btn-back,
+.btn-photo {
     font-size: 0;
     background-position: center center;
     background-size: 100%;
@@ -349,6 +350,9 @@ body {
 }
 .btn-back {
     background-image: url("../images/common/ico_back.png");
+}
+.btn-photo {
+    background-image: url("../images/common/ico_camera.png");
 }
 
 /* select */
@@ -2248,10 +2252,24 @@ footer .cs-info .btn-tel {
 /* 마이페이지 */
 .mypage-wrap .profile-info .profile-img {
     display: block;
+    position: relative;
     width: 21.277%;
     height: 0;
     padding-bottom: 21.277%;
     background-color: #edeae2;
+    border-radius: 50%;
+}
+.mypage-wrap .profile-info .profile-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+.mypage-wrap .profile-info .btn-photo {
+    position: absolute;
+    right: -0.741vw;
+    bottom: 0.278vw;
+    width: 6.481vw;
+    height: 6.481vw;
+    background-color: #fff;
     border-radius: 50%;
 }
 .mypage-wrap .profile-info .profile-txt {
@@ -2265,8 +2283,12 @@ footer .cs-info .btn-tel {
     display: block;
     margin-right: 0.833vw;
     padding: 0.370vw 1.944vw 0.463vw;
+    background-color: #a9e09d;
     border-radius: 1.944vw;
     letter-spacing: -0.06em;
+}
+.mypage-wrap .profile-info .grade.active {
+    background-color: #428c75;
 }
 .mypage-wrap .profile-info .level-txt {
     margin-top: 2.778vw;
@@ -4001,6 +4023,12 @@ footer .cs-info .btn-tel {
     }
 
     /* 마이페이지 */
+    .mypage-wrap .profile-info .btn-photo {
+        right: -2px;
+        bottom: 1px;
+        width: 20px;
+        height: 20px;
+    }
     .mypage-wrap .profile-info .profile-txt .name {
         margin-right: 4px;
     }
@@ -4549,6 +4577,9 @@ footer .cs-info .btn-tel {
     }
     .btn-back {
         background-image: url("../images/common/ico_back@2x.png");
+    }
+    .btn-photo {
+        background-image: url("../images/common/ico_camera@2x.png");
     }
 
     /* select */
@@ -5509,6 +5540,12 @@ footer .cs-info .btn-tel {
     }
 
     /* 마이페이지 */
+    .mypage-wrap .profile-info .btn-photo {
+        right: -8px;
+        bottom: 3px;
+        width: 70px;
+        height: 70px;
+    }
     .mypage-wrap .profile-info .profile-txt .name {
         margin-right: 13px;
     }

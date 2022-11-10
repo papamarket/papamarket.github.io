@@ -37,15 +37,15 @@
         <section class="mypage-wrap">
             <div class="inner">
                 <div class="profile-info flex align-center justify-between">
-                    <span class="profile-img"></span>
+                    <span class="profile-img"><img src="./asset/images/common/membership_plant03.png" alt=""><button class="btn btn-photo">프로필 사진 변경하기</button></span>
                     <div class="profile-txt">
                         <div class="flex align-end">
                             <p class="name fs36"><strong class="fs48 fw500">김민정</strong>님</p>
-                            <span class="grade white fs33 bg-green">구매등급</span><span class="grade white fs33 bg-yellowish">추천등급</span>
+                            <a class="btn grade grade-buy white fs33 active">구매 Lv.3</a><a class="btn grade grade-recommend white fs33">추천 Lv.1</a>
                         </div>
                         <p class="level-txt fs36">138,000원 추가 구매 시 <strong class="green fw500">Lv.4</strong> 달성!</p>
                         <div class="progress bg-yellowish">
-                            <div class="progress-bar bg-green"></div>
+                            <div class="progress-bar bg-green" style="width: 69%"></div>
                         </div>
                     </div>
                 </div>
@@ -353,6 +353,26 @@
     </div>
     <script src="./asset/js/ui.js"></script>
     <script>
+        /* 회원 등급 */
+        const $gradeBuy = $(".btn.grade-buy");
+        const $gradeRecommend = $(".btn.grade-recommend");
+        const $profileImg = $(".profile-img img");
+        const $levelTxt = $(".level-txt");
+        const $progressBar = $(".progress-bar");
+        
+        $gradeBuy.on("click",function(){
+            $profileImg.attr("src", "./asset/images/common/membership_plant03.png");
+            $levelTxt.html("138,000원 추가 구매 시 <strong class='green fw500'>Lv.4</strong> 달성!");
+            $progressBar.css("width", "69%");
+        });
+
+        $gradeRecommend.on("click",function(){
+            $profileImg.attr("src", "./asset/images/common/membership_person01.png");
+            $levelTxt.html("1명이 추천 시 <strong class='green fw500'>Lv.2</strong> 달성!");
+            $progressBar.css("width", "0%");
+        });
+
+
         /* 추천 상품 */
         const productSlide = new Swiper(".product-slide", {
             loop: false,
