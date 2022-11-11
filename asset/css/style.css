@@ -2543,24 +2543,24 @@ footer .cs-info .btn-tel {
 }
 
 /* 회원 등급 안내 */
-.grade-wrap .tab li a {
+.membership-wrap .tab li a {
     display: block;
     padding: 2.778vw 0;
 }
-.grade-wrap .tab li a.active {
+.membership-wrap .tab li a.active {
     border-bottom: 0.278vw solid #428c75;
 }
-.grade-wrap .intro-txt {
+.membership-wrap .intro-txt {
     letter-spacing: -0.06em;
 }
-.grade-wrap .intro-txt b {
+.membership-wrap .intro-txt b {
     letter-spacing: 0;
 }
-.grade-wrap .info-box {
+.membership-wrap .info-box {
     padding: 5.556vw;
     border-radius: 5.926vw;
 }
-.grade-wrap .info-box .tit:before {
+.membership-wrap .info-box .tit:before {
     display: block;
     position: absolute;
     top: 0;
@@ -2571,40 +2571,40 @@ footer .cs-info .btn-tel {
     background-repeat: no-repeat;
     content: '';
 }
-.grade-wrap .info-box .tit.ico-benefit:before {
+.membership-wrap .info-box .tit.ico-benefit:before {
     background-image: url("../images/common/ico_benefit.png");
 }
-.grade-wrap .info-box .tit.ico-point:before {
+.membership-wrap .info-box .tit.ico-point:before {
     background-image: url("../images/common/ico_point.png");
 }
-.grade-wrap .info-box .tit.ico-coupon:before {
+.membership-wrap .info-box .tit.ico-coupon:before {
     background-image: url("../images/common/ico_coupon.png");
 }
-.grade-wrap .info-box .tit {
+.membership-wrap .info-box .tit {
     position: relative;
     padding-left: 4.63vw;
     letter-spacing: -0.06em;
 }
-.grade-wrap .info-box .txt {
+.membership-wrap .info-box .txt {
     letter-spacing: -0.06em;
     line-height: 1.2em;
 }
-.grade-wrap .info-box .txt b {
+.membership-wrap .info-box .txt b {
     letter-spacing: 0;
 }
-.grade-wrap .coupon-list {
+.membership-wrap .coupon-list {
     margin-top: 3.241vw;
 }
-.grade-wrap .coupon-list li {
+.membership-wrap .coupon-list li {
     padding: 1.389vw 0;
 }
-.grade-wrap .coupon-list li:not(:last-child) {
+.membership-wrap .coupon-list li:not(:last-child) {
     border-bottom: 1px solid #f5f2e9;
 }
-.grade-wrap .coupon-list .coupon-name {
+.membership-wrap .coupon-list .coupon-name {
     width: 35%;
 }
-.grade-wrap .coupon-list .coupon-txt {
+.membership-wrap .coupon-list .coupon-txt {
     width: 32%;
 }
 .level-info li {
@@ -2670,12 +2670,12 @@ footer .cs-info .btn-tel {
 .level-info .coupon-box .coupon.not .state {
     color: #a9a69c;
 }
-.grade-wrap .more-tit {
+.membership-wrap .more-tit {
     display: flex;
     align-items: center;
     letter-spacing: -0.06em;
 }
-.grade-wrap .more-tit:after {
+.membership-wrap .more-tit:after {
     display: block;
     width: 2.222vw;
     height: 2.222vw;
@@ -2686,10 +2686,10 @@ footer .cs-info .btn-tel {
     transition: .3s transform;
     content: '';
 }
-.grade-wrap .more-tit.active:after {
+.membership-wrap .more-tit.active:after {
     transform: rotate(-180deg);
 }
-.grade-wrap .more-content .bar-list li {
+.membership-wrap .more-content .bar-list li {
     padding-left: 1.389vw;
     letter-spacing: -0.06em;
     line-height: 1.212em;
@@ -4458,27 +4458,27 @@ footer .cs-info .btn-tel {
     }
 
     /* 회원 등급 안내 */
-    .grade-wrap .tab li a {
+    .membership-wrap .tab li a {
         padding: 9px 0;
     }
-    .grade-wrap .tab li a.active {
+    .membership-wrap .tab li a.active {
         border-bottom: 1px solid #428c75;
     }
-    .grade-wrap .info-box {
+    .membership-wrap .info-box {
         padding: 18px;
         border-radius: 18px;
     }
-    .grade-wrap .info-box .tit:before {
+    .membership-wrap .info-box .tit:before {
         width: 9px;
         height: 11px;
     }
-    .grade-wrap .info-box .tit {
+    .membership-wrap .info-box .tit {
         padding-left: 15px;
     }
-    .grade-wrap .coupon-list {
+    .membership-wrap .coupon-list {
         margin-top: 10px;
     }
-    .grade-wrap .coupon-list li {
+    .membership-wrap .coupon-list li {
         padding: 4px 0;
     }
     .level-info li {
@@ -4501,12 +4501,12 @@ footer .cs-info .btn-tel {
     .level-info .coupon-box .coupon p {
         padding: 15px 0 3px;
     }
-    .grade-wrap .more-tit:after {
+    .membership-wrap .more-tit:after {
         width: 7px;
         height: 7px;
         margin-left: 4px;
     }
-    .grade-wrap .more-content .bar-list li {
+    .membership-wrap .more-content .bar-list li {
         padding-left: 4px;
     }
 
@@ -6099,36 +6099,36 @@ footer .cs-info .btn-tel {
     }
 
     /* 회원 등급 안내 */
-    .grade-wrap .tab li a {
+    .membership-wrap .tab li a {
         padding: 30px 0;
     }
-    .grade-wrap .tab li a.active {
+    .membership-wrap .tab li a.active {
         border-bottom: 3px solid #428c75;
     }
-    .grade-wrap .info-box {
+    .membership-wrap .info-box {
         padding: 60px;
         border-radius: 64px;
     }
-    .grade-wrap .info-box .tit:before {
+    .membership-wrap .info-box .tit:before {
         width: 32px;
         height: 39px;
     }
-    .grade-wrap .info-box .tit.ico-benefit:before {
+    .membership-wrap .info-box .tit.ico-benefit:before {
         background-image: url("../images/common/ico_benefit@2x.png");
     }
-    .grade-wrap .info-box .tit.ico-point:before {
+    .membership-wrap .info-box .tit.ico-point:before {
         background-image: url("../images/common/ico_point@2x.png");
     }
-    .grade-wrap .info-box .tit.ico-coupon:before {
+    .membership-wrap .info-box .tit.ico-coupon:before {
         background-image: url("../images/common/ico_coupon@2x.png");
     }
-    .grade-wrap .info-box .tit {
+    .membership-wrap .info-box .tit {
         padding-left: 50px;
     }
-    .grade-wrap .coupon-list {
+    .membership-wrap .coupon-list {
         margin-top: 35px;
     }
-    .grade-wrap .coupon-list li {
+    .membership-wrap .coupon-list li {
         padding: 15px 0;
     }
     .level-info li {
@@ -6158,13 +6158,13 @@ footer .cs-info .btn-tel {
     .level-info .coupon-box .coupon p {
         padding: 50px 0 9px;
     }
-    .grade-wrap .more-tit:after {
+    .membership-wrap .more-tit:after {
         width: 24px;
         height: 24px;
         margin-left: 15px;
         background-image: url("../images/common/ico_arrow@2x.png");
     }
-    .grade-wrap .more-content .bar-list li {
+    .membership-wrap .more-content .bar-list li {
         padding-left: 15px;
     }
 
