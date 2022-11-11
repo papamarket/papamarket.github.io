@@ -2552,6 +2552,8 @@ footer .cs-info .btn-tel {
 }
 .membership-wrap .intro-txt {
     letter-spacing: -0.06em;
+    line-height: 1.2em;
+    word-break: keep-all;
 }
 .membership-wrap .intro-txt b {
     letter-spacing: 0;
@@ -2588,6 +2590,7 @@ footer .cs-info .btn-tel {
 .membership-wrap .info-box .txt {
     letter-spacing: -0.06em;
     line-height: 1.2em;
+    word-break: keep-all;
 }
 .membership-wrap .info-box .txt b {
     letter-spacing: 0;
