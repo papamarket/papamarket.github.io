@@ -360,13 +360,21 @@
         const $levelTxt = $(".level-txt");
         const $progressBar = $(".progress-bar");
         
-        $gradeBuy.on("click",function(){
+        $gradeBuy.on("click",function(e){
+            e.preventDefault();
+
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
             $profileImg.attr("src", "./asset/images/common/membership_plant03.png");
             $levelTxt.html("138,000원 추가 구매 시 <strong class='green fw500'>Lv.4</strong> 달성!");
             $progressBar.css("width", "69%");
         });
 
-        $gradeRecommend.on("click",function(){
+        $gradeRecommend.on("click",function(e){
+            e.preventDefault();
+
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
             $profileImg.attr("src", "./asset/images/common/membership_person01.png");
             $levelTxt.html("1명이 추천 시 <strong class='green fw500'>Lv.2</strong> 달성!");
             $progressBar.css("width", "0%");
