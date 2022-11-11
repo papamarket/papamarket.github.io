@@ -4797,6 +4797,10 @@ footer .cs-info .btn-tel {
     }
 
     /* 회원 등급 안내 */
+    .level-info .coupon-box .coupon {
+        width: 120px;
+        height: 64px;
+    }
     .level-info .coupon-box .coupon:nth-child(2) {
         margin-top: 6px;
     }
