@@ -231,6 +231,9 @@ body {
 .fs57 {
     font-size: 5.278vw;
 }
+.fs65 {
+    font-size: 6.019vw;
+}
 
 /* font-weight */
 .fw300 {
@@ -302,6 +305,13 @@ body {
     height: 12.037vw;
     border-radius: 3.333vw;
     line-height: 12.037vw;
+}
+.btn-normal {
+    width: 100%;
+    height: 11.111vw;
+    border-radius: 3.333vw;
+    letter-spacing: -0.06em;
+    line-height: 11.111vw;
 }
 .btn-home,
 .btn-menu,
@@ -411,7 +421,7 @@ select {
     font-size: 3.333vw;
     background: none;
     letter-spacing: -0.06em;
-    line-height: 8.333vw;
+    line-height: 2.500em;
 }
 
 /* input */
@@ -436,13 +446,13 @@ select {
     outline: 0;
 }
 .input-row .inp::placeholder {
-    color: #9e9e9e;
+    color: #808080;
 }
 .input-row .inp::-webkit-input-placeholder {
-    color: #9e9e9e;
+    color: #808080;
 }
 .input-row .inp:-ms-input-placeholder {
-    color: #9e9e9e;
+    color: #808080;
 }
 .input-row .inp.match {
     background-image: url("../images/common/ico_match.png");
@@ -1202,17 +1212,12 @@ footer .cs-info .btn-tel {
     width: 76.333%;
     max-width: 458px;
 }
-.login-box .btn {
-    width: 100%;
-    height: 11.111vw;
-}
 .login-box .input-row + .input-row,
 .login-box .social-login .btn + .btn {
     margin-top: 2.778vw;
 }
 .login-box .btn-login {
     margin: 4.630vw 0;
-    border-radius: 3.333vw;
 }
 .login-box .info-user-menu li {
     position: relative;
@@ -1233,6 +1238,8 @@ footer .cs-info .btn-tel {
     content: '';
 }
 .login-box .social-login .btn {
+    width: 100%;
+    height: 11.111vw;
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 2.222vw;
@@ -2417,6 +2424,103 @@ footer .cs-info .btn-tel {
     height: 15.556vw;
 }
 
+/* 마켓 정보 수정 */
+.market-edit .photo-upload li {
+    width: 29.362%;
+    padding-bottom: 29.362%;
+}
+.market-edit .photo-upload li:not(:nth-child(4n)) {
+    margin-right: inherit;
+}
+.market-edit .photo-upload li:not(:nth-child(3n)) {
+    margin-right: 5.957%;
+}
+.market-edit .photo-upload li:nth-child(3) ~ li {
+    margin-top: 5.957%;
+}
+.market-edit .photo-upload .label-btn {
+    background-size: 5.926vw;
+}
+.market-edit .photo-upload .label {
+    position: absolute;
+    left: 2.037vw;
+    bottom: 2.315vw;
+    padding: 0 1.667vw;
+    border-radius: 3.241vw;
+    line-height: 6.481vw;
+    z-index: 3;
+}
+.market-edit .open-hour-area + .open-hour-area {
+    position: relative;
+    margin-top: 9.259vw;
+    padding-top: 9.444vw;
+}
+.market-edit .open-hour-area + .open-hour-area:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    max-width: 1080px;
+    height: 0.185vw;
+    background-color: #edeae2;
+    transform: translate(0, -50%);
+    content: '';
+}
+.market-edit .day-week-box .btn {
+    width: 9.815vw;
+    height: 13.889vw;
+    color: #808080;
+    font-weight: 400;
+    background-color: #edeae2;
+    border-radius: 4.907vw;
+    line-height: 13.889vw;
+}
+.market-edit .day-week-box .btn.active {
+    color: #fff;
+    font-weight: 500;
+    background-color: #428c75;
+}
+.market-edit .day-week-box .btn.selected {
+    color: #fff;
+    background-color: #b4b3af;
+}
+.market-edit .btn-add:before {
+    display: inline-block;
+    width: 2.407vw;
+    height: 2.407vw;
+    margin-right: 0.556vw;
+    background: url("../images/common/ico_plus.png") no-repeat center center;
+    background-size: contain;
+    content: '';
+}
+/* timepicker */
+.ui-timepicker {
+    height: auto;
+    max-height: 43.333vw;
+}
+.ui-timepicker-standard {
+    background-color: #428c75;
+    padding: 0;
+    font-size: 3.333vw;
+    border: 0;
+    border-radius: 3.333vw;
+}
+.ui-timepicker-standard li:not(:first-child) {
+    border-top: 1px solid #f5f2e9;
+}
+.ui-timepicker-standard a {
+    color: #fff;
+    padding: 0;
+    border: 0;
+    line-height: 2.500em;
+}
+.ui-timepicker-standard .ui-state-hover {
+    color: #222;
+    background-color: #fff;
+    border: 0;
+}
+
 /* 후기, 문의, 공지사항 */
 .review-photo-list {
     position: absolute;
@@ -2914,19 +3018,23 @@ footer .cs-info .btn-tel {
 .write-form .write-box .txt-total em {
     font-style: normal;
 }
-.write-form .photo-upload {
+.photo-upload {
     flex-wrap: wrap;
 }
-.write-form .photo-upload li {
+.photo-upload li {
     position: relative;
     width: 21.489%;
     height: 0;
     padding-bottom: 21.489%;
+    z-index: -1;
 }
-.write-form .photo-upload li:not(:nth-child(4)) {
+.photo-upload li:not(:nth-child(4n)) {
     margin-right: 4.681%;
 }
-.write-form .photo-upload li > div {
+.photo-upload li:nth-child(4) ~ li {
+    margin-top: 4.681%;
+}
+.photo-upload li > div {
     position: absolute;
     top: 0;
     left: 0;
@@ -2935,7 +3043,7 @@ footer .cs-info .btn-tel {
     border-radius: 4.444vw;
     overflow: hidden;
 }
-.write-form .photo-upload .inp-file {
+.photo-upload .inp-file {
     position: absolute;
     top: 0;
     left: 0;
@@ -2945,7 +3053,7 @@ footer .cs-info .btn-tel {
     text-indent: -9999px;
     z-index: -1;
 }
-.write-form .photo-upload .label-btn {
+.photo-upload .label-btn {
     position: absolute;
     top: 0;
     left: 0;
@@ -2954,7 +3062,7 @@ footer .cs-info .btn-tel {
     background: #edeae2 url("../images/common/ico_plus.png") no-repeat center center;
     background-size: 3.704vw;
 }
-.write-form .photo-upload .btn-delete {
+.photo-upload .btn-delete {
     position: absolute;
     top: -1.389vw;
     right: -1.667vw;
@@ -2967,8 +3075,9 @@ footer .cs-info .btn-tel {
     text-indent: -9999px;
     z-index: 2;
 }
-.write-form .photo-upload img {
+.photo-upload img {
     position: relative;
+    width: 100%;
     z-index: 1;
 }
 .write-form .bar-list li {
@@ -3181,12 +3290,20 @@ footer .cs-info .btn-tel {
     .fs57 {
         font-size: 17px;
     }
+    .fs65 {
+        font-size: 19px;
+    }
 
     /* btn */
     .btn-wide {
         height: 38px;
         border-radius: 10px;
         line-height: 38px;
+    }
+    .btn-normal {
+        height: 36px;
+        border-radius: 10px;
+        line-height: 36px;
     }
 
     /* border */
@@ -3223,8 +3340,7 @@ footer .cs-info .btn-tel {
     }
     .select-custom-selectBox-dropdown-menu.selectBox-options li a {
         padding: 0 13px;
-        font-size: 10px;
-        line-height: 26px;
+        font-size: 11px;
     }
 
     /* input */
@@ -3590,16 +3706,12 @@ footer .cs-info .btn-tel {
         min-width: 208px;
         padding: 30px 0;
     }
-    .login-box .btn {
-        height: 36px;
-    }
     .login-box .input-row + .input-row,
     .login-box .social-login .btn + .btn {
         margin-top: 9px;
     }
     .login-box .btn-login {
         margin: 15px 0;
-        border-radius: 10px;
     }
     .login-box .info-user-menu li {
         padding: 0 6px;
@@ -3608,6 +3720,7 @@ footer .cs-info .btn-tel {
         height: 7px;
     }
     .login-box .social-login .btn {
+        height: 36px;
         border-radius: 8px;
         text-indent: 38%;
     }
@@ -4142,6 +4255,44 @@ footer .cs-info .btn-tel {
         height: 50px;
     }
 
+    /* 마켓 정보 수정 */
+    .market-edit .photo-upload .label-btn {
+        background-size: 18px;
+    }
+    .market-edit .photo-upload .label {
+        left: 7px;
+        bottom: 7px;
+        padding: 0 5px;
+        border-radius: 10px;
+        line-height: 20px;
+    }
+    .market-edit .open-hour-area + .open-hour-area {
+        margin-top: 30px;
+        padding-top: 31px;
+    }
+    .market-edit .open-hour-area + .open-hour-area:before {
+        height: 1px;
+    }
+    .market-edit .day-week-box .btn {
+        width: 30px;
+        height: 44px;
+        border-radius: 15px;
+        line-height: 44px;
+    }
+    .market-edit .btn-add:before {
+        width: 8px;
+        height: 8px;
+        margin-right: 2px;
+    }
+    /* timepicker */
+    .ui-timepicker {
+        max-height: 139px;
+    }
+    .ui-timepicker-standard {
+        font-size: 11px;
+        border-radius: 10px;
+    }
+
     /* 후기, 문의, 공지사항 */
     .review-photo-list {
         top: 32px;
@@ -4361,13 +4512,13 @@ footer .cs-info .btn-tel {
         right: 14px;
         bottom: 16px;
     }
-    .write-form .photo-upload li > div {
+    .photo-upload li > div {
         border-radius: 14px;
     }
-    .write-form .photo-upload .label-btn {
+    .photo-upload .label-btn {
         background-size: 12px;
     }
-    .write-form .photo-upload .btn-delete {
+    .photo-upload .btn-delete {
         top: -4px;
         right: -5px;
         width: 20px;
@@ -4577,6 +4728,9 @@ footer .cs-info .btn-tel {
     .fs57 {
         font-size: 57px;
     }
+    .fs65 {
+        font-size: 65px;
+    }
 
     /* border */
     .bt10-edeae2 {
@@ -4591,6 +4745,11 @@ footer .cs-info .btn-tel {
         height: 130px;
         border-radius: 36px;
         line-height: 130px;
+    }
+    .btn-normal {
+        height: 120px;
+        border-radius: 36px;
+        line-height: 120px;
     }
     .home-w {
         background-image: url("../images/common/ico_home_w@2x.png");
@@ -4662,7 +4821,6 @@ footer .cs-info .btn-tel {
     .select-custom-selectBox-dropdown-menu.selectBox-options li a {
         padding: 0 45px;
         font-size: 36px;
-        line-height: 90px;
     }
 
     /* input */
@@ -5068,16 +5226,12 @@ footer .cs-info .btn-tel {
     .login-box {
         padding: 102px 0;
     }
-    .login-box .btn {
-        height: 120px;
-    }
     .login-box .input-row + .input-row,
     .login-box .social-login .btn + .btn {
         margin-top: 30px;
     }
     .login-box .btn-login {
         margin: 50px 0;
-        border-radius: 36px;
     }
     .login-box .info-user-menu li {
         padding: 0 20px;
@@ -5086,6 +5240,7 @@ footer .cs-info .btn-tel {
         height: 24px;
     }
     .login-box .social-login .btn {
+        height: 120px;
         border-radius: 24px;
     }
     .login-box .btn-kakao {
@@ -5678,6 +5833,45 @@ footer .cs-info .btn-tel {
         height: 168px;
     }
 
+    /* 마켓 정보 수정 */
+    .market-edit .photo-upload .label-btn {
+        background-size: 64px;
+    }
+    .market-edit .photo-upload .label {
+        left: 22px;
+        bottom: 25px;
+        padding: 0 18px;
+        border-radius: 35px;
+        line-height: 70px;
+    }
+    .market-edit .open-hour-area + .open-hour-area {
+        margin-top: 100px;
+        padding-top: 102px;
+    }
+    .market-edit .open-hour-area + .open-hour-area:before {
+        height: 2px;
+    }
+    .market-edit .day-week-box .btn {
+        width: 106px;
+        height: 150px;
+        border-radius: 53px;
+        line-height: 150px;
+    }
+    .market-edit .btn-add:before {
+        width: 26px;
+        height: 26px;
+        margin-right: 6px;
+        background-image: url("../images/common/ico_plus@2x.png");
+    }
+    /* timepicker */
+    .ui-timepicker {
+        max-height: 468px;
+    }
+    .ui-timepicker-standard {
+        font-size: 36px;
+        border-radius: 36px;
+    }
+
     /* 후기, 문의, 공지사항 */
     .review-photo-list {
         top: 108px;
@@ -5922,14 +6116,14 @@ footer .cs-info .btn-tel {
         right: 48px;
         bottom: 54px;
     }
-    .write-form .photo-upload li > div {
+    .photo-upload li > div {
         border-radius: 48px;
     }
-    .write-form .photo-upload .label-btn {
+    .photo-upload .label-btn {
         background-image: url("../images/common/ico_plus@2x.png");
         background-size: 40px;
     }
-    .write-form .photo-upload .btn-delete {
+    .photo-upload .btn-delete {
         top: -15px;
         right: -18px;
         width: 66px;
