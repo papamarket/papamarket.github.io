@@ -3019,11 +3019,11 @@ footer .cs-info .btn-tel {
     width: 100%;
     height: 100%;
 }
-/* 공지사항 상세 */
-.notice-view .view-head {
+/* 공지사항, 이벤트 상세 */
+.normal-view .view-head {
     border-bottom: 0.185vw solid #edeae2;
 }
-.notice-view .view-body p {
+.normal-view .view-body p {
     line-height: 1.208em;
     word-break: keep-all;
 }
@@ -4742,7 +4742,7 @@ footer .cs-info .btn-tel {
         border-top: 1px solid #edeae2;
     }
     /* 공지사항 상세 */
-    .notice-view .view-head {
+    .normal-view .view-head {
         border-bottom: 1px solid #edeae2;
     }
 
@@ -6489,7 +6489,7 @@ footer .cs-info .btn-tel {
         border-top: 2px solid #edeae2;
     }
     /* 공지사항 상세 */
-    .notice-view .view-head {
+    .normal-view .view-head {
         border-bottom: 2px solid #edeae2;
     }
 
