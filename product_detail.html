@@ -593,7 +593,7 @@
         var selectBox = new SelectBox($(".select-custom"), settings = {});
 
         /* 상품 옵션 열기 */
-        $(".btn-option").click(function() {
+        $(".btn-option").click(function(){
             $(".product-option").show();
             $(this).text('바로구매');
             $("html, body").addClass("no-scroll");
@@ -605,7 +605,7 @@
         });
 
         /* 상품 옵션 닫기 */
-        $(".btn-option-close").click(function () {
+        $(".btn-option-close").click(function (){
             $(this).parents(".product-option").hide();
             $(".btn-option").text('구매하기');
             $("html, body").removeClass("no-scroll");
@@ -614,7 +614,7 @@
             selectBox.hideMenus();
         });
         $(".product-option").click(function(e){
-            if( !$(".product-option").has(e.target).length ) {
+            if(!$(".product-option").has(e.target).length){
                 $(this).hide();
                 $(".btn-option").text('구매하기');
                 $("html, body").removeClass("no-scroll");
@@ -623,7 +623,7 @@
         });
 
         /* 팝업 열기 */
-        $(".btn-coupon").click(function(e) {
+        $(".btn-coupon").click(function(e){
             e.preventDefault();
 
             $(".popup").show();
@@ -631,12 +631,12 @@
         });
 
         /* 팝업 닫기 */
-        $(".btn-popup-close").click(function () {
+        $(".btn-popup-close").click(function(){
             $(this).parents(".popup").hide();
             $("html, body").removeClass("no-scroll");
         });
         $(".popup").click(function(e){
-            if( !$(".popup").has(e.target).length ) {
+            if(!$(".popup").has(e.target).length){
                 $(this).hide();
                 $("html, body").removeClass("no-scroll");
             } 

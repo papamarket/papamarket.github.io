@@ -28,16 +28,16 @@ $(".btn-gnb-close").on("click",function(){
 	$(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
 });
 $(".gnb-menu").click(function(e){
-    if( !$(".gnb-menu").has(e.target).length ) {
+    if(!$(".gnb-menu").has(e.target).length){
         $(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
         $("html, body").removeClass("no-scroll");
     }
 });
 
 /* gnb-menu > sub-menu open */
-$(".gnb-menu .gnb-tit.after").click(function(e) {
+$(".gnb-menu .gnb-tit.after").click(function(e){
     e.preventDefault();
-	if ($(this).hasClass("active")) {
+	if ($(this).hasClass("active")){
 		$(this).removeClass("active");
 		$(this).next(".sub-menu").stop().slideUp();
 	} else {
