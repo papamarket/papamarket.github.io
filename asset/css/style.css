@@ -2271,7 +2271,7 @@ footer .cs-info .btn-tel {
     width: 87.037%;
     max-width: 940px;
     margin: 0 auto 1.852vw;
-    padding-top: 10vw 0;
+    padding-top: 10vw;
     border-radius: 5.926vw;
     box-sizing: border-box;    
 }
@@ -2295,14 +2295,17 @@ footer .cs-info .btn-tel {
     max-width: 81.481vw;
     z-index: 20;
 }
-.product-option .select-custom + .purchase-option,
-.product-option .box + .box {
-    margin-top: 2.778vw;
-}
 .product-option .box {
     position: relative;
     padding: 5.833vw 2.778vw 2.778vw;
     border-radius: 3.333vw;
+}
+.product-option .no-option .box {
+    padding: 2.778vw;
+}
+.product-option .select-custom + .box,
+.product-option .box + .box {
+    margin-top: 2.778vw;
 }
 .btn-purchase-option-close {
     position: absolute;
@@ -4442,13 +4445,16 @@ footer .cs-info .btn-tel {
     .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
         max-width: 260px;
     }
-    .product-option .select-custom + .purchase-option,
-    .product-option .box + .box {
-        margin-top: 9px;
-    }
     .product-option .box {
         padding: 19px 9px 9px;
         border-radius: 10px;
+    }
+    .product-option .no-option .box {
+        padding: 9px;
+    }
+    .product-option .select-custom + .box,
+    .product-option .box + .box {
+        margin-top: 9px;
     }
     .btn-purchase-option-close {
         top: 9px;
@@ -6145,13 +6151,16 @@ footer .cs-info .btn-tel {
     .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
         max-width: 880px;
     }
-    .product-option .select-custom + .purchase-option,
-    .product-option .box + .box {
-        margin-top: 30px;
-    }
     .product-option .box {
         padding: 63px 30px 30px;
         border-radius: 36px;
+    }
+    .product-option .no-option .box {
+        padding: 30px;
+    }
+    .product-option .select-custom + .box,
+    .product-option .box + .box {
+        margin-top: 30px;
     }
     .btn-purchase-option-close {
         top: 30px;
