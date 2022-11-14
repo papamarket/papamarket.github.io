@@ -85,7 +85,7 @@
                 <!-- 요일 추가 -->
                 <div class="open-hour-area">
                     <div class="day-week-box flex align-center justify-between">
-                        <button class="btn fs36">일</button><button class="btn fs36 selected">월</button><button class="btn fs36 selected">화</button><button class="btn fs36 selected">수</button><button class="btn fs36 selected">목</button><button class="btn fs36 selected">금</button><button class="btn fs36 active">토</button>
+                        <button class="btn fs36">일</button><button class="btn fs36 disabled">월</button><button class="btn fs36 disabled">화</button><button class="btn fs36 disabled">수</button><button class="btn fs36 disabled">목</button><button class="btn fs36 disabled">금</button><button class="btn fs36 active">토</button>
                     </div>
                     <div class="time-box input-row flex align-center justify-between mt30">
                         <input type="text" class="timepicker inp fs36 txt-center" placeholder="00:00">
@@ -306,7 +306,7 @@
         $(".day-week-box .btn").on("click", function(){
             $(this).toggleClass("active");
         });
-        
+
         /* 영업시간 시간 선택 */
         $("input.timepicker").timepicker({
             timeFormat: 'HH:mm',

@@ -142,6 +142,9 @@ button::-moz-focus-inner {
     -moz-user-select: none;
     -ms-user-select: none;
 }
+html, body {
+	width:100%;
+}
 body {
 	color: #222;
 	font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;

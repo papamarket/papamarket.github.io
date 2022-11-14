@@ -90,6 +90,9 @@ body {
 .mt70 {
     margin-top: 6.481vw;
 }
+.mt80 {
+    margin-top: 7.407vw;
+}
 .mt100 {
     margin-top: 9.259vw;
 }
@@ -1678,7 +1681,7 @@ footer .cs-info .btn-tel {
     height: 100%;
 }
 .fixed-btn-wrap .btn.w460 {
-    width: 48.936%;
+    width: calc(50% - 0.926vw);
     border-radius: 4.444vw;
     line-height: 13.889vw;
 }
@@ -2328,6 +2331,30 @@ footer .cs-info .btn-tel {
     color: #222;
     font-size: 4.444vw;
 }
+.product-option .day-week-box .btn {
+    color: #222;
+    background-color: #fff;
+}
+.product-option .time-box {
+    flex-wrap: wrap;
+}
+.product-option .time-box .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 0.926vw);
+    height: 11.111vw;
+    color: #222;
+    background-color: #fff;
+    border-radius: 3.333vw;
+    line-height: 11.111vw;
+}
+.product-option .time-box .btn:nth-child(2) ~ .btn {
+    margin-top: 1.852vw;
+}
+.product-option .time-box .btn span {
+    padding: 0 2.778vw;
+}
 .option-foot {
     height: 13.889vw;
     padding: 0 2.778vw;
@@ -2533,22 +2560,27 @@ footer .cs-info .btn-tel {
     transform: translate(0, -50%);
     content: '';
 }
-.market-edit .day-week-box .btn {
+.day-week-box .btn {
     width: 9.815vw;
     height: 13.889vw;
-    color: #808080;
     font-weight: 400;
-    background-color: #edeae2;
     border-radius: 4.907vw;
     line-height: 13.889vw;
 }
-.market-edit .day-week-box .btn.active {
+.market-edit .day-week-box .btn {
+    color: #808080;
+    background-color: #edeae2;
+}
+.day-week-box .btn.active,
+.product-option .time-box .btn.active {
     color: #fff;
     font-weight: 500;
     background-color: #428c75;
 }
-.market-edit .day-week-box .btn.selected {
+.day-week-box .btn.disabled,
+.product-option .time-box .btn.disabled {
     color: #fff;
+    font-weight: 400;
     background-color: #b4b3af;
 }
 .market-edit .btn-add:before {
@@ -3385,6 +3417,9 @@ footer .cs-info .btn-tel {
     .mt70 {
         margin-top: 21px;
     }
+    .mt80 {
+        margin-top: 24px;
+    }
     .mt100 {
         margin-top: 30px;
     }
@@ -4136,6 +4171,7 @@ footer .cs-info .btn-tel {
         bottom: 82px;
     }
     .fixed-btn-wrap .btn.w460 {
+        width: calc(50% - 3px);
         border-radius: 14px;
         line-height: 44px;
     }
@@ -4432,6 +4468,18 @@ footer .cs-info .btn-tel {
     .product-option .counter-box .num {
         font-size: 14px;
     }
+    .product-option .time-box .btn {
+        width: calc(50% - 3px);
+        height: 36px;
+        border-radius: 10px;
+        line-height: 36px;
+    }
+    .product-option .time-box .btn:nth-child(2) ~ .btn {
+        margin-top: 6px;
+    }
+    .product-option .time-box .btn span {
+        padding: 0 9px;
+    }
     .option-foot {
         height: 44px;
         padding: 0 9px;
@@ -4538,7 +4586,7 @@ footer .cs-info .btn-tel {
     .market-edit .open-hour-area + .open-hour-area:before {
         height: 1px;
     }
-    .market-edit .day-week-box .btn {
+    .day-week-box .btn {
         width: 30px;
         height: 44px;
         border-radius: 15px;
@@ -4933,6 +4981,9 @@ footer .cs-info .btn-tel {
     }
     .mt70 {
         margin-top: 70px;
+    }
+    .mt80 {
+        margin-top: 80px;
     }
     .mt100 {
         margin-top: 100px;
@@ -5793,6 +5844,7 @@ footer .cs-info .btn-tel {
         margin-right: auto;
     }
     .fixed-btn-wrap .btn.w460 {
+        width: calc(50% - 10px);
         border-radius: 48px;
         line-height: 150px;
     }
@@ -6120,6 +6172,18 @@ footer .cs-info .btn-tel {
     .product-option .counter-box .num {
         font-size: 48px;
     }
+    .product-option .time-box .btn {
+        width: calc(50% - 10px);
+        height: 120px;
+        border-radius: 36px;
+        line-height: 120px;
+    }
+    .product-option .time-box .btn:nth-child(2) ~ .btn {
+        margin-top: 20px;
+    }
+    .product-option .time-box .btn span {
+        padding: 0 30px;
+    }
     .option-foot {
         height: 150px;
         padding: 0 50px;
@@ -6227,7 +6291,7 @@ footer .cs-info .btn-tel {
     .market-edit .open-hour-area + .open-hour-area:before {
         height: 2px;
     }
-    .market-edit .day-week-box .btn {
+    .day-week-box .btn {
         width: 106px;
         height: 150px;
         border-radius: 53px;
