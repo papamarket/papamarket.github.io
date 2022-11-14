@@ -378,8 +378,7 @@ body {
     background-image: url("../images/common/ico_heart_active.png");
 }
 .btn-gnb-close,
-.btn-popup-close,
-.btn-purchase-option-close {
+.btn-popup-close {
     background-image: url("../images/common/ico_close.png");
 }
 .btn-back {
@@ -424,6 +423,7 @@ select {
     border-left: 0;
 }
 .select-custom-selectBox-dropdown-menu.selectBox-options {
+    max-width: 87.037vw;
     max-height: 43.333vw;
     background: #428c75;
     border: 0;
@@ -2267,18 +2267,18 @@ footer .cs-info .btn-tel {
     position: relative;
     width: 87.037%;
     max-width: 940px;
-    max-height: 68.611vw;
     margin: 0 auto 1.852vw;
+    padding-top: 10vw 0;
     border-radius: 5.926vw;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    
+    box-sizing: border-box;    
 }
 .option-body {
     position: relative;
-    padding: 10vw 2.778vw 7.407vw;
+    max-height: 68.611vw;
+    padding: 0 2.778vw 7.407vw;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .btn-option-close {
     position: absolute;
@@ -2289,6 +2289,7 @@ footer .cs-info .btn-tel {
     background-image: url("../images/common/ico_close_g.png");
 }
 .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
+    max-width: 81.481vw;
     z-index: 20;
 }
 .product-option .select-custom + .purchase-option,
@@ -2296,8 +2297,17 @@ footer .cs-info .btn-tel {
     margin-top: 2.778vw;
 }
 .product-option .box {
+    position: relative;
     padding: 5.833vw 2.778vw 2.778vw;
     border-radius: 3.333vw;
+}
+.btn-purchase-option-close {
+    position: absolute;
+    top: 2.778vw;
+    right: 2.778vw;
+    width: 2.222vw;
+    height: 2.222vw;
+    background-image: url("../images/common/ico_delete.png");
 }
 .product-option .box .option-name {
     letter-spacing: -0.06em;
@@ -2319,7 +2329,8 @@ footer .cs-info .btn-tel {
     font-size: 4.444vw;
 }
 .option-foot {
-    padding: 4.630vw 2.778vw;
+    height: 13.889vw;
+    padding: 0 2.778vw;
     border-top: 0.185vw solid #d0d0d0;
 }
 
@@ -3277,7 +3288,7 @@ footer .cs-info .btn-tel {
     width: 6.111vw;
     height: 6.111vw;
     font-size: 0;
-    background: #fff url("../images/common/ico_delete.png") no-repeat center center;
+    background: #fff url("../images/common/ico_delete_gy.png") no-repeat center center;
     background-size: 50%;
     border-radius: 50%;
     text-indent: -9999px;
@@ -3555,6 +3566,7 @@ footer .cs-info .btn-tel {
         background-size: 6px;
     }
     .select-custom-selectBox-dropdown-menu.selectBox-options {
+        max-width: 279px;
         max-height: 139px;
         border-radius: 10px;
     }
@@ -4127,15 +4139,6 @@ footer .cs-info .btn-tel {
         border-radius: 14px;
         line-height: 44px;
     }
-    /* .fixed-btn-wrap .counter-box .minus,
-    .fixed-btn-wrap .counter-box .plus {
-        width: 18px;
-        height: 18px;
-        background-size: 10px;
-    }
-    .fixed-btn-wrap .counter-box .num {
-        font-size: 24px;
-    } */
 
     /* recommend-list */
     .recommend-list li {
@@ -4385,19 +4388,23 @@ footer .cs-info .btn-tel {
     }
     /* 상품 옵션 */
     .product-option {
-        max-height: 220px;
         margin-bottom: 6px;
+        padding-top: 32px;
         border-radius: 18px;
         
     }
     .option-body {
-        padding: 32px 9px 7.407vw;
+        max-height: 220px;
+        padding: 0 9px 24px;
     }
     .btn-option-close {
         top: 9px;
         right: 9px;
         width: 8px;
         height: 8px;
+    }
+    .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
+        max-width: 260px;
     }
     .product-option .select-custom + .purchase-option,
     .product-option .box + .box {
@@ -4406,6 +4413,12 @@ footer .cs-info .btn-tel {
     .product-option .box {
         padding: 19px 9px 9px;
         border-radius: 10px;
+    }
+    .btn-purchase-option-close {
+        top: 9px;
+        right: 9px;
+        width: 6px;
+        height: 6px;
     }
     .product-option .counter-box {
         min-width: 12.963vw;
@@ -4420,7 +4433,8 @@ footer .cs-info .btn-tel {
         font-size: 14px;
     }
     .option-foot {
-        padding: 15px 9px;
+        height: 44px;
+        padding: 0 9px;
         border-top: 1px solid #d0d0d0;
     }
 
@@ -4859,6 +4873,11 @@ footer .cs-info .btn-tel {
         display: block;
     }
 
+    /* select custom */
+    .select-custom-selectBox-dropdown-menu.selectBox-options {
+        max-width: 240px;
+    }
+
     /* footer */
     footer .cs-info p span {
         display: block;
@@ -4870,14 +4889,14 @@ footer .cs-info .btn-tel {
         letter-spacing: -0.06em;
     }
 
-    /* fixed-btn-wrap */
-    /* .fixed-btn-wrap .counter-box .num {
-        font-size: 20px;
-    } */
-
     /* Mr.공구 */
     .together-detail-wrap .product-slide .txt-box {
         padding: 0 9px;
+    }
+
+    /* 상품 옵션 */
+    .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
+        max-width: 226px;
     }
 
     /* 회원 등급 안내 */
@@ -5105,8 +5124,7 @@ footer .cs-info .btn-tel {
         background-image: url("../images/common/ico_heart_active@2x.png");
     }
     .btn-gnb-close,
-    .btn-popup-close,
-    .btn-purchase-option-close {
+    .btn-popup-close {
         background-image: url("../images/common/ico_close@2x.png");
     }
     .btn-back {
@@ -5139,6 +5157,7 @@ footer .cs-info .btn-tel {
         background-size: 24px;
     }
     .select-custom-selectBox-dropdown-menu.selectBox-options {
+        max-width: 940px;
         max-height: 468px;
         border-radius: 32px;
     }
@@ -5777,15 +5796,6 @@ footer .cs-info .btn-tel {
         border-radius: 48px;
         line-height: 150px;
     }
-    /* .fixed-btn-wrap .counter-box .minus,
-    .fixed-btn-wrap .counter-box .plus {
-        width: 64px;
-        height: 64px;
-        background-size: 36px;
-    }
-    .fixed-btn-wrap .counter-box .num {
-        font-size: 80px;
-    } */
 
     /* recommend-list */
     .recommend-list li {
@@ -6065,13 +6075,13 @@ footer .cs-info .btn-tel {
     }
     /* 상품 옵션 */
     .product-option {
-        max-height: 741px;
         margin-bottom: 20px;
+        padding-top: 108px;
         border-radius: 64px;
-        
     }
     .option-body {
-        padding: 108px 30px 80px;
+        max-height: 741px;
+        padding: 0 30px 80px;
     }
     .btn-option-close {
         top: 30px;
@@ -6080,6 +6090,9 @@ footer .cs-info .btn-tel {
         height: 27px;
         background-image: url("../images/common/ico_close_g@2x.png");
     }
+    .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
+        max-width: 880px;
+    }
     .product-option .select-custom + .purchase-option,
     .product-option .box + .box {
         margin-top: 30px;
@@ -6087,6 +6100,13 @@ footer .cs-info .btn-tel {
     .product-option .box {
         padding: 63px 30px 30px;
         border-radius: 36px;
+    }
+    .btn-purchase-option-close {
+        top: 30px;
+        right: 30px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/common/ico_delete@2x.png");
     }
     .product-option .counter-box {
         min-width: 140px;
@@ -6101,7 +6121,8 @@ footer .cs-info .btn-tel {
         font-size: 48px;
     }
     .option-foot {
-        padding: 50px 30px;
+        height: 150px;
+        padding: 0 50px;
         border-top: 2px solid #d0d0d0;
     }
 
@@ -6551,7 +6572,7 @@ footer .cs-info .btn-tel {
         right: -18px;
         width: 66px;
         height: 66px;
-        background-image: url("../images/common/ico_delete.png");
+        background-image: url("../images/common/ico_delete_gy.png");
     }
     .write-form .bar-list li {
         padding-left: 20px;
