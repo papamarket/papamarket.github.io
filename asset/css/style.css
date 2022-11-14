@@ -4741,7 +4741,7 @@ footer .cs-info .btn-tel {
     .notice-list {
         border-top: 1px solid #edeae2;
     }
-    /* 공지사항 상세 */
+    /* 공지사항, 이벤트 상세 */
     .normal-view .view-head {
         border-bottom: 1px solid #edeae2;
     }
@@ -6488,7 +6488,7 @@ footer .cs-info .btn-tel {
     .notice-list {
         border-top: 2px solid #edeae2;
     }
-    /* 공지사항 상세 */
+    /* 공지사항, 이벤트 상세 */
     .normal-view .view-head {
         border-bottom: 2px solid #edeae2;
     }
