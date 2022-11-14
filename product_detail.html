@@ -365,7 +365,9 @@
         });
 
         /* 팝업 열기 */
-        $(".btn-coupon").click(function() {
+        $(".btn-coupon").click(function(e) {
+            e.preventDefault();
+
             $(".popup").show();
             $("html, body").addClass("no-scroll");
         });
@@ -376,7 +378,10 @@
             $("html, body").removeClass("no-scroll");
         });
         $(".popup").click(function(e){
-            if( !$(".popup").has(e.target).length ) $(this).hide(); $("html, body").removeClass("no-scroll");
+            if( !$(".popup").has(e.target).length ) {
+                $(this).hide();
+                $("html, body").removeClass("no-scroll");
+            } 
         });
     </script>
 </body>

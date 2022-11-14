@@ -449,7 +449,10 @@
             $("html, body").removeClass("no-scroll");
         });
         $(".popup").click(function(e){
-            if( !$(".popup").has(e.target).length ) $(this).hide(); $("html, body").removeClass("no-scroll");
+            if( !$(".popup").has(e.target).length ) {
+                $(this).hide();
+                $("html, body").removeClass("no-scroll");
+            } 
         });
     </script>
 </body>

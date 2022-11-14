@@ -28,8 +28,10 @@ $(".btn-gnb-close").on("click",function(){
 	$(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
 });
 $(".gnb-menu").click(function(e){
-    if( !$(".gnb-menu").has(e.target).length ) $(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
-    if( !$(".gnb-menu").has(e.target).length ) $("html, body").removeClass("no-scroll");
+    if( !$(".gnb-menu").has(e.target).length ) {
+        $(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
+        $("html, body").removeClass("no-scroll");
+    }
 });
 
 /* gnb-menu > sub-menu open */

@@ -160,7 +160,7 @@
                                         </p>
                                         <span class="state fs27 fw500">발급완료</span>
                                     </a>
-                                    <a href="#" class="coupon">
+                                    <a href="#" class="coupon coupon-download">
                                         <p>
                                             <span class="tit black fs46 fw700">5천원 쿠폰</span>
                                             <span class="txt gray2 fs24">5만원 이상 사용 가능</span>
@@ -471,6 +471,18 @@
             </ul>
         </div>
     </div>
+    <!-- 팝업 -->
+    <div class="popup popup-normal">
+        <div class="popup-body bg-green">
+            <button class="btn btn-popup-close">팝업 닫기</button>
+            <div class="txt-wrap txt-center">
+                <p class="txt white fs50 fw500">쿠폰이 발급되었습니다.</p>
+            </div>
+            <div class="btn-wrap flex justify-between">
+                <button class="btn white fs42 fw500">확인</button>
+            </div>
+        </div>
+    </div>
     <script src="./asset/js/ui.js"></script>
     <script>
         /* tab */
@@ -515,6 +527,26 @@
                 }
             });
         }
+
+        /* 팝업 열기 */
+        $(".coupon-download").click(function(e) {
+            e.preventDefault();
+            
+            $(".popup").show();
+            $("html, body").addClass("no-scroll");
+        });
+
+        /* 팝업 닫기 */
+        $(".btn-popup-close").click(function () {
+            $(this).parents(".popup").hide();
+            $("html, body").removeClass("no-scroll");
+        });
+        $(".popup").click(function(e){
+            if( !$(".popup").has(e.target).length ) {
+                $(this).hide();
+                $("html, body").removeClass("no-scroll");
+            } 
+        });
     </script>
 </body>
 </html>
