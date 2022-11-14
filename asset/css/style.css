@@ -143,6 +143,12 @@ body {
 .pt136 {
     padding-top: 12.593vw;
 }
+.pt146 {
+    padding-top: 13.519vw;
+}
+.pt186 {
+    padding-top: 17.222vw;
+}
 .pt213 {
     padding-top: 19.722vw;
 }
@@ -2186,6 +2192,8 @@ footer .cs-info .btn-tel {
 .desc-detail .detail-tab.fixed {
     position: fixed;
     top: 18.519vw;
+    -webkit-box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
+    box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
 	z-index: 15;
 }
 .desc-detail .detail-tab li {
@@ -3473,6 +3481,12 @@ footer .cs-info .btn-tel {
     .pt136 {
         padding-top: 40px;
     }
+    .pt146 {
+        padding-top: 43px;
+    }
+    .pt186 {
+        padding-top: 55px;
+    }
     .pt213 {
         padding-top: 63px;
     }
@@ -4397,6 +4411,8 @@ footer .cs-info .btn-tel {
     }
     .desc-detail .detail-tab.fixed {
         top: 60px;
+        -webkit-box-shadow: 3px 3px 5px 0 rgba(162,162,162,.05);
+        box-shadow: 3px 3px 5px 0 rgba(162,162,162,.05);
     }
     .desc-detail .detail-tab li a {
         padding: 0 11px;
@@ -5040,6 +5056,12 @@ footer .cs-info .btn-tel {
     }
     .pt136 {
         padding-top: 136px;
+    }
+    .pt146 {
+        padding-top: 146px;
+    }
+    .pt186 {
+        padding-top: 186px;
     }
     .pt213 {
         padding-top: 213px;
@@ -6101,6 +6123,8 @@ footer .cs-info .btn-tel {
         right: 0;
         margin-left: auto;
         margin-right: auto;
+        -webkit-box-shadow: 10px 10px 16px 0 rgba(162,162,162,.05);
+        box-shadow: 10px 10px 16px 0 rgba(162,162,162,.05);
     }
     .desc-detail .detail-tab li a {
         padding: 0 38px;

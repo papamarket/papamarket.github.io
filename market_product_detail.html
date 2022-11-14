@@ -241,8 +241,8 @@
                 </div>
             </div>
             <!-- 상품 상세 -->
-            <div class="desc-detail pt136 pb80 bt10-edeae2">
-                <ul class="detail-tab flex align-center justify-center fs36">
+            <div class="desc-detail pt146 pb80">
+                <ul class="detail-tab flex align-center justify-center fs36 bt10-edeae2">
                     <li><a href="#" class="active">상품정보</a></li>
                     <li><a href="#">후기<span>(76)</span></a></li>
                     <li><a href="#">문의<span>(12)</span></a></li>
@@ -254,7 +254,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="tab-btn-box fs48 tab-btn-box">
+            <ul class="tab-btn-box fs48 tab-btn-box bt10-edeae2">
                 <li><a href="#">후기<span>(76)</span></a></li>
                 <li><a href="#">문의<span>(12)</span></a></li>
             </ul>
@@ -550,9 +550,8 @@
         });
 
         /* detail-tab fixed */
-        const headerH = $("header").height();
-        const detailtabH = $(".detail-tab").height();
-        const detailtabT = $(".detail-tab").offset().top - detailtabH - headerH;
+        const headerOH = $("header").outerHeight();
+        const detailtabT = $(".detail-tab").offset().top - headerOH;
 
         $(window).scroll(function(){
             const scrollT = $(this).scrollTop();

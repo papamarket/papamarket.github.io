@@ -385,10 +385,8 @@
     <script src="./asset/js/ui.js"></script>
     <script>
         /* sub-header fixed */
-        const headerH = $("header").height();
         const headerOH = $("header").outerHeight();
-        const subHeaderOH = $(".sub-header").outerHeight();
-        const subHeaderT = $(".sub-header").offset().top - subHeaderOH - headerH;
+        const subHeaderT = $(".sub-header").offset().top - headerOH;
 
         $(window).scroll(function(){
             const scrollT = $(this).scrollTop();

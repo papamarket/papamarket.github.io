@@ -324,10 +324,9 @@
     <script src="./asset/js/ui.js"></script>
     <script>
         /* category-list fixed */
-        const headerH = $("header").height();
         const headerOH = $("header").outerHeight();
         const categoryOH = $(".category-list").outerHeight();
-        const categoryT = $(".category-list").offset().top - categoryOH - headerH;
+        const categoryT = $(".category-list").offset().top - headerOH;
 
         $(window).scroll(function(){
             const scrollT = $(this).scrollTop();
