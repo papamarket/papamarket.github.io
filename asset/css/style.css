@@ -105,6 +105,9 @@ body {
 .mr15 {
     margin-right: 1.389vw;
 }
+.mr20 {
+    margin-right: 1.852vw;
+}
 .mb30 {
     margin-bottom: 2.778vw;
 }
@@ -198,6 +201,9 @@ body {
 }
 .green {
     color: #428c75;
+}
+.red {
+    color: #f00;
 }
 
 /* font-size */
@@ -711,6 +717,13 @@ input[type="checkbox"] + label {
     right: 2.778vw;
     width: 2.963vw;
     height: 2.963vw;
+}
+.btn-popup-close.bg-none {
+    width: auto;
+    height: auto;
+    background: none;
+    text-indent: 0;
+    line-height: 0.905em;
 }
 .popup-normal .popup-body .txt-wrap {
     padding: 15.833vw 0 10.556vw;
@@ -1620,12 +1633,13 @@ footer .cs-info .btn-tel {
     border-radius: 5.926vw;
     overflow: hidden;
 }
-.product-list .product-img .select-inp {
+.product-img .select-inp {
     position: absolute;
     top: 2.778vw;
     left: 2.778vw;
+    z-index: 1;
 }
-.product-list .product-img .select-inp + label {
+.product-img .select-inp + label {
     position: absolute;
     font-size: 0;
     text-indent: -9999px;
@@ -2274,7 +2288,6 @@ footer .cs-info .btn-tel {
     content: '';
 }
 .product-option {
-    display: none;
     position: relative;
     width: 87.037%;
     max-width: 940px;
@@ -2282,6 +2295,9 @@ footer .cs-info .btn-tel {
     padding-top: 10vw;
     border-radius: 5.926vw;
     box-sizing: border-box;    
+}
+.product-detail-wrap .product-option {
+    display: none;
 }
 .option-body {
     position: relative;
@@ -2370,6 +2386,144 @@ footer .cs-info .btn-tel {
     height: 13.889vw;
     padding: 0 2.778vw;
     border-top: 0.185vw solid #d0d0d0;
+}
+
+/* 장바구니 */
+.cart-wrap .sub-header .select-inp + label {
+    margin-left: 1.667vw;
+}
+.cart-wrap h5,
+.cart-wrap h6,
+.cart-wrap .txt,
+.cart-wrap .product-txt p {
+    letter-spacing: -0.06em;
+}
+.cart-product {
+    padding: 4.630vw 6.481vw;
+}
+.cart-product + .cart-product {
+    border-top: 0.185vw solid #edeae2;
+}
+.cart-product .product-info {
+    position: relative;
+}
+.cart-product .product-img {
+    position: relative;
+    width: 32.407vw;
+    height: 32.407vw;
+    border-radius: 5.926vw;
+    overflow: hidden;
+}
+.cart-product.end .product-img:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 5.556vw;
+    font-weight: 500;
+    background-color: rgba(128,128,128,.5);
+    letter-spacing: -0.06em;
+    content: '품절';
+}
+.cart-product.end.cart-together-product .product-img:after {
+    content: '공구 종료';
+}
+.cart-product .product-txt {
+    width: calc(100% - 51.667vw);
+}
+.cart-product .product-txt .name {
+    padding-bottom: 0.278vw;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cart-product .btn-wrap {
+    width: 10vw;
+}
+.cart-product .btn-wrap .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4.444vw;
+    border-radius: 2.222vw;
+    letter-spacing: -0.06em;
+}
+.cart-product .btn-wrap .btn + .btn {
+    margin-top: 5.278vw;
+}
+.cart-product .product-info .price {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.cart-wrap .more-tit {
+    position: relative;
+    padding-right: 4.444vw;
+}
+.cart-product .more-tit {
+    padding-right: 3.704vw;
+}
+.cart-wrap .more-tit:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 2.963vw;
+    height: 2.963vw;
+    margin-top: -1.481vw;
+    background: url("../images/common/ico_arrow.png") no-repeat center center;
+    background-size: cover;
+    transform: rotate(0);
+    transition: .3s transform;
+    content: '';
+}
+.cart-wrap .more-tit.active:after {
+    transform: rotate(-180deg);
+}
+.cart-wrap .more-tit.active .txt {
+    font-weight: 700;
+}
+.cart-product .more-tit:after {
+    width: 2.222vw;
+    height: 2.222vw;
+    margin-top: -1.111vw;
+}
+.cart-wrap .btn-coupon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11.296vw;
+    height: 5.370vw;
+    border-radius: 2.685vw;
+    letter-spacing: -0.06em;
+}
+.noti-txt:before {
+    display: block;
+    position: absolute;
+    left: 0;
+    background: url("../images/common/ico_notice.png") no-repeat center center;
+    background-size: cover;
+    content: '';
+}
+.noti-txt {
+    position: relative;
+    line-height: 1.2em;
+    word-break: keep-all;
+}
+.cart-wrap .noti-txt:before {
+    top: 0.370vw;
+    width: 2.963vw;
+    height: 2.963vw;
+}
+.cart-wrap .noti-txt {
+    padding-left: 4.630vw;
 }
 
 /* 마이페이지 */
@@ -3440,6 +3594,9 @@ footer .cs-info .btn-tel {
     .mr15 {
         margin-right: 4px;
     }
+    .mr20 {
+        margin-right: 6px;
+    }
     .mb30 {
         margin-bottom: 9px;
     }
@@ -4159,7 +4316,7 @@ footer .cs-info .btn-tel {
     .product-list .product-img {
         border-radius: 18px;
     }
-    .product-list .product-img .select-inp {
+    .product-img .select-inp {
         top: 9px;
         left: 9px;
     }
@@ -4503,6 +4660,70 @@ footer .cs-info .btn-tel {
         height: 44px;
         padding: 0 9px;
         border-top: 1px solid #d0d0d0;
+    }
+
+    /* 장바구니 */
+    .cart-wrap .sub-header .select-inp + label {
+        margin-left: 5px;
+    }
+    .cart-product {
+        padding: 15px 20px;
+    }
+    .cart-product + .cart-product {
+        border-top: 1px solid #edeae2;
+    }
+    .cart-product .product-img {
+        width: 104px;
+        height: 104px;
+        border-radius: 18px;
+    }
+    .cart-product.end .product-img:after {
+        font-size: 18px;
+    }
+    .cart-product .product-txt {
+        width: calc(100% - 166px);
+    }
+    .cart-product .product-txt .name {
+        padding-bottom: 1px;
+    }
+    .cart-product .btn-wrap {
+        width: 32px;
+    }
+    .cart-product .btn-wrap .btn {
+        height: 14px;
+        border-radius: 7px;
+    }
+    .cart-product .btn-wrap .btn + .btn {
+        margin-top: 17px;
+    }
+    .cart-wrap .more-tit {
+        padding-right: 14px;
+    }
+    .cart-product .more-tit {
+        padding-right: 12px;
+    }
+    .cart-wrap .more-tit:after {
+        width: 8px;
+        height: 8px;
+        margin-top: -4px;
+    }
+    .cart-product .more-tit:after {
+        width: 7px;
+        height: 7px;
+        margin-top: -3.5px;
+    }
+    .cart-wrap .btn-coupon {
+        width: 36px;
+        height: 18px;
+        border-radius: 9px;
+    }
+    .cart-wrap .noti-txt:before {
+        top: 2px;
+        width: 8px;
+        height: 8px;
+    }
+    .cart-wrap .noti-txt {
+        padding-left: 15px;
     }
 
     /* 마이페이지 */
@@ -4966,6 +5187,22 @@ footer .cs-info .btn-tel {
         max-width: 226px;
     }
 
+    /* 장바구니 */
+    .cart-product .product-img {
+        width: 90px;
+        height: 90px;
+        border-radius: 16px;
+    }
+    .cart-product.end .product-img:after {
+        font-size: 16px;
+    }
+    .cart-product .product-txt {
+        width: calc(100% - 148px);
+    }
+    .cart-product .product-txt .txt {
+        line-height: 1.2em;
+    }
+
     /* 회원 등급 안내 */
     .level-info .coupon-box .coupon {
         width: 120px;
@@ -5015,6 +5252,9 @@ footer .cs-info .btn-tel {
     }
     .mr15 {
         margin-right: 15px;
+    }
+    .mr20 {
+        margin-right: 20px;
     }
     .mb30 {
         margin-bottom: 30px;
@@ -5839,7 +6079,7 @@ footer .cs-info .btn-tel {
     .product-list .product-img {
         border-radius: 64px;
     }
-    .product-list .product-img .select-inp {
+    .product-img .select-inp {
         top: 30px;
         left: 30px;
     }
@@ -6218,6 +6458,74 @@ footer .cs-info .btn-tel {
         height: 150px;
         padding: 0 50px;
         border-top: 2px solid #d0d0d0;
+    }
+
+    /* 장바구니 */
+    .cart-wrap .sub-header .select-inp + label {
+        margin-left: 18px;
+    }
+    .cart-product {
+        padding: 50px 70px;
+    }
+    .cart-product + .cart-product {
+        border-top: 2px solid #edeae2;
+    }
+    .cart-product .product-img {
+        width: 350px;
+        height: 350px;
+        border-radius: 64px;
+    }
+    .cart-product.end .product-img:after {
+        font-size: 60px;
+    }
+    .cart-product .product-txt {
+        width: calc(100% - 558px);
+    }
+    .cart-product .product-txt .name {
+        padding-bottom: 3px;
+    }
+    .cart-product .btn-wrap {
+        width: 108px;
+    }
+    .cart-product .btn-wrap .btn {
+        height: 48px;
+        border-radius: 24px;
+    }
+    .cart-product .btn-wrap .btn + .btn {
+        margin-top: 57px;
+    }
+    .cart-wrap .more-tit {
+        padding-right: 48px;
+    }
+    .cart-product .more-tit {
+        padding-right: 40px;
+    }
+    .cart-wrap .more-tit:after {
+        width: 32px;
+        height: 32px;
+        margin-top: -16px;
+        background-image: url("../images/common/ico_arrow@2x.png");
+    }
+    .cart-product .more-tit:after {
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+    }
+    .cart-wrap .btn-coupon {
+        width: 122px;
+        height: 58px;
+        border-radius: 29px;
+    }
+    .noti-txt:before {
+        background-image: url("../images/common/ico_notice@2x.png");
+    }
+    .cart-wrap .noti-txt:before {
+        top: 4px;
+        width: 32px;
+        height: 32px;
+    }
+    .cart-wrap .noti-txt {
+        padding-left: 50px;
     }
 
     /* 마이페이지 */
