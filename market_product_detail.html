@@ -315,7 +315,7 @@
                 </div>
                 <!-- 장바구니, 구매하기 버튼 -->
                 <div class="inner flex align-center justify-between">
-                    <button class="btn w460 green fs50 bg-white">장바구니</button>
+                    <button class="btn w460 green fs50 bg-white btn-cart">장바구니</button>
                     <button class="btn w460 white fs50 bg-green btn-option">구매하기</button>
                 </div>
             </div>
@@ -593,6 +593,16 @@
         var selectBox = new SelectBox($(".select-custom"), settings = {});
 
         /* 상품 옵션 열기 */
+        $(".btn-cart").click(function(){
+            $(".product-option").show().addClass("active");
+            $(".btn-option").text('바로구매');
+            $("body").addClass("no-scroll");
+            
+            /* select custom */
+            $(".select-custom").selectBox({
+                mobile: true
+            });
+        });
         $(".btn-option").click(function(){
             $(".product-option").show().addClass("active");
             $(this).text('바로구매');
