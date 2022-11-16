@@ -547,6 +547,15 @@ input[type="checkbox"] + label {
 .design-inp[type="checkbox"] + label {
     margin-left: 1.574vw;
 }
+/* disabled */
+.design-inp[type="radio"].disabled,
+.design-inp[type="checkbox"].disabled {
+    border: 0;
+    background: #b4b3af;
+}
+.design-inp.disabled + label {
+    cursor: inherit;
+}
 /* select-inp */
 .select-inp {
     width: 6.111vw;
@@ -2752,6 +2761,68 @@ input[type="range"]::-webkit-slider-thumb {
     padding-left: 4.630vw;
 }
 
+/* 쿠폰 */
+.coupon-wrap h5 {
+    position: relative;
+    letter-spacing: -0.06em;
+}
+.coupon-wrap .coupon-box + h5:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100% + 12.963vw);
+    height: 0.185vw;
+    background-color: #edeae2;
+    transform: translate(-50%, 0);
+    content: '';
+}
+.coupon-wrap .coupon-box + h5 {
+    padding-top: 5.741vw;
+}
+.coupon-wrap .coupon-box .coupon {
+    width: calc(50% - 1.944vw);
+}
+.coupon-wrap .coupon-box .coupon:nth-child(2) ~ .coupon {
+    margin-top: 3.889vw;
+}
+.coupon-wrap .coupon-box .coupon a {
+    height: 22.222vw;
+}
+.coupon-wrap .coupon-box .coupon p {
+    height: 75%;
+    padding-bottom: 1.852vw;
+}
+.coupon-wrap .coupon-box .coupon .date {
+    margin-top: 0.833vw;
+}
+.coupon-box .coupon .design-inp {
+    position: absolute;
+    top: 1.389vw;
+    left: 1.389vw;
+}
+.coupon-box .coupon .coupon-label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 0;
+    text-indent: -9999px;
+}
+.coupon-wrap .coupon-box .coupon .txt-use {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4.630vw;
+    margin-top: 1.389vw;
+    border-radius: 1.481vw;
+}
+.coupon-wrap .coupon-box .coupon.not .txt-use {
+    color: #a9a69c;
+    background-color: #edeae2;
+}
+
 /* 마이페이지 */
 .profile-info .profile-img {
     display: block;
@@ -3110,37 +3181,42 @@ input[type="range"]::-webkit-slider-thumb {
 .coupon-box {
     flex-wrap: wrap;
 }
-.coupon-box .coupon {
+.level-info .coupon-box .coupon {
+    width: 33.519vw;
+}
+.level-info .coupon-box .coupon:nth-child(2) ~ .coupon {
+    margin-top: 1.852vw;
+}
+.coupon-box .coupon a {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    position: relative;
+    width: 100%;
     background: url("../images/common/coupon.png") no-repeat center center;
-    background-size: contain;
+    background-size: 100% 100%;
     text-align: center;
 }
-.coupon-box .coupon.completed {
+.coupon-box .coupon.completed a {
     background-image: url("../images/common/coupon_completed.png");
 }
-.coupon-box .coupon.not {
+.coupon-box .coupon.not a {
     background-image: url("../images/common/coupon_not.png");
 }
-.level-info .coupon-box .coupon {
-    width: 33.519vw;
+.level-info .coupon-box .coupon a {
     height: 17.870vw;
-}
-.coupon-box .coupon:nth-child(2) ~ .coupon {
-    margin-top: 1.852vw;
 }
 .coupon-box .coupon p {
     display: flex;
     align-items: flex-end;
+    align-content: end;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
 }
 .level-info .coupon-box .coupon p {
     height: 74.611%;
-    padding: 4.630vw 0 0.833vw;
+    padding-bottom: 0.926vw;
 }
 .coupon-box .coupon span {
     display: block;
@@ -3148,7 +3224,7 @@ input[type="range"]::-webkit-slider-thumb {
     letter-spacing: -0.06em;
 }
 .coupon-box .coupon .tit {
-    align-self: flex-start;
+    margin-bottom: 1.852vw;
 }
 .coupon-box .coupon .state {
     color: #fff;
@@ -3159,11 +3235,13 @@ input[type="range"]::-webkit-slider-thumb {
 .coupon-box .coupon.not .state {
     color: #a9a69c;
 }
+.coupon-wrap .more-tit,
 .membership-wrap .more-tit {
     display: flex;
     align-items: center;
     letter-spacing: -0.06em;
 }
+.coupon-wrap .more-tit:after,
 .membership-wrap .more-tit:after {
     display: block;
     width: 2.222vw;
@@ -3175,6 +3253,7 @@ input[type="range"]::-webkit-slider-thumb {
     transition: .3s transform;
     content: '';
 }
+.coupon-wrap .more-tit.active:after,
 .membership-wrap .more-tit.active:after {
     transform: rotate(-180deg);
 }
@@ -5061,6 +5140,39 @@ input[type="range"]::-webkit-slider-thumb {
         padding-left: 15px;
     }
 
+    /* 쿠폰 */
+    .coupon-wrap .coupon-box + h5:before {
+        width: calc(100% + 40px);
+        height: 1px;
+    }
+    .coupon-wrap .coupon-box + h5 {
+        padding-top: 19px;
+    }
+    .coupon-wrap .coupon-box .coupon {
+        width: 134px;
+    }
+    .coupon-wrap .coupon-box .coupon:nth-child(2) ~ .coupon {
+        margin-top: 12px;
+    }
+    .coupon-wrap .coupon-box .coupon a {
+        height: 72px;
+    }
+    .coupon-wrap .coupon-box .coupon p {
+        padding-bottom: 6px;
+    }
+    .coupon-wrap .coupon-box .coupon .date {
+        margin-top: 3px;
+    }
+    .coupon-box .coupon .design-inp {
+        top: 4px;
+        left: 4px;
+    }
+    .coupon-wrap .coupon-box .coupon .txt-use {
+        height: 16px;
+        margin-top: 4px;
+        border-radius: 4px;
+    }
+
     /* 마이페이지 */
     .profile-info .btn-photo {
         right: -2px;
@@ -5217,14 +5329,20 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .level-info .coupon-box .coupon {
         width: 107px;
-        height: 57px;
     }
-    .coupon-box .coupon:nth-child(2) ~ .coupon {
+    .level-info .coupon-box .coupon:nth-child(2) ~ .coupon {
         margin-top: 6px;
     }
-    .level-info .coupon-box .coupon p {
-        padding: 15px 0 3px;
+    .level-info .coupon-box .coupon a {
+        height: 57px;
     }
+    .level-info .coupon-box .coupon p {
+        padding-bottom: 3px;
+    }
+    .coupon-box .coupon .tit {
+        margin-bottom: 6px;
+    }
+    .coupon-wrap .more-tit:after
     .membership-wrap .more-tit:after {
         width: 7px;
         height: 7px;
@@ -5558,13 +5676,36 @@ input[type="range"]::-webkit-slider-thumb {
         line-height: 1.2em;
     }
 
+    /* 쿠폰 */
+    .coupon-wrap .coupon-box .coupon {
+        width: 118px;
+    }
+    .coupon-wrap .coupon-box .coupon a {
+        height: 63px;
+    }
+    .coupon-wrap .coupon-box .coupon .tit {
+        margin-bottom: 4px;
+    }
+    .coupon-wrap .coupon-box .coupon p {
+        padding-bottom: 2px;
+    }
+    .coupon-wrap .coupon-box .coupon .date {
+        margin-top: 2px;
+    }
+    .coupon-box .coupon .design-inp {
+        top: 3px;
+        left: 3px;
+    }
+
     /* 회원 등급 안내 */
     .level-info .coupon-box .coupon {
         width: 120px;
-        height: 64px;
     }
     .level-info .coupon-box .coupon:nth-child(2) {
         margin-top: 6px;
+    }
+    .level-info .coupon-box .coupon a {
+        height: 64px;
     }
 }
 
@@ -6988,6 +7129,39 @@ input[type="range"]::-webkit-slider-thumb {
         padding-left: 50px;
     }
 
+    /* 쿠폰 */
+    .coupon-wrap .coupon-box + h5:before {
+        width: calc(100% + 140px);
+        height: 2px;
+    }
+    .coupon-wrap .coupon-box + h5 {
+        padding-top: 62px;
+    }
+    .coupon-wrap .coupon-box .coupon {
+        width: calc(50% - 21px);
+    }
+    .coupon-wrap .coupon-box .coupon:nth-child(2) ~ .coupon {
+        margin-top: 42px;
+    }
+    .coupon-wrap .coupon-box .coupon a {
+        height: 240px;
+    }
+    .coupon-wrap .coupon-box .coupon p {
+        padding-bottom: 20px;
+    }
+    .coupon-wrap .coupon-box .coupon .date {
+        margin-top: 9px;
+    }
+    .coupon-box .coupon .design-inp {
+        top: 15px;
+        left: 15px;
+    }
+    .coupon-wrap .coupon-box .coupon .txt-use {
+        height: 50px;
+        margin-top: 15px;
+        border-radius: 16px;
+    }
+
     /* 마이페이지 */
     .profile-info .btn-photo {
         right: -8px;
@@ -7153,25 +7327,31 @@ input[type="range"]::-webkit-slider-thumb {
         width: calc(100% - 192px);
         margin-left: 42px;
     }
-    .coupon-box .coupon {
-        background-image: url("../images/common/coupon@2x.png");
-    }
-    .level-info .coupon-box .coupon.completed {
-        background-image: url("../images/common/coupon_completed@2x.png");
-    }
-    .level-info .coupon-box .coupon.not {
-        background-image: url("../images/common/coupon_not@2x.png");
-    }
     .level-info .coupon-box .coupon {
         width: 362px;
-        height: 193px;
     }
-    .coupon-box .coupon:nth-child(2) ~ .coupon {
+    .level-info .coupon-box .coupon:nth-child(2) ~ .coupon {
         margin-top: 20px;
     }
-    .level-info .coupon-box .coupon p {
-        padding: 50px 0 9px;
+    .coupon-box .coupon a {
+        background-image: url("../images/common/coupon@2x.png");
     }
+    .level-info .coupon-box .coupon.completed a {
+        background-image: url("../images/common/coupon_completed@2x.png");
+    }
+    .level-info .coupon-box .coupon.not a {
+        background-image: url("../images/common/coupon_not@2x.png");
+    }
+    .level-info .coupon-box .coupon a {
+        height: 193px;
+    }
+    .level-info .coupon-box .coupon p {
+        padding-bottom: 10px;
+    }
+    .coupon-box .coupon .tit {
+        margin-bottom: 20px;
+    }
+    .coupon-wrap .more-tit:after
     .membership-wrap .more-tit:after {
         width: 24px;
         height: 24px;
