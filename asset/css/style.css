@@ -1195,10 +1195,6 @@ footer .cs-info .btn-tel {
     width: calc(100% - 7.407vw);
     padding: 0;
 }
-/*  */
-.keyword-area {
-    display: none;
-}
 /* 검색 결과 */
 .filter-box {
     border-radius: 5.926vw;
