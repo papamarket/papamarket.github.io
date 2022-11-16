@@ -8,11 +8,11 @@
     <title>PAPAMARKET</title>
     <link rel="stylesheet" href="./asset/css/reset.css">
     <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./asset/css/jquery.selectBox.css">
+    <link rel="stylesheet" href="./asset/css/nice-select.css">
     <link rel="stylesheet" href="./asset/css/style.css">
     <script src="./asset/js/jquery-3.6.1.js"></script>
     <script src="./asset/js/swiper-bundle.min.js"></script>
-    <script src="./asset/js/jquery.selectBox.js"></script>
+    <script src="./asset/js/jquery.nice-select.min.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -57,7 +57,7 @@
                     <!-- 문의 유형 -->
                     <label for="select-faq" class="input-label mb30 fs48">문의 유형</label>
                     <!-- select -->
-                    <select id="select-faq" name="select-faq" class="select-custom fs36">
+                    <select id="select-faq" name="select-faq" class="select-custom fs36 wide">
                         <option value="">문의 유형을 선택해 주세요.</option>
                         <option value="">상품</option>
                         <option value="">주문취소</option>
@@ -294,9 +294,7 @@
     <script src="./asset/js/ui.js"></script>
     <script>
         /* select custom */
-        $(".select-custom").selectBox({
-            mobile: true
-        });
+        $(".select-custom").niceSelect();
     </script>
 </body>
 </html>

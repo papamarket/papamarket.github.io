@@ -8,11 +8,11 @@
     <title>PAPAMARKET</title>
     <link rel="stylesheet" href="./asset/css/reset.css">
     <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./asset/css/jquery.selectBox.css">
+    <link rel="stylesheet" href="./asset/css/nice-select.css">
     <link rel="stylesheet" href="./asset/css/style.css">
     <script src="./asset/js/jquery-3.6.1.js"></script>
     <script src="./asset/js/swiper-bundle.min.js"></script>
-    <script src="./asset/js/jquery.selectBox.js"></script>
+    <script src="./asset/js/jquery.nice-select.min.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -538,7 +538,7 @@
     <!-- 변경 팝업 -->
     <div class="popup popup-normal popup-change">
         <div class="popup-body product-option bg-lightgray">
-            <button class="btn btn-popup-close green fs42 fw700 bg-none">완료</button>
+            <button class="btn btn-popup-close green fw700 bg-none">완료</button>
             <div class="option-body">
                 <div>
                     <!-- 옵션 선택 없을 시 -->
@@ -553,7 +553,7 @@
                     </div>
                     <!-- 옵션 선택 있을 시 -->
                     <!-- <div class="purchase-option">
-                        <select id="" name="" class="select-custom product-option-select fs42">
+                        <select id="" name="" class="select-custom product-option-select fs42 wide">
                             <option value="">옵션을 선택하세요.</option>
                             <option value="">[물가안정행사] 감귤500g</option>
                             <option value="">[물가안정행사] 감귤500g *2SET</option>
@@ -597,7 +597,7 @@
     <!-- 픽업 변경 팝업 -->
     <div class="popup popup-normal popup-pickup-change">
         <div class="popup-body product-option bg-lightgray">
-            <button class="btn btn-popup-close green fs42 fw700 bg-none">완료</button>
+            <button class="btn btn-popup-close green fw700 bg-none">완료</button>
             <div class="option-body">
                 <div>
                     <!-- 옵션 선택 없을 시 -->
@@ -612,7 +612,7 @@
                     </div> -->
                     <!-- 옵션 선택 있을 시 -->
                     <div class="purchase-option">
-                        <select id="" name="" class="select-custom product-option-select fs42">
+                        <select id="" name="" class="select-custom product-option-select fs42 wide">
                             <option value="">옵션을 선택하세요.</option>
                             <option value="">[물가안정행사] 감귤500g</option>
                             <option value="">[물가안정행사] 감귤500g *2SET</option>
@@ -686,7 +686,7 @@
         }
 
         /* select custom */
-        var selectBox = new SelectBox($(".select-custom"), settings = {});
+        $(".select-custom").niceSelect();
 
         /* 픽업 가능한 시간 선택 */
         $(".day-week-box .btn, .time-box .btn").on("click", function(){
@@ -704,37 +704,23 @@
         $(".btn-change").click(function() {
             $(".popup-change").show();
             $("body").addClass("no-scroll");
-
-            /* select custom */
-            $(".select-custom").selectBox({
-                mobile: true
-            });
         });
 
         /* 픽업 변경 팝업 열기 */
         $(".btn-pickup-change").click(function() {
             $(".popup-pickup-change").show();
             $("body").addClass("no-scroll");
-
-            /* select custom */
-            $(".select-custom").selectBox({
-                mobile: true
-            });
         });
 
         /* 팝업 닫기 */
         $(".btn-popup-close, .btn-close").click(function () {
             $(this).parents(".popup").hide();
             $("body").removeClass("no-scroll");
-            /* select custom */
-            selectBox.hideMenus();
         });
         $(".popup").click(function(e){
             if( !$(".popup").has(e.target).length ) {
                 $(this).hide();
                 $("body").removeClass("no-scroll");
-                /* select custom */
-                selectBox.hideMenus();
             } 
         });
     </script>

@@ -417,49 +417,50 @@ select {
 }
 /* select custom */
 .select-custom {
-    width: 100%;
-}
-.select-custom.selectBox-dropdown {
     height: 11.111vw;
-    color: #222;
-    background: #fff;
-    border: 0;
+    padding: 0 7.778vw 0 4.167vw;
     border-radius: 3.333vw;
-    box-shadow: none;
-    line-height: 1;
     outline: initial;
 }
-.select-custom.selectBox-dropdown .selectBox-label {
-    padding: 0 4.167vw;
+.select-custom .current {
+    display: inline-block;
+    width: 100%;
+    color: #222;
+    box-sizing: border-box;
     letter-spacing: -0.06em;
     line-height: 11.111vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-.select-custom.selectBox-dropdown .selectBox-arrow {
-    width: 12.128%;
+.select-custom:after {
+    top: 50%;
+    right: 0;
+    width: 7.778vw;
     height: 100%;
     background: url("../images/common/ico_arrow.png") no-repeat center center;
     background-size: 2.222vw;
-    border-left: 0;
+    transform: translate(0, -50%);
+    border: 0;
 }
-.select-custom-selectBox-dropdown-menu.selectBox-options {
-    max-width: 87.037vw;
+.select-custom .list {
+    width: 100%;
     max-height: 43.333vw;
     background: #428c75;
-    border: 0;
     border-radius: 2.963vw;
-    z-index: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
-.select-custom-selectBox-dropdown-menu.selectBox-options li:not(:first-child) {
-    border-top: 1px solid #f5f2e9;
-}
-.select-custom-selectBox-dropdown-menu.selectBox-options li a {
+.select-custom .list .option {
+    min-height: auto;
     padding: 2.222vw 4.167vw;
     color: #fff;
-    font-size: 3.333vw;
-    background: none;
     letter-spacing: -0.06em;
     line-height: 1.190em;
     white-space: inherit;
+}
+.select-custom .list .option:not(:first-child) {
+    border-top: 1px solid #f5f2e9;
 }
 
 /* input */
@@ -548,12 +549,12 @@ input[type="checkbox"] + label {
     margin-left: 1.574vw;
 }
 /* disabled */
-.design-inp[type="radio"].disabled,
-.design-inp[type="checkbox"].disabled {
+.design-inp[type="radio"]:disabled,
+.design-inp[type="checkbox"]:disabled {
     border: 0;
     background: #b4b3af;
 }
-.design-inp.disabled + label {
+.design-inp:disabled + label {
     cursor: inherit;
 }
 /* select-inp */
@@ -702,6 +703,8 @@ input[type="checkbox"] + label {
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(255,255,255,.5);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -734,7 +737,8 @@ input[type="checkbox"] + label {
 .btn-popup-close.bg-none {
     width: auto;
     height: auto;
-    font-size: inherit;
+    padding-bottom: 0.278vw;
+    font-size: 3.889vw;
     background: none;
     text-indent: 0;
     line-height: 0.905em;
@@ -1385,30 +1389,27 @@ input[type="range"]::-webkit-slider-thumb {
 .sort-tit {
     letter-spacing: -0.06em;
 }
-.sort-select {
-    width: auto;
+.sort-select.select-custom {
     min-width: 21.111vw;
-}
-.select-custom.selectBox-dropdown.sort-select {
     height: auto;
-    color: #428c75;
+    padding: 0 3.611vw 0 0;
     background: none;
     border-radius: 0;
 }
-.select-custom.selectBox-dropdown.sort-select .selectBox-label {
-    padding: 0;
+.sort-select.select-custom .current {
+    color: #428c75;
     line-height: inherit;
     text-align: center;
 }
-.select-custom.selectBox-dropdown.sort-select .selectBox-arrow {
+.sort-select.select-custom:after {
     width: 2.037vw;
     background-image: url("../images/common/ico_arrow_g.png");
     background-size: 2.037vw;
 }
-.sort-select-selectBox-dropdown-menu.selectBox-options {
+.sort-select.select-custom .list {
     margin-top: 1.852vw;
 }
-.select-custom-selectBox-dropdown-menu.selectBox-options.sort-select-selectBox-dropdown-menu li a {
+.sort-select.select-custom .list .option {
     padding-left: 0;
     padding-right: 0;
     text-align: center;
@@ -2550,10 +2551,6 @@ input[type="range"]::-webkit-slider-thumb {
     background-image: url("../images/common/ico_close_g.png");
     z-index: 1;
 }
-.select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
-    max-width: 81.481vw;
-    z-index: 20;
-}
 .product-option .box {
     position: relative;
     padding: 5.833vw 2.778vw 2.778vw;
@@ -3614,6 +3611,9 @@ input[type="range"]::-webkit-slider-thumb {
 .order-box .box-head dt {
     margin-right: 2.500vw;
 }
+.order-box .box-head .date {
+    margin-left: auto;
+}
 .order-box .box-body {
     padding: 0 6.481vw;
 }
@@ -4073,25 +4073,24 @@ input[type="range"]::-webkit-slider-thumb {
         border-radius: 10px;
     }
     /* select custom */
-    .select-custom.selectBox-dropdown {
+    .select-custom {
         height: 36px;
+        padding: 0 25px 0 13px;
         border-radius: 10px;
     }
-    .select-custom.selectBox-dropdown .selectBox-label {
-        padding: 0 13px;
+    .select-custom .current {
         line-height: 36px;
     }
-    .select-custom.selectBox-dropdown .selectBox-arrow {
+    .select-custom:after {
+        width: 25px;
         background-size: 6px;
     }
-    .select-custom-selectBox-dropdown-menu.selectBox-options {
-        max-width: 279px;
+    .select-custom .list {
         max-height: 139px;
         border-radius: 10px;
     }
-    .select-custom-selectBox-dropdown-menu.selectBox-options li a {
+    .select-custom .list .option {
         padding: 7px 13px;
-        font-size: 11px;
     }
 
     /* input */
@@ -4194,6 +4193,10 @@ input[type="range"]::-webkit-slider-thumb {
         right: 9px;
         width: 9px;
         height: 9px;
+    }
+    .btn-popup-close.bg-none {
+        padding-bottom: 1px;
+        font-size: 12px;
     }
     .popup-normal .popup-body .txt-wrap {
         padding: 50px 0 34px;
@@ -4517,17 +4520,15 @@ input[type="range"]::-webkit-slider-thumb {
         line-height: 20px;
     }
     /* 정렬 */
-    .sort-select {
+    .sort-select.select-custom {
         min-width: 68px;
+        padding-right: 12px;
     }
-    .select-custom.selectBox-dropdown.sort-select .selectBox-label {
-        max-width: 68px;
-    }
-    .select-custom.selectBox-dropdown.sort-select .selectBox-arrow {
+    .sort-select.select-custom:after {
         width: 7px;
         background-size: 7px;
     }
-    .sort-select-selectBox-dropdown-menu.selectBox-options {
+    .sort-select.select-custom .list {
         margin-top: 6px;
     }
 
@@ -5026,9 +5027,6 @@ input[type="range"]::-webkit-slider-thumb {
         right: 9px;
         width: 8px;
         height: 8px;
-    }
-    .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
-        max-width: 260px;
     }
     .product-option .box {
         padding: 19px 9px 9px;
@@ -5617,9 +5615,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     /* select custom */
-    .select-custom-selectBox-dropdown-menu.selectBox-options {
+    /* .select-custom-selectBox-dropdown-menu.selectBox-options {
         max-width: 240px;
-    }
+    } */
 
     /* footer */
     footer .cs-info p span {
@@ -5655,11 +5653,6 @@ input[type="range"]::-webkit-slider-thumb {
     /* Mr.공구 */
     .together-detail-wrap .product-slide .txt-box {
         padding: 0 9px;
-    }
-
-    /* 상품 옵션 */
-    .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
-        max-width: 226px;
     }
 
     /* 장바구니 */
@@ -5961,24 +5954,24 @@ input[type="range"]::-webkit-slider-thumb {
         border-radius: 36px;
     }
     /* select custom */
-    .select-custom.selectBox-dropdown {
+    .select-custom {
         height: 120px;
+        padding: 0 84px 0 45px;
         border-radius: 36px;
     }
-    .select-custom.selectBox-dropdown .selectBox-label {
-        padding: 0 45px;
+    .select-custom .current {
         line-height: 120px;
     }
-    .select-custom.selectBox-dropdown .selectBox-arrow {
+    .select-custom:after {
+        width: 84px;
         background-image: url("../images/common/ico_arrow@2x.png");
         background-size: 24px;
     }
-    .select-custom-selectBox-dropdown-menu.selectBox-options {
-        max-width: 940px;
+    .select-custom .list {
         max-height: 468px;
         border-radius: 32px;
     }
-    .select-custom-selectBox-dropdown-menu.selectBox-options li a {
+    .select-custom .list .option {
         padding: 24px 45px;
         font-size: 36px;
     }
@@ -6092,6 +6085,10 @@ input[type="range"]::-webkit-slider-thumb {
         right: 30px;
         width: 32px;
         height: 32px;
+    }
+    .btn-popup-close.bg-none {
+        padding-bottom: 3px;
+        font-size: 42px;
     }
     .popup-normal .popup-body .txt-wrap {
         padding: 171px 0 114px;
@@ -6444,15 +6441,16 @@ input[type="range"]::-webkit-slider-thumb {
         line-height: 70px;
     }
     /* 정렬 */
-    .sort-select {
+    .sort-select.select-custom {
         min-width: 228px;
+        padding-right: 39px;
     }
-    .select-custom.selectBox-dropdown.sort-select .selectBox-arrow {
+    .sort-select.select-custom:after {
         width: 22px;
         background-image: url("../images/common/ico_arrow_g@2x.png");
         background-size: 22px;
     }
-    .sort-select-selectBox-dropdown-menu.selectBox-options {
+    .sort-select.select-custom .list {
         margin-top: 20px;
     }
 
@@ -7011,9 +7009,6 @@ input[type="range"]::-webkit-slider-thumb {
         width: 27px;
         height: 27px;
         background-image: url("../images/common/ico_close_g@2x.png");
-    }
-    .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
-        max-width: 880px;
     }
     .product-option .box {
         padding: 63px 30px 30px;

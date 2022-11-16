@@ -8,11 +8,11 @@
     <title>PAPAMARKET</title>
     <link rel="stylesheet" href="./asset/css/reset.css">
     <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./asset/css/jquery.selectBox.css">
+    <link rel="stylesheet" href="./asset/css/nice-select.css">
     <link rel="stylesheet" href="./asset/css/style.css">
     <script src="./asset/js/jquery-3.6.1.js"></script>
     <script src="./asset/js/swiper-bundle.min.js"></script>
-    <script src="./asset/js/jquery.selectBox.js"></script>
+    <script src="./asset/js/jquery.nice-select.min.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -51,7 +51,7 @@
                 <div class="inner">
                     <!-- select -->
                     <label for="select-faq" class="hidden">자주 묻는 질문 카테고리</label>
-                    <select id="select-faq" name="select-faq" class="select-custom fs36">
+                    <select id="select-faq" name="select-faq" class="select-custom fs36 wide">
                         <option value="">상품</option>
                         <option value="">주문취소</option>
                         <option value="">반품/교환</option>
@@ -411,9 +411,7 @@
         $(".tab li:first-child a").trigger("click");
 
         /* select custom */
-        $(".select-custom").selectBox({
-            mobile: true
-        });
+        $(".select-custom").niceSelect();
 
         /* 더보기 */
         var faqTit = $(".faq-list .tit");

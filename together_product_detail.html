@@ -8,11 +8,11 @@
     <title>PAPAMARKET</title>
     <link rel="stylesheet" href="./asset/css/reset.css">
     <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./asset/css/jquery.selectBox.css">
+    <link rel="stylesheet" href="./asset/css/nice-select.css">
     <link rel="stylesheet" href="./asset/css/style.css">
     <script src="./asset/js/jquery-3.6.1.js"></script>
     <script src="./asset/js/swiper-bundle.min.js"></script>
-    <script src="./asset/js/jquery.selectBox.js"></script>
+    <script src="./asset/js/jquery.nice-select.min.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -324,7 +324,7 @@
                             </div> -->
                             <!-- 옵션 선택 있을 시 -->
                             <div class="purchase-option">
-                                <select id="" name="" class="select-custom product-option-select fs42">
+                                <select id="" name="" class="select-custom product-option-select fs42 wide">
                                     <option value="">옵션을 선택하세요.</option>
                                     <option value="">[물가안정행사] 감귤500g</option>
                                     <option value="">[물가안정행사] 감귤500g *2SET</option>
@@ -659,28 +659,18 @@
         });
 
         /* select custom */
-        var selectBox = new SelectBox($(".select-custom"), settings = {});
+        $(".select-custom").niceSelect();
 
         /* 상품 옵션 열기 */
         $(".btn-cart").click(function(){
             $(".product-option").show().addClass("active");
             $(".btn-option").text('바로구매');
             $("body").addClass("no-scroll");
-            
-            /* select custom */
-            $(".select-custom").selectBox({
-                mobile: true
-            });
         });
         $(".btn-option").click(function(){
             $(".product-option").show().addClass("active");
             $(this).text('바로구매');
             $("body").addClass("no-scroll");
-            
-            /* select custom */
-            $(".select-custom").selectBox({
-                mobile: true
-            });
         });
 
         /* 상품 옵션 닫기 */
@@ -688,16 +678,12 @@
             $(this).parents(".product-option").hide().removeClass("active");
             $(".btn-option").text('구매하기');
             $("body").removeClass("no-scroll");
-
-            /* select custom */
-            selectBox.hideMenus();
         });
         $(".product-option").click(function(e){
             if(!$(".product-option").has(e.target).length){
                 $(this).hide().removeClass("active");
                 $(".btn-option").text('구매하기');
                 $("body").removeClass("no-scroll");
-                selectBox.hideMenus();
             }
         });
 
