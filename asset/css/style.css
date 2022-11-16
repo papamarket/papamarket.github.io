@@ -31,6 +31,7 @@ body {
     background-color: #f5f2e9;
 }
 .no-scroll {
+    height: 100%;
     overflow: hidden;
     -webkit-overflow-scrolling: auto;
     scroll-behavior: auto;
@@ -422,6 +423,7 @@ select {
     background: #fff;
     border: 0;
     border-radius: 3.333vw;
+    box-shadow: none;
     line-height: 1;
     outline: initial;
 }
@@ -721,9 +723,11 @@ input[type="checkbox"] + label {
 .btn-popup-close.bg-none {
     width: auto;
     height: auto;
+    font-size: inherit;
     background: none;
     text-indent: 0;
     line-height: 0.905em;
+    z-index: 1;
 }
 .popup-normal .popup-body .txt-wrap {
     padding: 15.833vw 0 10.556vw;
@@ -1013,24 +1017,24 @@ footer .cs-info .btn-tel {
 .gnb-menu {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
-    height: 100%;
-    -webkit-transition: left 0.4s cubic-bezier(0.5, 0, 0, 1);
-    -o-transition: left 0.4s cubic-bezier(0.5, 0, 0, 1);
-    -moz-transition: left 0.4s cubic-bezier(0.5, 0, 0, 1);
-    transition: left 0.4s cubic-bezier(0.5, 0, 0, 1);
+    height: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: background-color .3s,height 0s .3s;
+    transition: background-color .3s,height 0s .3s;
+    overflow: hidden;
     z-index: 50;
 }
 .gnb-menu.active {
-    left: 0;
-    -webkit-transition: left 0.4s ease;
-    -o-transition: left 0.4s ease;
-    -moz-transition: left 0.4s ease;
-    transition: left 0.4s ease;
+    height: 100%;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
 }
 .gnb-menu .menu-body {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 76.852%;
     max-width: 830px;
     height: 100%;
@@ -1041,6 +1045,14 @@ footer .cs-info .btn-tel {
     box-sizing: border-box;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    -webkit-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+    -webkit-transform: translate3d(-100%,0,0) scale(1);
+    transform: translate3d(-100%,0,0) scale(1);
+}
+.gnb-menu.active .menu-body {
+    -webkit-transform: translate3d(0,0,0) scale(1);
+    transform: translateZ(0) scale(1);
 }
 .gnb-menu .btn-gnb-close {
     position: absolute;
@@ -1176,9 +1188,146 @@ footer .cs-info .btn-tel {
     margin-right: 3.981vw;
     background-image: url("../images/common/ico_search@2x.png");
 }
-.searchbar-box .inp {
+.searchbar-box .input-row .inp {
     width: calc(100% - 7.407vw);
     padding: 0;
+}
+/*  */
+.keyword-area {
+    display: none;
+}
+/* 검색 결과 */
+.filter-box {
+    border-radius: 64px;
+}
+.filter-box .more-tit {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    letter-spacing: -0.06em;
+}
+.filter-box .more-tit:not(.bt0) {
+    border-top: 1px solid #f5f2e9;
+}
+.filter-box .more-tit:after {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    background: url("../images/common/ico_arrow.png") no-repeat center center;
+    background-size: cover;
+    transform: rotate(0);
+    transition: .3s transform;
+    content: '';
+}
+.filter-box .more-tit.active:after {
+    transform: rotate(-180deg);
+}
+.filter-box .more-content > div {
+    padding: 0 50px 50px;
+}
+.multi-range-slider {
+    position: relative;
+    padding: 15px 0;
+}
+.multi-slider {
+    position: relative;
+    height: 20px;
+    z-index: 1;
+}
+.multi-slider > .track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 1;
+}
+.multi-slider > .range {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #428c75;
+    z-index: 2;
+}
+.multi-slider > .thumb {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: #428c75;
+    border-radius: 50%;
+    z-index: 3;
+}
+.multi-slider > .thumb.left {
+    left: 0;
+    transform: translate(0, -15px);
+}
+.multi-slider > .thumb.right {
+    right: 0;
+    transform: translate(0, -15px);
+}
+input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    opacity: 0;
+    z-index: 2;
+}
+input[type="range"]::-webkit-slider-thumb {
+    width: 48px;
+    height: 48px;
+    background-color: #428c75;
+    border: 0 none;
+    border-radius: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    pointer-events: all;
+}
+.filter-box .price-range-value p {
+    min-width: 180px;
+    padding: 0 24px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    line-height: 70px;
+    text-align: right;
+}
+/* 정렬 */
+.sort-tit {
+    letter-spacing: -0.06em;
+}
+.sort-select {
+    width: 228px;
+}
+.select-custom.selectBox-dropdown.sort-select {
+    height: auto;
+    color: #428c75;
+    background: none;
+    border-radius: 0;
+}
+.select-custom.selectBox-dropdown.sort-select .selectBox-label {
+    padding: 0;
+    line-height: inherit;
+    text-align: center;
+}
+.select-custom.selectBox-dropdown.sort-select .selectBox-arrow {
+    width: 22px;
+    background-image: url("../images/common/ico_arrow_g.png");
+    background-size: 22px;
+}
+.sort-select-selectBox-dropdown-menu.selectBox-options {
+    margin-top: 20px;
+}
+.select-custom-selectBox-dropdown-menu.selectBox-options.sort-select-selectBox-dropdown-menu li a {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
 }
 
 /* sub-header */
@@ -1657,7 +1806,7 @@ footer .cs-info .btn-tel {
     position: absolute;
     right: 2.778vw;
     bottom: 2.778vw;
-    z-index: 1;
+    z-index: 0;
 }
 .product-list .product-txt {
     position: relative;
@@ -2292,7 +2441,6 @@ footer .cs-info .btn-tel {
     width: 87.037%;
     max-width: 940px;
     margin: 0 auto 1.852vw;
-    padding-top: 10vw;
     border-radius: 5.926vw;
     box-sizing: border-box;    
 }
@@ -2301,8 +2449,11 @@ footer .cs-info .btn-tel {
 }
 .option-body {
     position: relative;
+    padding: 10vw 0 7.407vw;
+}
+.option-body > div {
     max-height: 68.611vw;
-    padding: 0 2.778vw 7.407vw;
+    padding: 0 2.778vw;
     box-sizing: border-box;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -2314,6 +2465,7 @@ footer .cs-info .btn-tel {
     width: 2.500vw;
     height: 2.500vw;
     background-image: url("../images/common/ico_close_g.png");
+    z-index: 1;
 }
 .select-custom-selectBox-dropdown-menu.selectBox-options.product-option-select-selectBox-dropdown-menu {
     max-width: 81.481vw;
@@ -4110,7 +4262,7 @@ footer .cs-info .btn-tel {
         height: 10px;
         margin-right: 13px;
     }
-    .searchbar-box .inp {
+    .searchbar-box .input-row .inp {
         width: calc(100% - 24px);
     }
 
@@ -4598,13 +4750,15 @@ footer .cs-info .btn-tel {
     /* 상품 옵션 */
     .product-option {
         margin-bottom: 6px;
-        padding-top: 32px;
         border-radius: 18px;
         
     }
     .option-body {
+        padding: 32px 0 24px;
+    }
+    .option-body > div {
         max-height: 220px;
-        padding: 0 9px 24px;
+        padding: 0 9px;
     }
     .btn-option-close {
         top: 9px;
@@ -5847,8 +6001,70 @@ footer .cs-info .btn-tel {
         height: 34px;
         margin-right: 43px;
     }
-    .searchbar-box .inp {
+    .searchbar-box .input-row .inp {
         width: calc(100% - 80px);
+    }
+
+    /* 검색 결과 */
+    .filter-box {
+        border-radius: 64px;
+    }
+    .filter-box .more-tit {
+        padding: 50px;
+    }
+    .filter-box .more-tit:after {
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+        background-image: url("../images/common/ico_arrow@2x.png");
+    }
+    .filter-box .more-content > div {
+        padding: 0 50px 50px;
+    }
+    .multi-range-slider {
+        padding: 15px 0;
+    }
+    .multi-slider {
+        height: 20px;
+    }
+    .multi-slider > .track,
+    .multi-slider > .range {
+        border-radius: 10px;
+    }
+    .multi-slider > .thumb {
+        width: 48px;
+        height: 48px;
+    }
+    .multi-slider > .thumb.left {
+        transform: translate(0, -15px);
+    }
+    .multi-slider > .thumb.right {
+        transform: translate(0, -15px);
+    }
+    input[type="range"] {
+        height: 20px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        width: 48px;
+        height: 48px;
+    }
+    .filter-box .price-range-value p {
+        min-width: 180px;
+        padding: 0 24px;
+        border-radius: 24px;
+        line-height: 70px;
+    }
+    /* 정렬 */
+    .sort-select {
+        width: 228px;
+    }
+    .select-custom.selectBox-dropdown.sort-select .selectBox-arrow {
+        width: 22px;
+        background-image: url("../images/common/ico_arrow_g@2x.png");
+        background-size: 22px;
+    }
+    .sort-select-selectBox-dropdown-menu.selectBox-options {
+        margin-top: 20px;
     }
 
     /* sub-header */
@@ -6395,12 +6611,14 @@ footer .cs-info .btn-tel {
     /* 상품 옵션 */
     .product-option {
         margin-bottom: 20px;
-        padding-top: 108px;
         border-radius: 64px;
     }
     .option-body {
+        padding: 108px 0 80px;
+    }
+    .option-body > div {
         max-height: 741px;
-        padding: 0 30px 80px;
+        padding: 0 30px;
     }
     .btn-option-close {
         top: 30px;
