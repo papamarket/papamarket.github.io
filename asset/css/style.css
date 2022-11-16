@@ -3257,6 +3257,7 @@ input[type="range"]::-webkit-slider-thumb {
 .membership-wrap .more-tit.active:after {
     transform: rotate(-180deg);
 }
+.coupon-wrap .more-content .bar-list li,
 .membership-wrap .more-content .bar-list li {
     padding-left: 1.389vw;
     letter-spacing: -0.06em;
@@ -5348,6 +5349,7 @@ input[type="range"]::-webkit-slider-thumb {
         height: 7px;
         margin-left: 4px;
     }
+    .coupon-wrap .more-content .bar-list li,
     .membership-wrap .more-content .bar-list li {
         padding-left: 4px;
     }
@@ -7358,6 +7360,7 @@ input[type="range"]::-webkit-slider-thumb {
         margin-left: 15px;
         background-image: url("../images/common/ico_arrow@2x.png");
     }
+    .coupon-wrap .more-content .bar-list li,
     .membership-wrap .more-content .bar-list li {
         padding-left: 15px;
     }
