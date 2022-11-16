@@ -533,18 +533,18 @@
             e.preventDefault();
             
             $(".popup").show();
-            $("html, body").addClass("no-scroll");
+            $("body").addClass("no-scroll");
         });
 
         /* 팝업 닫기 */
         $(".btn-popup-close").click(function () {
             $(this).parents(".popup").hide();
-            $("html, body").removeClass("no-scroll");
+            $("body").removeClass("no-scroll");
         });
         $(".popup").click(function(e){
             if( !$(".popup").has(e.target).length ) {
                 $(this).hide();
-                $("html, body").removeClass("no-scroll");
+                $("body").removeClass("no-scroll");
             } 
         });
     </script>

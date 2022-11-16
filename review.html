@@ -536,16 +536,19 @@
 
             photoReviewPopupSlide.slideTo(idx);
             $(".popup-review").show();
-            $("html, body").addClass("no-scroll");
+            $("body").addClass("no-scroll");
         });
 
         /* 사진리뷰 팝업 닫기 */
         $(".btn-popup-close").click(function () {
             $(this).parents(".popup").hide();
-            $("html, body").removeClass("no-scroll");
+            $("body").removeClass("no-scroll");
         });
         $(".popup").click(function(e){
-            if( !$(".popup").has(e.target).length ) $(this).hide(); $("html, body").removeClass("no-scroll");
+            if( !$(".popup").has(e.target).length ) {
+                $(this).hide();
+                $("body").removeClass("no-scroll");
+            } 
         });
 
         /* 리뷰 더보기 클릭 시 */

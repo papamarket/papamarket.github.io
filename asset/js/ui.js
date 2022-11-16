@@ -11,12 +11,12 @@ $(window).scroll(function(){
 
 /* gnb-menu open */
 $(".btn-menu").on("click",function(){
-	$("html, body").addClass("no-scroll");
+	$("body").addClass("no-scroll");
 	$(".gnb-menu").addClass("active").attr("aria-hidden", "false");
 	$(document).on("keyup", function(evt){
 		var keycode = evt.which;
 		if(keycode == 27){
-			$("html, body").removeClass("no-scroll");
+			$("body").removeClass("no-scroll");
 			$(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
 		}
 	});
@@ -24,13 +24,13 @@ $(".btn-menu").on("click",function(){
 
 /* gnb-menu close */
 $(".btn-gnb-close").on("click",function(){
-	$("html, body").removeClass("no-scroll");
+	$("body").removeClass("no-scroll");
 	$(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
 });
 $(".gnb-menu").click(function(e){
     if(!$(".gnb-menu").has(e.target).length){
         $(".gnb-menu").removeClass("active").attr("aria-hidden", "true");
-        $("html, body").removeClass("no-scroll");
+        $("body").removeClass("no-scroll");
     }
 });
 
