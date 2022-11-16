@@ -2082,6 +2082,7 @@ input[type="range"]::-webkit-slider-thumb {
     top: 79.554%;
     padding: 2.778vw 5.556vw 2.963vw;
     border-radius: 0 0 5.926vw 5.926vw;
+    z-index: 1;
 }
 .market-card .txt-box .name {
     width: 43.659%;
