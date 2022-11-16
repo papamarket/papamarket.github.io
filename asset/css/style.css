@@ -31,10 +31,9 @@ body {
     background-color: #f5f2e9;
 }
 .no-scroll {
+    position: relative;
     height: 100%;
     overflow: hidden;
-    -webkit-overflow-scrolling: auto;
-    scroll-behavior: auto;
 }
 .inner {
     position: relative;
@@ -3108,52 +3107,56 @@ input[type="range"]::-webkit-slider-thumb {
 .level-info li .txt-box .txt {
     letter-spacing: -0.06em;
 }
-.level-info .coupon-box {
+.coupon-box {
     flex-wrap: wrap;
 }
-.level-info .coupon-box .coupon {
+.coupon-box .coupon {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: 33.519vw;
-    height: 17.870vw;
     background: url("../images/common/coupon.png") no-repeat center center;
     background-size: contain;
     text-align: center;
 }
-.level-info .coupon-box .coupon:nth-child(2) ~ .coupon {
-    margin-top: 1.852vw;
-}
-.level-info .coupon-box .coupon.completed {
+.coupon-box .coupon.completed {
     background-image: url("../images/common/coupon_completed.png");
 }
-.level-info .coupon-box .coupon.not {
+.coupon-box .coupon.not {
     background-image: url("../images/common/coupon_not.png");
 }
-.level-info .coupon-box .coupon p {
+.level-info .coupon-box .coupon {
+    width: 33.519vw;
+    height: 17.870vw;
+}
+.coupon-box .coupon:nth-child(2) ~ .coupon {
+    margin-top: 1.852vw;
+}
+.coupon-box .coupon p {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
     width: 100%;
-    height: 74.611%;
-    padding: 4.630vw 0 0.833vw;
     box-sizing: border-box;
 }
-.level-info .coupon-box .coupon span {
+.level-info .coupon-box .coupon p {
+    height: 74.611%;
+    padding: 4.630vw 0 0.833vw;
+}
+.coupon-box .coupon span {
     display: block;
     width: 100%;
     letter-spacing: -0.06em;
 }
-.level-info .coupon-box .coupon .tit {
+.coupon-box .coupon .tit {
     align-self: flex-start;
 }
-.level-info .coupon-box .coupon .state {
+.coupon-box .coupon .state {
     color: #fff;
 }
-.level-info .coupon-box .coupon.completed .state {
+.coupon-box .coupon.completed .state {
     color: #428c75;
 }
-.level-info .coupon-box .coupon.not .state {
+.coupon-box .coupon.not .state {
     color: #a9a69c;
 }
 .membership-wrap .more-tit {
@@ -5216,7 +5219,7 @@ input[type="range"]::-webkit-slider-thumb {
         width: 107px;
         height: 57px;
     }
-    .level-info .coupon-box .coupon:nth-child(2) ~ .coupon {
+    .coupon-box .coupon:nth-child(2) ~ .coupon {
         margin-top: 6px;
     }
     .level-info .coupon-box .coupon p {
@@ -7150,19 +7153,21 @@ input[type="range"]::-webkit-slider-thumb {
         width: calc(100% - 192px);
         margin-left: 42px;
     }
-    .level-info .coupon-box .coupon {
-        width: 362px;
-        height: 193px;
+    .coupon-box .coupon {
         background-image: url("../images/common/coupon@2x.png");
-    }
-    .level-info .coupon-box .coupon:nth-child(2) ~ .coupon {
-        margin-top: 20px;
     }
     .level-info .coupon-box .coupon.completed {
         background-image: url("../images/common/coupon_completed@2x.png");
     }
     .level-info .coupon-box .coupon.not {
         background-image: url("../images/common/coupon_not@2x.png");
+    }
+    .level-info .coupon-box .coupon {
+        width: 362px;
+        height: 193px;
+    }
+    .coupon-box .coupon:nth-child(2) ~ .coupon {
+        margin-top: 20px;
     }
     .level-info .coupon-box .coupon p {
         padding: 50px 0 9px;
