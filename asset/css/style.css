@@ -1198,11 +1198,11 @@ footer .cs-info .btn-tel {
 }
 /* 검색 결과 */
 .filter-box {
-    border-radius: 64px;
+    border-radius: 5.926vw;
 }
 .filter-box .more-tit {
     width: 100%;
-    padding: 50px;
+    padding: 4.630vw;
     box-sizing: border-box;
     letter-spacing: -0.06em;
 }
@@ -1211,9 +1211,9 @@ footer .cs-info .btn-tel {
 }
 .filter-box .more-tit:after {
     display: block;
-    width: 24px;
-    height: 24px;
-    margin-top: -12px;
+    width: 2.222vw;
+    height: 2.222vw;
+    margin-top: -1.111vw;
     background: url("../images/common/ico_arrow.png") no-repeat center center;
     background-size: cover;
     transform: rotate(0);
@@ -1224,15 +1224,15 @@ footer .cs-info .btn-tel {
     transform: rotate(-180deg);
 }
 .filter-box .more-content > div {
-    padding: 0 50px 50px;
+    padding: 0 4.630vw 4.630vw;
 }
 .multi-range-slider {
     position: relative;
-    padding: 15px 0;
+    padding: 1.389vw 0;
 }
 .multi-slider {
     position: relative;
-    height: 20px;
+    height: 1.852vw;
     z-index: 1;
 }
 .multi-slider > .track {
@@ -1241,7 +1241,7 @@ footer .cs-info .btn-tel {
     right: 0;
     top: 0;
     bottom: 0;
-    border-radius: 10px;
+    border-radius: 0.926vw;
     background-color: #fff;
     z-index: 1;
 }
@@ -1251,38 +1251,38 @@ footer .cs-info .btn-tel {
     right: 0;
     top: 0;
     bottom: 0;
-    border-radius: 10px;
+    border-radius: 0.926vw;
     background-color: #428c75;
     z-index: 2;
 }
 .multi-slider > .thumb {
     position: absolute;
-    width: 48px;
-    height: 48px;
+    width: 4.444vw;
+    height: 4.444vw;
     background-color: #428c75;
     border-radius: 50%;
     z-index: 3;
 }
 .multi-slider > .thumb.left {
     left: 0;
-    transform: translate(0, -15px);
+    transform: translate(0, -1.389vw);
 }
 .multi-slider > .thumb.right {
     right: 0;
-    transform: translate(0, -15px);
+    transform: translate(0, -1.389vw);
 }
 input[type="range"] {
     position: absolute;
     width: 100%;
-    height: 20px;
+    height: 1.852vw;
     pointer-events: none;
     -webkit-appearance: none;
     opacity: 0;
     z-index: 2;
 }
 input[type="range"]::-webkit-slider-thumb {
-    width: 48px;
-    height: 48px;
+    width: 4.444vw;
+    height: 4.444vw;
     background-color: #428c75;
     border: 0 none;
     border-radius: 0;
@@ -1291,11 +1291,11 @@ input[type="range"]::-webkit-slider-thumb {
     pointer-events: all;
 }
 .filter-box .price-range-value p {
-    min-width: 180px;
-    padding: 0 24px;
-    border-radius: 24px;
+    min-width: 16.667vw;
+    padding: 0 2.222vw;
+    border-radius: 2.222vw;
     box-sizing: border-box;
-    line-height: 70px;
+    line-height: 6.481vw;
     text-align: right;
 }
 /* 정렬 */
@@ -1303,7 +1303,8 @@ input[type="range"]::-webkit-slider-thumb {
     letter-spacing: -0.06em;
 }
 .sort-select {
-    width: 228px;
+    width: auto;
+    min-width: 21.111vw;
 }
 .select-custom.selectBox-dropdown.sort-select {
     height: auto;
@@ -1317,12 +1318,12 @@ input[type="range"]::-webkit-slider-thumb {
     text-align: center;
 }
 .select-custom.selectBox-dropdown.sort-select .selectBox-arrow {
-    width: 22px;
+    width: 2.037vw;
     background-image: url("../images/common/ico_arrow_g.png");
-    background-size: 22px;
+    background-size: 2.037vw;
 }
 .sort-select-selectBox-dropdown-menu.selectBox-options {
-    margin-top: 20px;
+    margin-top: 1.852vw;
 }
 .select-custom-selectBox-dropdown-menu.selectBox-options.sort-select-selectBox-dropdown-menu li a {
     padding-left: 0;
@@ -4266,6 +4267,69 @@ input[type="range"]::-webkit-slider-thumb {
         width: calc(100% - 24px);
     }
 
+    /* 검색 결과 */
+    .filter-box {
+        border-radius: 18px;
+    }
+    .filter-box .more-tit {
+        padding: 15px;
+    }
+    .filter-box .more-tit:after {
+        width: 7px;
+        height: 7px;
+        margin-top: -3.5px;
+    }
+    .filter-box .more-content > div {
+        padding: 0 15px 15px;
+    }
+    .multi-range-slider {
+        padding: 4px 0;
+    }
+    .multi-slider {
+        height: 6px;
+    }
+    .multi-slider > .track,
+    .multi-slider > .range {
+        border-radius: 3px;
+    }
+    .multi-slider > .thumb {
+        width: 14px;
+        height: 14px;
+    }
+    .multi-slider > .thumb.left {
+        transform: translate(0, -4px);
+    }
+    .multi-slider > .thumb.right {
+        transform: translate(0, -4px);
+    }
+    input[type="range"] {
+        height: 6px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        width: 14px;
+        height: 14px;
+    }
+    .filter-box .price-range-value p {
+        min-width: 53px;
+        padding: 0 7px;
+        border-radius: 10px;
+        line-height: 20px;
+    }
+    /* 정렬 */
+    .sort-select {
+        min-width: 68px;
+    }
+    .select-custom.selectBox-dropdown.sort-select .selectBox-label {
+        max-width: 68px;
+    }
+    .select-custom.selectBox-dropdown.sort-select .selectBox-arrow {
+        width: 7px;
+        background-size: 7px;
+    }
+    .sort-select-selectBox-dropdown-menu.selectBox-options {
+        margin-top: 6px;
+    }
+
     /* sub-header */
     .sub-header {
         border-bottom: 3px solid #edeae2;
@@ -6056,7 +6120,7 @@ input[type="range"]::-webkit-slider-thumb {
     }
     /* 정렬 */
     .sort-select {
-        width: 228px;
+        min-width: 228px;
     }
     .select-custom.selectBox-dropdown.sort-select .selectBox-arrow {
         width: 22px;
