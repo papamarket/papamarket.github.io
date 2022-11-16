@@ -112,6 +112,9 @@ body {
 .mb30 {
     margin-bottom: 2.778vw;
 }
+.mb50 {
+    margin-bottom: 4.630vw;
+}
 .mb80 {
     margin-bottom: 7.407vw;
 }
@@ -1725,7 +1728,6 @@ input[type="range"]::-webkit-slider-thumb {
 /* banner */
 .banner {
     width: 100%;
-    margin-bottom: 4.630vw;
     border-radius: 4.444vw;
     overflow: hidden;
 }
@@ -2071,14 +2073,13 @@ input[type="range"]::-webkit-slider-thumb {
 .market-card {
     position: relative;
     width: 100%;
-    margin-bottom: 4.630vw;
 }
 .market-card img {
     width: 100%;
     border-radius: 5.926vw;
 }
 .market-card .txt-box {
-    top: 82.528%;
+    top: 79.554%;
     padding: 2.778vw 5.556vw 2.963vw;
     border-radius: 0 0 5.926vw 5.926vw;
 }
@@ -3762,6 +3763,9 @@ input[type="range"]::-webkit-slider-thumb {
     .mb30 {
         margin-bottom: 9px;
     }
+    .mb50 {
+        margin-bottom: 15px;
+    }
     .mb80 {
         margin-bottom: 24px;
     }
@@ -4512,7 +4516,6 @@ input[type="range"]::-webkit-slider-thumb {
 
     /* banner */
     .banner {
-        margin-bottom: 15px;
         border-radius: 14px;
     }
 
@@ -4665,9 +4668,6 @@ input[type="range"]::-webkit-slider-thumb {
     .market-list .btn-like {
         width: 14px;
         height: 13px;
-    }
-    .market-card {
-        margin-bottom: 15px;
     }
     .market-card img {
         border-radius: 18px;
@@ -5491,6 +5491,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .mb30 {
         margin-bottom: 30px;
+    }
+    .mb50 {
+        margin-bottom: 50px;
     }
     .mb80 {
         margin-bottom: 80px;
@@ -6341,7 +6344,6 @@ input[type="range"]::-webkit-slider-thumb {
 
     /* banner */
     .banner {
-        margin-bottom: 50px;
         border-radius: 48px;
     }
 
@@ -6496,9 +6498,6 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .market-list .bg-red .btn-like.active {
         background-image: url("../images/common/ico_heart_w@2x.png");
-    }
-    .market-card {
-        margin-bottom: 50px;
     }
     .market-card img {
         border-radius: 64px;
