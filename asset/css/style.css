@@ -72,6 +72,9 @@ body {
 }
 
 /* margin */
+.mt6 {
+    margin-top: 0.556vw;
+}
 .mt20 {
     margin-top: 1.852vw;
 }
@@ -806,10 +809,11 @@ input[type="checkbox"] + label {
     letter-spacing: 0;
 }
 .popup-body .ico-membership {
-    width: 30px;
+    width: 2.778vw;
 }
 .popup-body .progress {
-    width: 702px;
+    width: 74.681%;
+    max-width: 702px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -2768,23 +2772,20 @@ input[type="range"]::-webkit-slider-thumb {
 .noti-txt:before {
     display: block;
     position: absolute;
+    top: 0.370vw;
     left: 0;
+    width: 2.963vw;
+    height: 2.963vw;
     background: url("../images/common/ico_notice.png") no-repeat center center;
     background-size: cover;
     content: '';
 }
 .noti-txt {
     position: relative;
+    padding-left: 4.630vw;
+    letter-spacing: -0.06em;
     line-height: 1.2em;
     word-break: keep-all;
-}
-.cart-wrap .noti-txt:before {
-    top: 0.370vw;
-    width: 2.963vw;
-    height: 2.963vw;
-}
-.cart-wrap .noti-txt {
-    padding-left: 4.630vw;
 }
 
 /* 쿠폰 */
@@ -2894,6 +2895,22 @@ input[type="range"]::-webkit-slider-thumb {
     width: 75.532%;
     line-height: 1.222em;
     word-break: keep-all;
+}
+
+/* 배송 조회 */
+.order-box .box .product-txt .btn-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 117px;
+    height: 48px;
+    border-radius: 24px;
+}
+.deilvery-current .current-list .info-current:before {
+
+}
+.deilvery-current .current-list li {
+    position: relative;
 }
 
 /* 마이페이지 */
@@ -3698,6 +3715,9 @@ input[type="range"]::-webkit-slider-thumb {
     position: relative;
     padding: 3.704vw 0;
 }
+.order-box .box.pt0 {
+    padding-top: 0;
+}
 .order-box .box + .box {
     border-top: 0.185vw solid #edeae2;
 }
@@ -3950,6 +3970,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     /* margin */
+    .mt6 {
+        margin-top: 2px;
+    }
     .mt20 {
         margin-top: 6px;
     }
@@ -4308,6 +4331,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .popup-review-thumbnail .swiper-slide div {
         border-radius: 10px;
+    }
+    .popup-body .ico-membership {
+        width: 9px;
     }
 
     /* counter-box */
@@ -5220,12 +5246,12 @@ input[type="range"]::-webkit-slider-thumb {
         height: 18px;
         border-radius: 9px;
     }
-    .cart-wrap .noti-txt:before {
+    .noti-txt:before {
         top: 2px;
         width: 8px;
         height: 8px;
     }
-    .cart-wrap .noti-txt {
+    .noti-txt {
         padding-left: 15px;
     }
 
@@ -5825,6 +5851,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     /* margin */
+    .mt6 {
+        margin-top: 6px;
+    }
     .mt20 {
         margin-top: 20px;
     }
@@ -6235,6 +6264,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .popup-review-thumbnail .swiper-slide div {
         border-radius: 36px;
+    }
+    .popup-body .ico-membership {
+        width: 30px;
     }
     
     /* counter-box */
@@ -7240,14 +7272,12 @@ input[type="range"]::-webkit-slider-thumb {
         border-radius: 29px;
     }
     .noti-txt:before {
-        background-image: url("../images/common/ico_notice@2x.png");
-    }
-    .cart-wrap .noti-txt:before {
         top: 4px;
         width: 32px;
         height: 32px;
+        background-image: url("../images/common/ico_notice@2x.png");
     }
-    .cart-wrap .noti-txt {
+    .noti-txt {
         padding-left: 50px;
     }
 
