@@ -2902,15 +2902,78 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 117px;
-    height: 48px;
-    border-radius: 24px;
+    width: 10.833vw;
+    height: 4.444vw;
+    border-radius: 2.222vw;
 }
-.deilvery-current .current-list .info-current:before {
-
+.deilvery-current .current-list {
+    padding-left: 1.759vw;
 }
 .deilvery-current .current-list li {
     position: relative;
+    padding-left: 3.611vw;
+}
+.deilvery-current .current-list li + li {
+    margin-top: 9.444vw;
+}
+.deilvery-current .current-list li:not(:last-child):after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 0.926vw;
+    height: calc(100% + 9.444vw);
+    background-color: #b4b3af;
+    content: '';
+}
+.deilvery-current .current-list .info-current:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1.759vw;
+    width: 4.444vw;
+    height: 4.444vw;
+    background-color: #f5f2e9;
+    border: 0.926vw solid #b4b3af;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 1;
+    content: '';
+}
+.deilvery-current .current-list .on .info-current:before {
+    border-color: #428c75;
+}
+.deilvery-current .current-list .info-current {
+    color: #b4b3af;
+}
+.deilvery-current .current-list .on .info-current {
+    color: #222;
+}
+.deilvery-current .current-list .txt-location,
+.deilvery-current .current-list .info-state {
+    letter-spacing: -0.06em;
+}
+.deilvery-current .current-list .txt-location {
+    position: relative;
+    margin-right: 3.056vw;
+}
+.deilvery-current .current-list .txt-location:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -1.574vw;
+    width: 0.185vw;
+    height: 2.315vw;
+    background-color: #b4b3af;
+    transform: translate(0, -50%);
+    content: '';
+}
+.deilvery-current .current-list .on .txt-location:after {
+    background-color: #222;
+}
+.deilvery-current .current-list .on .info-state {
+    color: #428c75;
+    font-weight: 700;
 }
 
 /* 마이페이지 */
@@ -5305,6 +5368,40 @@ input[type="range"]::-webkit-slider-thumb {
         height: 12px;
     }
 
+    /* 배송 조회 */
+    .order-box .box .product-txt .btn-copy {
+        width: 35px;
+        height: 14px;
+        border-radius: 7px;
+    }
+    .deilvery-current .current-list {
+        padding-left: 6px;
+    }
+    .deilvery-current .current-list li {
+        padding-left: 12px;
+    }
+    .deilvery-current .current-list li + li {
+        margin-top: 30px;
+    }
+    .deilvery-current .current-list li:not(:last-child):after {
+        width: 3px;
+        height: calc(100% + 30px);
+    }
+    .deilvery-current .current-list .info-current:before {
+        left: -6px;
+        width: 14px;
+        height: 14px;
+        border: 3px solid #b4b3af;
+    }
+    .deilvery-current .current-list .txt-location {
+        margin-right: 11px;
+    }
+    .deilvery-current .current-list .txt-location:after {
+        right: -6px;
+        width: 1px;
+        height: 7px;
+    }
+
     /* 마이페이지 */
     .profile-info .btn-photo {
         right: -2px;
@@ -7330,6 +7427,40 @@ input[type="range"]::-webkit-slider-thumb {
         width: 40px;
         height: 40px;
         background-image: url("../images/common/ico_arrow@2x.png");
+    }
+
+    /* 배송 조회 */
+    .order-box .box .product-txt .btn-copy {
+        width: 117px;
+        height: 48px;
+        border-radius: 24px;
+    }
+    .deilvery-current .current-list {
+        padding-left: 19px;
+    }
+    .deilvery-current .current-list li {
+        padding-left: 39px;
+    }
+    .deilvery-current .current-list li + li {
+        margin-top: 102px;
+    }
+    .deilvery-current .current-list li:not(:last-child):after {
+        width: 10px;
+        height: calc(100% + 102px);
+    }
+    .deilvery-current .current-list .info-current:before {
+        left: -19px;
+        width: 48px;
+        height: 48px;
+        border: 10px solid #b4b3af;
+    }
+    .deilvery-current .current-list .txt-location {
+        margin-right: 33px;
+    }
+    .deilvery-current .current-list .txt-location:after {
+        right: -17px;
+        width: 2px;
+        height: 25px;
     }
 
     /* 마이페이지 */
