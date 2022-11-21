@@ -3176,11 +3176,22 @@ input[type="range"]::-webkit-slider-thumb {
     content: '';
 }
 .day-week-box .btn {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     width: 9.815vw;
     height: 13.889vw;
     font-weight: 400;
     border-radius: 4.907vw;
-    line-height: 13.889vw;
+}
+.day-week-box .btn span {
+    display: block;
+    width: 100%;
+    line-height: 1;
+}
+.day-week-box .btn span + span {
+    margin-top: 1.389vw;
 }
 .market-edit .day-week-box .btn {
     color: #808080;
@@ -5506,7 +5517,9 @@ input[type="range"]::-webkit-slider-thumb {
         width: 30px;
         height: 44px;
         border-radius: 15px;
-        line-height: 44px;
+    }
+    .day-week-box .btn span + span {
+        margin-top: 4px;
     }
     .market-edit .btn-add:before {
         width: 8px;
@@ -5846,11 +5859,6 @@ input[type="range"]::-webkit-slider-thumb {
         display: block;
     }
 
-    /* select custom */
-    /* .select-custom-selectBox-dropdown-menu.selectBox-options {
-        max-width: 240px;
-    } */
-
     /* footer */
     footer .cs-info p span {
         display: block;
@@ -5927,6 +5935,11 @@ input[type="range"]::-webkit-slider-thumb {
     .coupon-box .coupon .design-inp {
         top: 3px;
         left: 3px;
+    }
+
+    /* 마켓 정보 수정 */
+    .day-week-box .btn span + span {
+        letter-spacing: -0.06em;
     }
 
     /* 회원 등급 안내 */
@@ -7568,7 +7581,9 @@ input[type="range"]::-webkit-slider-thumb {
         width: 106px;
         height: 150px;
         border-radius: 53px;
-        line-height: 150px;
+    }
+    .day-week-box .btn span + span {
+        margin-top: 15px;
     }
     .market-edit .btn-add:before {
         width: 26px;
