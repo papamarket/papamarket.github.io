@@ -3049,6 +3049,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .order-wrap .big-more-tit p span {
     display: block;
+    padding-bottom: 0.278vw;
     letter-spacing: -0.06em;
     word-break: keep-all;
     white-space: nowrap;
@@ -5791,6 +5792,9 @@ input[type="range"]::-webkit-slider-thumb {
     .order-wrap .big-more-tit:after {
         margin-top: -6px;
     }
+    .order-wrap .big-more-tit p span {
+        padding-bottom: 1px;
+    }
     .order-wrap .order-box .box-body + .box-body {
         margin-top: 1px;
     }
@@ -7988,6 +7992,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .order-wrap .big-more-tit:after {
         margin-top: -20px;
+    }
+    .order-wrap .big-more-tit p span {
+        padding-bottom: 3px;
     }
     .order-wrap .order-box .box-body + .box-body {
         margin-top: 2px;
