@@ -94,7 +94,8 @@ select {
 select::-ms-expand {
     display: none;
 }
-select:disabled{
+input:disabled,
+select:disabled {
     opacity: 1;
 }
 
