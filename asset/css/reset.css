@@ -94,6 +94,9 @@ select {
 select::-ms-expand {
     display: none;
 }
+select:disabled{
+    opacity: 1;
+}
 
 /* Base */
 [role="button"],
