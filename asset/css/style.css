@@ -2998,9 +2998,18 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 10.833vw;
     height: 4.444vw;
-    padding: 0 2.778vw;
     border-radius: 2.222vw;
+}
+.payment-information .passbook-area {
+    width: 72%;
+}
+.payment-information .passbook-area p {
+    width: calc(100% - 12.685vw);
+}
+.payment-information .passbook-area .bank-name {
+    letter-spacing: -0.06em;
 }
 .address-box .address {
     letter-spacing: -0.06em;
@@ -5765,9 +5774,12 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .address-box .btn-change,
     .payment-information .btn-copy {
+        width: 35px;
         height: 14px;
-        padding: 0 9px;
         border-radius: 7px;
+    }
+    .payment-information .passbook-area p {
+        width: calc(100% - 41px);
     }
     .address-box .btn-wrap .btn {
         height: 14px;
@@ -6404,6 +6416,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     /* 결제 */
+    .payment-information .passbook-area .bank-name {
+        display: block;
+    }
     .discount-box .input-row {
         width: 88px;
     }
@@ -7957,9 +7972,12 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .address-box .btn-change,
     .payment-information .btn-copy {
+        width: 117px;
         height: 48px;
-        padding: 0 30px;
         border-radius: 24px;
+    }
+    .payment-information .passbook-area p {
+        width: calc(100% - 137px);
     }
     .address-box .btn-wrap .btn {
         height: 48px;
