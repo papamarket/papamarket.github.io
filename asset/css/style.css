@@ -1747,14 +1747,11 @@ input[type="range"]::-webkit-slider-thumb {
 .member-join .member-info-box dt,
 .member-join .member-info-box dd,
 .agree-wrap .more-content dt,
-.agree-wrap .more-content dd {
-    letter-spacing: -0.06em;
-    line-height: 1.121em;
-}
+.agree-wrap .more-content dd,
 .agree-wrap .more-content .bar-list li,
 .agree-wrap .more-content p {
     letter-spacing: -0.06em;
-    line-height: 1.455em;
+    line-height: 1.121em;
 }
 .agree-wrap .more-content .bar-list li {
     padding-left: 1.667vw;
@@ -3012,7 +3009,8 @@ input[type="range"]::-webkit-slider-thumb {
 /* 결제 */
 .order-wrap h5,
 .order-wrap h5 + a,
-.order-wrap h6 {
+.order-wrap h6,
+.refund-box .txt {
     letter-spacing: -0.06em;
 }
 .address-box {
