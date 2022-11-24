@@ -105,6 +105,9 @@ body {
 .mt200 {
     margin-top: 18.519vw;
 }
+.mt250 {
+    margin-top: 23.148vw;
+}
 .ml30 {
     margin-left: 2.778vw;
 }
@@ -123,8 +126,14 @@ body {
 .mb50 {
     margin-bottom: 4.630vw;
 }
+.mb70 {
+    margin-bottom: 6.481vw;
+}
 .mb80 {
     margin-bottom: 7.407vw;
+}
+.mb100 {
+    margin-bottom: 9.259vw;
 }
 
 /* padding */
@@ -161,17 +170,26 @@ body {
 .pt146 {
     padding-top: 13.519vw;
 }
+.pt150 {
+    padding-top: 13.889vw;
+}
 .pt186 {
     padding-top: 17.222vw;
 }
 .pt213 {
     padding-top: 19.722vw;
 }
+.pt340 {
+    padding-top: 31.481vw;
+}
 .pt475 {
     padding-top: 43.981vw;
 }
 .pb30 {
     padding-bottom: 2.778vw;
+}
+.pb35 {
+    padding-bottom: 3.241vw;
 }
 .pb45 {
     padding-bottom: 4.167vw;
@@ -182,17 +200,26 @@ body {
 .pb60 {
     padding-bottom: 5.556vw;
 }
+.pb70 {
+    padding-bottom: 6.481vw;
+}
 .pb80 {
     padding-bottom: 7.407vw;
 }
 .pb100 {
     padding-bottom: 9.259vw;
 }
+.pb150 {
+    padding-bottom: 13.889vw;
+}
 .pb170 {
     padding-bottom: 15.741vw;
 }
 .pb240 {
     padding-bottom: 22.222vw;
+}
+.pb340 {
+    padding-bottom: 31.481vw;
 }
 
 /* color */
@@ -275,6 +302,9 @@ body {
 }
 .fs65 {
     font-size: 6.019vw;
+}
+.fs70 {
+    font-size: 6.481vw;
 }
 
 /* font-weight */
@@ -1643,7 +1673,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* no-list */
 .no-list {
-    padding: 31.481vw 0;
     color: #9e9e9e;
     text-align: center;
 }
@@ -4453,6 +4482,76 @@ input[type="range"]::-webkit-slider-thumb {
     margin-left: 1.852vw;
 }
 
+/* 파파마켓 소개 */
+.company-wrap img {
+    width: 100%;
+}
+.company-wrap h4 {
+    line-height: 1.286em;
+}
+.company-wrap .txt {
+    letter-spacing: -0.06em;
+    line-height: 1.515em;
+    word-break: keep-all;
+}
+.company-wrap .bar-list li {
+    padding-left: 1.389vw;
+}
+
+/* 이용 안내 */
+.information-txt-box {
+    width: 100%;
+    height: 27.778vw;
+    padding: 4.630vw;
+    border-radius: 4.444vw;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.information-txt-box .txt {
+    line-height: 1.194em;
+}
+
+/* 입점 문의 */
+.partner-wrap h5,
+.partner-wrap .txt {
+    letter-spacing: -0.06em;
+}
+.partner-wrap .intro-txt {
+    line-height: 1.548em;
+}
+.partner-wrap .txt-box {
+    width: 85.106%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3.333vw;
+}
+.partner-wrap .txt-box .txt {
+    line-height: 1.515em;
+}
+.partner-wrap .btn-wrap .btn {
+    width: 47.407vw;
+    margin: 0 auto;
+    border-radius: 6.019vw;
+}
+.partner-wrap .list li:not(:first-child) {
+    border-top: 0.185vw solid #edeae2;
+}
+.partner-wrap .list a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 6.481vw;
+    box-sizing: border-box;
+}
+.partner-wrap .list .tit {
+    padding-bottom: 0.278vw;
+    letter-spacing: -0.06em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 @media screen and (max-width: 320px) {
     /* common */
     .inner {
@@ -4482,7 +4581,7 @@ input[type="range"]::-webkit-slider-thumb {
         margin-top: 15px;
     }
     .mt70 {
-        margin-top: 21px;
+        margin-top: 20px;
     }
     .mt80 {
         margin-top: 24px;
@@ -4492,6 +4591,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .mt200 {
         margin-top: 59px;
+    }
+    .mt250 {
+        margin-top: 74px;
     }
     .ml30 {
         margin-left: 9px;
@@ -4511,8 +4613,14 @@ input[type="range"]::-webkit-slider-thumb {
     .mb50 {
         margin-bottom: 15px;
     }
+    .mb70 {
+        margin-bottom: 20px;
+    }
     .mb80 {
         margin-bottom: 24px;
+    }
+    .mb100 {
+        margin-bottom: 30px;
     }
 
     /* padding */
@@ -4529,7 +4637,7 @@ input[type="range"]::-webkit-slider-thumb {
         padding-top: 15px;
     }
     .pt70 {
-        padding-top: 21px;
+        padding-top: 20px;
     }
     .pt80 {
         padding-top: 24px;
@@ -4549,17 +4657,26 @@ input[type="range"]::-webkit-slider-thumb {
     .pt146 {
         padding-top: 43px;
     }
+    .pt150 {
+        padding-top: 44px;
+    }
     .pt186 {
         padding-top: 55px;
     }
     .pt213 {
         padding-top: 63px;
     }
+    .pt340 {
+        padding-top: 100px;
+    }
     .pt475 {
         padding-top: 140px;
     }
     .pb30 {
         padding-bottom: 9px;
+    }
+    .pb35 {
+        padding-bottom: 10px;
     }
     .pb45 {
         padding-bottom: 13px;
@@ -4570,17 +4687,26 @@ input[type="range"]::-webkit-slider-thumb {
     .pb60 {
         padding-bottom: 18px;
     }
+    .pb70 {
+        padding-bottom: 20px;
+    }
     .pb80 {
         padding-bottom: 24px;
     }
     .pb100 {
         padding-bottom: 30px;
     }
+    .pb150 {
+        padding-bottom: 44px;
+    }
     .pb170 {
         padding-bottom: 50px;
     }
     .pb240 {
         padding-bottom: 72px;
+    }
+    .pb340 {
+        padding-bottom: 100px;
     }
 
     /* font-size */
@@ -4640,6 +4766,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .fs65 {
         font-size: 19px;
+    }
+    .fs70 {
+        font-size: 21px;
     }
 
     /* btn */
@@ -5224,11 +5353,6 @@ input[type="range"]::-webkit-slider-thumb {
         padding-bottom: 10px;
     }
     
-    /* no-list */
-    .no-list {
-        padding: 100px 0;
-    }
-
     /* more-content */
     .more-content.normal > div {
         padding: 15px;
@@ -6418,6 +6542,37 @@ input[type="range"]::-webkit-slider-thumb {
     .member-leave .btn-wrap .btn + .btn {
         margin-left: 6px;
     }
+
+    /* 파파마켓 소개 */
+    .company-wrap .bar-list li {
+        padding-left: 4px;
+    }
+
+    /* 이용 안내 */
+    .information-txt-box {
+        height: 88px;
+        padding: 15px;
+        border-radius: 14px;
+    }
+
+    /* 입점 문의 */
+    .partner-wrap .txt-box {
+        width: 238px;
+        border-radius: 10px;
+    }
+    .partner-wrap .btn-wrap .btn {
+        width: 152px;
+        border-radius: 19px;
+    }
+    .partner-wrap .list li:not(:first-child) {
+        border-top: 1px solid #edeae2;
+    }
+    .partner-wrap .list a {
+        padding: 20px;
+    }
+    .partner-wrap .list .tit {
+        padding-bottom: 1px;
+    }
 }
 
 @media screen and (max-width: 280px) {
@@ -6535,6 +6690,11 @@ input[type="range"]::-webkit-slider-thumb {
     .level-info .coupon-box .coupon a {
         height: 64px;
     }
+
+    /* 입점 문의 */
+    .partner-wrap .txt-box {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1080px) {
@@ -6577,6 +6737,9 @@ input[type="range"]::-webkit-slider-thumb {
     .mt200 {
         margin-top: 200px;
     }
+    .mt250 {
+        margin-top: 250px;
+    }
     .ml30 {
         margin-left: 30px;
     }
@@ -6595,8 +6758,14 @@ input[type="range"]::-webkit-slider-thumb {
     .mb50 {
         margin-bottom: 50px;
     }
+    .mb70 {
+        margin-bottom: 70px;
+    }
     .mb80 {
         margin-bottom: 80px;
+    }
+    .mb100 {
+        margin-bottom: 100px;
     }
 
     /* padding */
@@ -6633,17 +6802,26 @@ input[type="range"]::-webkit-slider-thumb {
     .pt146 {
         padding-top: 146px;
     }
+    .pt150 {
+        padding-top: 150px;
+    }
     .pt186 {
         padding-top: 186px;
     }
     .pt213 {
         padding-top: 213px;
     }
+    .pt340 {
+        padding-top: 340px;
+    }
     .pt475 {
         padding-top: 475px;
     }
     .pb30 {
         padding-bottom: 30px;
+    }
+    .pb35 {
+        padding-bottom: 35px;
     }
     .pb45 {
         padding-bottom: 45px;
@@ -6654,17 +6832,26 @@ input[type="range"]::-webkit-slider-thumb {
     .pb60 {
         padding-bottom: 60px;
     }
+    .pb70 {
+        padding-bottom: 70px;
+    }
     .pb80 {
         padding-bottom: 80px;
     }
     .pb100 {
         padding-bottom: 100px;
     }
+    .pb150 {
+        padding-bottom: 150px;
+    }
     .pb170 {
         padding-bottom: 170px;
     }
     .pb240 {
         padding-bottom: 240px;
+    }
+    .pb340 {
+        padding-bottom: 340px;
     }
     
     /* font-size */
@@ -6724,6 +6911,9 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .fs65 {
         font-size: 65px;
+    }
+    .fs70 {
+        font-size: 70px;
     }
 
     /* border */
@@ -7383,11 +7573,6 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .sub-header .tab li {
         padding-bottom: 37px;
-    }
-    
-    /* no-list */
-    .no-list {
-        padding: 340px 0;
     }
 
     /* more-content */
@@ -8701,5 +8886,36 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .member-leave .btn-wrap .btn + .btn {
         margin-left: 20px;
+    }
+
+    /* 파파마켓 소개 */
+    .company-wrap .bar-list li {
+        padding-left: 15px;
+    }
+
+    /* 이용 안내 */
+    .information-txt-box {
+        height: 300px;
+        padding: 50px;
+        border-radius: 48px;
+    }
+
+    /* 입점 문의 */
+    .partner-wrap .txt-box {
+        width: 800px;
+        border-radius: 36px;
+    }
+    .partner-wrap .btn-wrap .btn {
+        width: 512px;
+        border-radius: 65px;
+    }
+    .partner-wrap .list li:not(:first-child) {
+        border-top: 2px solid #edeae2;
+    }
+    .partner-wrap .list a {
+        padding: 70px;
+    }
+    .partner-wrap .list .tit {
+        padding-bottom: 3px;
     }
 }
