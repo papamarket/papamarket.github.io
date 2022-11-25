@@ -1658,23 +1658,24 @@ input[type="range"]::-webkit-slider-thumb {
     z-index: 15;
 }
 .sub-header h3,
-.sub-header a {
+.sub-header a,
+.market-review-head h3,
+.market-review-head a {
     letter-spacing: -0.06em;
 }
-.sub-header h3 span {
-    color: #808080;
-    font-size: 3.889vw;
-    font-weight: 400;
+.sub-header h3 span,
+.market-review-head h3 span {
     letter-spacing: 0;
 }
 .sub-header a.after:after,
+.market-review-head a.after:after,
 .btn-after:after {
     display: inline-block;
     width: 1.667vw;
     height: 2.778vw;
     margin-left: 1.389vw;
     background: url("../images/common/ico_more_g.png") no-repeat center center;
-    background-size: 100%;
+    background-size: contain;
     content: '';
 }
 .sub-header .tab li {
@@ -2360,7 +2361,8 @@ input[type="range"]::-webkit-slider-thumb {
 .market-list .name,
 .market-list .address,
 .market-card .name,
-.market-card .address {
+.market-card .address,
+.market-card .active .category {
     letter-spacing: -0.06em;
     word-break: keep-all;
 }
@@ -2383,13 +2385,16 @@ input[type="range"]::-webkit-slider-thumb {
     background-size: cover;
     content: '';
 }
-.market-list .name .market-name {
+.market-list .name .market-name,
+.market-card .name .market-name {
     display: block;
-    max-width: calc(100% - 3.704vw);
     line-height: 1.190em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.market-list .name .market-name {
+    max-width: calc(100% - 3.704vw);
 }
 .market-list .location:before,
 .market-card .location:before {
@@ -2398,7 +2403,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 3.241vw;
     margin-right: 1.111vw;
     background: url("../images/common/ico_location.png") no-repeat center center;
-    background-size: 100%;
+    background-size: contain;
     content: '';
 }
 .market-list .score-area + span,
@@ -2406,7 +2411,9 @@ input[type="range"]::-webkit-slider-thumb {
     margin-left: 1.111vw;
 }
 .market-list .address,
-.market-list .category {
+.market-list .category,
+.market-card .address,
+.market-card .category {
     line-height: 1.2em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2420,23 +2427,23 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .market-card .active .txt-body,
 .market-card .active .txt-foot {
-    margin-top: 4.722vw;
+    margin-top: 4.259vw;
 }
 .market-card .more-tit {
     flex-wrap: wrap;
 }
 .market-card .address {
     width: 100%;
-    line-height: 1.2em;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
-.market-card .active .address {
-    white-space: initial;
+.market-card .active .name {
+    word-break: break-all;
+}
+.market-card .active .name .market-name,
+.market-card .active .address,
+.market-card .active .category {
     overflow: initial;
     text-overflow: initial;
+    white-space: initial;
 }
 .market-card .btn-more {
     display: flex;
@@ -2471,7 +2478,7 @@ input[type="range"]::-webkit-slider-thumb {
     width: 2.963vw;
     height: 3.241vw;
     background-position: center center;
-    background-size: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     content: '';
 }
@@ -2502,12 +2509,85 @@ input[type="range"]::-webkit-slider-thumb {
 .market-desc-detail .tab li a.active {
     color: #222;
 }
+/* 마켓 상품 */
 .market-desc-detail .category-list {
-    padding-top: 20px;
+    padding-top: 1.852vw;
 }
 .market-desc-detail .category-list.fixed {
-    top: 289px;
-    padding-top: 20px;
+    top: 26.759vw;
+    padding-top: 1.852vw;
+}
+/* 마켓 이벤트 */
+.market-desc-detail .event-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 22.222vw;
+    padding: 2.778vw 4.630vw;
+    background-color: #edeae2;
+    box-sizing: border-box;
+}
+.market-desc-detail .event-list li p {
+    max-width: 64.881%;
+    letter-spacing: -0.06em;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.market-desc-detail .event-list .no-thumbnail p {
+    max-width: 100%;
+}
+.market-desc-detail .event-list li .thumbnail {
+    width: 29.167%;
+    height: 100%;
+    border-radius: 3.333vw;
+    overflow: hidden;
+}
+.market-desc-detail .event-list li .thumbnail img {
+    width: 100%;
+}
+.market-desc-detail .market-event-content {
+    display: none;
+}
+.market-desc-detail .market-event-content .content-box {
+    padding: 4.630vw 4.630vw 2.778vw;
+    border-radius: 4.444vw;
+}
+.market-desc-detail .market-event-content .content-box p {
+    display: -webkit-box;
+    line-height: 1.194em;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.market-desc-detail .market-event-content .content-box.active p {
+    display: block;
+    word-wrap: initial;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: initial;
+    overflow: initial;
+}
+.market-desc-detail .market-event-content .content-box .btn-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.market-desc-detail .market-event-content .content-box .btn-more:after {
+    display: block;
+    width: 2.222vw;
+    height: 2.222vw;
+    margin-left: 1.389vw;
+    background: url("../images/common/ico_arrow.png") no-repeat center center;
+    background-size: cover;
+    transition: .3s transform;
+    transform: rotate(0);
+    content: '';
+}
+.market-desc-detail .market-event-content .content-box .btn-more.active:after {
+    transform: rotate(-180deg);
 }
 
 /* 상품 상세 */
@@ -5536,10 +5616,8 @@ input[type="range"]::-webkit-slider-thumb {
     .sub-header.fixed {
         top: 60px;
     }
-    .sub-header h3 span {
-        font-size: 12px;
-    }
     .sub-header a.after:after,
+    .market-review-head a.after:after,
     .btn-after:after {
         width: 5px;
         height: 9px;
@@ -5846,7 +5924,8 @@ input[type="range"]::-webkit-slider-thumb {
     .market-list .name .market-name {
         max-width: calc(100% - 12px);
     }
-    .market-list .location:before {
+    .market-list .location:before,
+    .market-card .location:before {
         width: 9px;
         height: 10px;
         margin-right: 3px;
@@ -5855,22 +5934,14 @@ input[type="range"]::-webkit-slider-thumb {
     .market-card .score-area + span {
         margin-left: 4px;
     }
-    .market-list .btn-like {
+    .market-list .btn-like,
+    .market-card .btn-like {
         width: 14px;
         height: 13px;
     }
-    /* .market-card img {
-        border-radius: 18px;
-    }
-    .market-card .txt-box {
-        padding: 9px 18px 10px;
-        border-radius: 0 0 18px 18px;
-    }
-    .market-card .more-tit {
-        padding-top: 2px;
-    }
-    .market-card .address {
-        width: calc(100% - 12px);
+    .market-card .active .txt-body,
+    .market-card .active .txt-foot {
+        margin-top: 13px;
     }
     .market-card .btn-more:after {
         width: 7px;
@@ -5878,9 +5949,6 @@ input[type="range"]::-webkit-slider-thumb {
         margin-left: 3px;
         background-size: 7px;
     }
-    .market-card ul {
-        padding-top: 6px;
-    } */
     .market-card ul li:not(:first-child) {
         margin-top: 6px;
     }
@@ -5898,6 +5966,32 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .market-label + .market-label {
         margin-left: 3px;
+    }
+    /* 마켓 상세 */
+    /* 마켓 상품 */
+    .market-desc-detail .category-list {
+        padding-top: 6px;
+    }
+    .market-desc-detail .category-list.fixed {
+        top: 85px;
+        padding-top: 6px;
+    }
+    /* 마켓 이벤트 */
+    .market-desc-detail .event-list li a {
+        height: 72px;
+        padding: 9px 15px;
+    }
+    .market-desc-detail .event-list li .thumbnail {
+        border-radius: 11px;
+    }
+    .market-desc-detail .market-event-content .content-box {
+        padding: 15px 15px 9px;
+        border-radius: 14px;
+    }
+    .market-desc-detail .market-event-content .content-box .btn-more:after {
+        width: 7px;
+        height: 7px;
+        margin-left: 4px;
     }
 
     /* 상품 상세 */
@@ -7841,10 +7935,8 @@ input[type="range"]::-webkit-slider-thumb {
         margin-left: auto;
         margin-right: auto;
     }
-    .sub-header h3 span {
-        font-size: 42px;
-    }
     .sub-header a.after:after,
+    .market-review-head a.after:after,
     .btn-after:after {
         width: 18px;
         height: 30px;
@@ -8146,10 +8238,13 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     /* 주변 매장 */
-    .market-list li {
-        margin-bottom: 50px;
+    .market-list li,
+    .market-card {
         padding: 50px;
         border-radius: 64px;
+    }
+    .market-list li {
+        margin-bottom: 50px;
     }
     .market-list .img-box,
     .market-card .img-box {
@@ -8169,7 +8264,8 @@ input[type="range"]::-webkit-slider-thumb {
     .market-list .name .market-name {
         max-width: calc(100% - 40px);
     }
-    .market-list .location:before {
+    .market-list .location:before,
+    .market-card .location:before {
         width: 32px;
         height: 35px;
         margin-right: 12px;
@@ -8179,37 +8275,22 @@ input[type="range"]::-webkit-slider-thumb {
     .market-card .score-area + span {
         margin-left: 12px;
     }
-    .market-list .btn-like {
+    .market-list .btn-like,
+    .market-card .btn-like {
         width: 48px;
         height: 43px;
     }
     .market-card .active .txt-body,
     .market-card .active .txt-foot {
-        margin-top: 51px;
-    }
-    /* .market-card img {
-        border-radius: 64px;
-    }
-    .market-card .txt-box {
-        padding: 30px 60px 32px;
-        border-radius: 0 0 64px 64px;
-    }
-    .market-card .more-tit {
-        padding-top: 6px;
-    }
-    .market-card .address {
-        width: calc(100% - 40px);
+        margin-top: 46px;
     }
     .market-card .btn-more:after {
         width: 24px;
         height: 40px;
         margin-left: 10px;
-        background-image: url("../images/common/ico_arrow_w@2x.png");
+        background-image: url("../images/common/ico_arrow@2x.png");
         background-size: 24px;
     }
-    .market-card ul {
-        padding-top: 20px;
-    } */
     .market-card ul li:not(:first-child) {
         margin-top: 20px;
     }
@@ -8233,6 +8314,33 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .market-label + .market-label {
         margin-left: 10px;
+    }
+    /* 마켓 상세 */
+    /* 마켓 상품 */
+    .market-desc-detail .category-list {
+        padding-top: 20px;
+    }
+    .market-desc-detail .category-list.fixed {
+        top: 289px;
+        padding-top: 20px;
+    }
+    /* 마켓 이벤트 */
+    .market-desc-detail .event-list li a {
+        height: 240px;
+        padding: 30px 50px;
+    }
+    .market-desc-detail .event-list li .thumbnail {
+        border-radius: 36px;
+    }
+    .market-desc-detail .market-event-content .content-box {
+        padding: 50px 50px 30px;
+        border-radius: 48px;
+    }
+    .market-desc-detail .market-event-content .content-box .btn-more:after {
+        width: 24px;
+        height: 24px;
+        margin-left: 15px;
+        background-image: url("../images/common/ico_arrow@2x.png");
     }
 
     /* 상품 상세 */
