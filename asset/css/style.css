@@ -415,7 +415,7 @@ body {
 .btn-photo {
     font-size: 0;
     background-position: center center;
-    background-size: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     text-indent: -9999px;
 }
@@ -1623,7 +1623,7 @@ input[type="range"]::-webkit-slider-thumb {
 .sort-select.select-custom .current {
     color: #428c75;
     line-height: inherit;
-    text-align: center;
+    text-align: right;
 }
 .sort-select.select-custom:after {
     width: 2.037vw;
@@ -2310,7 +2310,10 @@ input[type="range"]::-webkit-slider-thumb {
     position: relative;
     width: 100%;
     margin-bottom: 4.630vw;
+    padding: 4.630vw;
+    background-color: #fff;
     border-radius: 5.926vw;
+    box-sizing: border-box;
     overflow: hidden;
 }
 .market-list li > a {
@@ -2322,10 +2325,22 @@ input[type="range"]::-webkit-slider-thumb {
     height: 100%;
     z-index: 1;
 }
-.market-list li img {
+.market-list .img-box {
+    width: 48.810%;
+    max-width: 410px;
+    border-radius: 4.444vw;
+    overflow: hidden;
+}
+.market-list .img-box img {
     width: 100%;
 }
-.market-list li .txt-box,
+.market-list .txt-box {
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 47.619%;
+    max-width: 400px;
+}
+/* .market-list li .txt-box,
 .market-card .txt-box {
     position: absolute;
     left: 0;
@@ -2335,9 +2350,9 @@ input[type="range"]::-webkit-slider-thumb {
 .market-list li .txt-box {
     bottom: 0;
     padding: 3.333vw 4.630vw;
-}
-.market-list li .txt-box > div {
-    width: calc(100% - 6.296vw);
+} */
+.market-list .txt-box > div {
+    width: 100%;
 }
 .market-list .name,
 .market-list .address,
@@ -2346,8 +2361,28 @@ input[type="range"]::-webkit-slider-thumb {
     letter-spacing: -0.06em;
     word-break: keep-all;
 }
-.market-list .address {
-    line-height: 1.2em;
+.market-list .name,
+.market-card .name {
+    width: calc(100% - 8.611vw);
+}
+.market-list .name,
+.market-list .location {
+    display: flex;
+    align-items: center;
+}
+.market-list .name:after {
+    display: block;
+    width: 1.481vw;
+    height: 2.593vw;
+    margin-left: 2.222vw;
+    background: url("../images/common/ico_more.png") no-repeat center center;
+    background-size: cover;
+    content: '';
+}
+.market-list .name .market-name {
+    display: block;
+    max-width: calc(100% - 3.704vw);
+    line-height: 1.190em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -2357,14 +2392,20 @@ input[type="range"]::-webkit-slider-thumb {
     width: 2.963vw;
     height: 3.241vw;
     margin-right: 1.111vw;
-    background: url("../images/common/ico_location_w.png") no-repeat center center;
+    background: url("../images/common/ico_location.png") no-repeat center center;
     background-size: 100%;
     content: '';
 }
-.market-list .location {
-    display: flex;
-    align-items: center;
-    margin: 0 1.667vw 0 2.778vw;
+.market-list .score-area + span,
+.market-card .score-area + span {
+    margin-left: 1.111vw;
+}
+.market-list .address,
+.market-list .category {
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .market-list .btn-like {
     position: relative;
@@ -2372,9 +2413,9 @@ input[type="range"]::-webkit-slider-thumb {
     height: 3.981vw;
     z-index: 2;
 }
-.market-list .bg-red .btn-like.active {
-    background-image: url("../images/common/ico_heart_w.png");
-}
+/* .market-list .bg-red .btn-like.active {
+    background-image: url("../images/common/ico_heart.png");
+} */
 .market-card {
     position: relative;
     width: 100%;
@@ -2460,6 +2501,17 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .market-card .time:before {
     background-image: url("../images/common/ico_clock.png");
+}
+.market-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.278vw;
+    height: 4.074vw;
+    border-radius: 2.037vw;
+}
+.market-label + .market-label {
+    margin-left: 0.926vw;
 }
 
 /* 상품 상세 */
@@ -3930,6 +3982,8 @@ input[type="range"]::-webkit-slider-thumb {
 .review-head .id {
     margin-right: 1.852vw;
 }
+.market-list .score-area,
+.market-card .score-area,
 .review-head .score-area {
     display: block;
     width: 16.667vw;
@@ -3939,19 +3993,22 @@ input[type="range"]::-webkit-slider-thumb {
     background-repeat: no-repeat;
     text-indent: -9999px;
 }
-.review-head .star-score1 {
+.star-score0 {
+    background-image: url("../images/common/star_score0.png");
+}
+.star-score1 {
     background-image: url("../images/common/star_score1.png");
 }
-.review-head .star-score2 {
+.star-score2 {
     background-image: url("../images/common/star_score2.png");
 }
-.review-head .star-score3 {
+.star-score3 {
     background-image: url("../images/common/star_score3.png");
 }
-.review-head .star-score4 {
+.star-score4 {
     background-image: url("../images/common/star_score4.png");
 }
-.review-head .star-score5 {
+.star-score5 {
     background-image: url("../images/common/star_score5.png");
 }
 .review-body {
@@ -4377,7 +4434,7 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 4.630vw 4.167vw;
 }
 .review-write .write-box {
-    height: 72.222vw;
+    height: 67.500vw;
     padding: 4.630vw 4.167vw 8.056vw;
 }
 .write-form .write-box textarea {
@@ -5771,21 +5828,38 @@ input[type="range"]::-webkit-slider-thumb {
     /* 주변 매장 */
     .market-list li {
         margin-bottom: 15px;
+        padding: 15px;
         border-radius: 18px;
     }
-    .market-list li .txt-box {
+    .market-list .img-box {
+        border-radius: 14px;
+    }
+    /* .market-list li .txt-box {
         padding: 10px 15px;
     }
     .market-list li .txt-box > div {
         width: calc(100% - 20px);
+    } */
+    .market-list .name,
+    .market-card .name {
+        width: calc(100% - 28px);
+    }
+    .market-list .name:after {
+        width: 5px;
+        height: 9px;
+        margin-left: 7px;
+    }
+    .market-list .name .market-name {
+        max-width: calc(100% - 12px);
     }
     .market-list .location:before {
         width: 9px;
         height: 10px;
         margin-right: 3px;
     }
-    .market-list .location {
-        margin: 0 5px 0 9px;
+    .market-list .score-area + span,
+    .market-card .score-area + span {
+        margin-left: 4px;
     }
     .market-list .btn-like {
         width: 14px;
@@ -5823,6 +5897,14 @@ input[type="range"]::-webkit-slider-thumb {
     .market-card ul li:before {
         width: 9px;
         height: 10px;
+    }
+    .market-label {
+        width: 33px;
+        height: 14px;
+        border-radius: 7px;
+    }
+    .market-label + .market-label {
+        margin-left: 3px;
     }
 
     /* 상품 상세 */
@@ -6451,6 +6533,8 @@ input[type="range"]::-webkit-slider-thumb {
     .review-head .id {
         margin-right: 6px;
     }
+    .market-list .score-area,
+    .market-card .score-area,
     .review-head .score-area {
         width: 53px;
         height: 9px;
@@ -6646,7 +6730,7 @@ input[type="range"]::-webkit-slider-thumb {
         padding: 15px 13px;
     }
     .review-write .write-box {
-        height: 230px;
+        height: 216px;
         padding: 15px 13px 25px;
     }
     .write-form .write-box .txt-total {
@@ -8068,30 +8152,48 @@ input[type="range"]::-webkit-slider-thumb {
     /* 주변 매장 */
     .market-list li {
         margin-bottom: 50px;
+        padding: 50px;
         border-radius: 64px;
     }
-    .market-list li .txt-box {
+    .market-list .img-box {
+        border-radius: 48px;
+    }
+    /* .market-list li .txt-box {
         padding: 36px 50px;
     }
     .market-list li .txt-box > div {
         width: calc(100% - 68px);
+    } */
+    .market-list .name,
+    .market-card .name {
+        width: calc(100% - 93px);
+    }
+    .market-list .name:after {
+        width: 16px;
+        height: 28px;
+        margin-left: 24px;
+        background-image: url("../images/common/ico_more@2x.png");
+    }
+    .market-list .name .market-name {
+        max-width: calc(100% - 40px);
     }
     .market-list .location:before {
         width: 32px;
         height: 35px;
         margin-right: 12px;
-        background-image: url("../images/common/ico_location_w@2x.png");
+        background-image: url("../images/common/ico_location@2x.png");
     }
-    .market-list .location {
-        margin: 0 18px 0 30px;
+    .market-list .score-area + span,
+    .market-card .score-area + span {
+        margin-left: 12px;
     }
     .market-list .btn-like {
         width: 48px;
         height: 43px;
     }
-    .market-list .bg-red .btn-like.active {
+    /* .market-list .bg-red .btn-like.active {
         background-image: url("../images/common/ico_heart_w@2x.png");
-    }
+    } */
     .market-card img {
         border-radius: 64px;
     }
@@ -8134,6 +8236,14 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .market-card .time:before {
         background-image: url("../images/common/ico_clock@2x.png");
+    }
+    .market-label {
+        width: 111px;
+        height: 44px;
+        border-radius: 22px;
+    }
+    .market-label + .market-label {
+        margin-left: 10px;
     }
 
     /* 상품 상세 */
@@ -8822,23 +8932,28 @@ input[type="range"]::-webkit-slider-thumb {
     .review-head .id {
         margin-right: 20px;
     }
+    .market-list .score-area,
+    .market-card .score-area,
     .review-head .score-area {
         width: 180px;
         height: 30px;
     }
-    .review-head .star-score1 {
+    .star-score0 {
+        background-image: url("../images/common/star_score0@2x.png");
+    }
+    .star-score1 {
         background-image: url("../images/common/star_score1@2x.png");
     }
-    .review-head .star-score2 {
+    .star-score2 {
         background-image: url("../images/common/star_score2@2x.png");
     }
-    .review-head .star-score3 {
+    .star-score3 {
         background-image: url("../images/common/star_score3@2x.png");
     }
-    .review-head .star-score4 {
+    .star-score4 {
         background-image: url("../images/common/star_score4@2x.png");
     }
-    .review-head .star-score5 {
+    .star-score5 {
         background-image: url("../images/common/star_score5@2x.png");
     }
     .review-list .review-body {
@@ -9038,7 +9153,7 @@ input[type="range"]::-webkit-slider-thumb {
         padding: 50px 45px;
     }
     .review-write .write-box {
-        height: 780px;
+        height: 729px;
         padding: 50px 45px 87px;
     }
     .write-form .write-box .txt-total {
