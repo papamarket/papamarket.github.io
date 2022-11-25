@@ -146,6 +146,9 @@ body {
 .pt27 {
     padding-top: 2.500vw;
 }
+.pt30 {
+    padding-top: 2.778vw;
+}
 .pt36 {
     padding-top: 3.333vw;
 }
@@ -1680,6 +1683,9 @@ input[type="range"]::-webkit-slider-thumb {
 .tab2 li {
     width: 50%;
 }
+.tab4 li {
+    width: 25%;
+}
 .tab li a {
     color: #222;
     letter-spacing: -0.06em;
@@ -2306,15 +2312,18 @@ input[type="range"]::-webkit-slider-thumb {
 .market-list {
     flex-wrap: wrap;
 }
-.market-list li {
+.market-list li,
+.market-card {
     position: relative;
     width: 100%;
-    margin-bottom: 4.630vw;
     padding: 4.630vw;
     background-color: #fff;
     border-radius: 5.926vw;
     box-sizing: border-box;
     overflow: hidden;
+}
+.market-list li {
+    margin-bottom: 4.630vw;
 }
 .market-list li > a {
     display: block;
@@ -2325,22 +2334,27 @@ input[type="range"]::-webkit-slider-thumb {
     height: 100%;
     z-index: 1;
 }
-.market-list .img-box {
+.market-list .img-box,
+.market-card .img-box {
     width: 48.810%;
     max-width: 410px;
+    height: 37.037vw;
     border-radius: 4.444vw;
     overflow: hidden;
 }
-.market-list .img-box img {
+.market-list .img-box img,
+.market-card .img-box img {
     width: 100%;
 }
-.market-list .txt-box {
+.market-list .txt-box,
+.market-card .txt-box {
     flex-wrap: wrap;
     align-content: space-between;
     width: 47.619%;
     max-width: 400px;
 }
-.market-list .txt-box > div {
+.market-list .txt-box > div,
+.market-card .txt-box > div {
     width: 100%;
 }
 .market-list .name,
@@ -2355,7 +2369,8 @@ input[type="range"]::-webkit-slider-thumb {
     width: calc(100% - 8.611vw);
 }
 .market-list .name,
-.market-list .location {
+.market-list .location,
+.market-card .location {
     display: flex;
     align-items: center;
 }
@@ -2376,7 +2391,8 @@ input[type="range"]::-webkit-slider-thumb {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.market-list .location:before {
+.market-list .location:before,
+.market-card .location:before {
     display: block;
     width: 2.963vw;
     height: 3.241vw;
@@ -2402,31 +2418,15 @@ input[type="range"]::-webkit-slider-thumb {
     height: 3.981vw;
     z-index: 2;
 }
-.market-card {
-    position: relative;
-    width: 100%;
-}
-.market-card img {
-    width: 100%;
-    border-radius: 5.926vw;
-}
-.market-card .txt-box {
-    top: 79.554%;
-    padding: 2.778vw 5.556vw 2.963vw;
-    border-radius: 0 0 5.926vw 5.926vw;
-    z-index: 1;
-}
-.market-card .txt-box .name {
-    width: 43.659%;
-}
-.market-card .txt-box > div {
-    width: 56.341%;
+.market-card .active .txt-body,
+.market-card .active .txt-foot {
+    margin-top: 4.722vw;
 }
 .market-card .more-tit {
-    padding-top: 0.556vw;
+    flex-wrap: wrap;
 }
 .market-card .address {
-    width: calc(100% - 3.704vw);
+    width: 100%;
     line-height: 1.2em;
     box-sizing: border-box;
     overflow: hidden;
@@ -2439,34 +2439,30 @@ input[type="range"]::-webkit-slider-thumb {
     text-overflow: initial;
 }
 .market-card .btn-more {
+    display: flex;
+    align-items: center;
+}
+.market-card .btn-more:after {
     display: block;
     width: 2.222vw;
     height: 3.704vw;
-    font-size: 0;
-    background: url("../images/common/ico_arrow_w.png") no-repeat center center;
+    margin-left: 0.926vw;
+    background: url("../images/common/ico_arrow.png") no-repeat center center;
     background-size: 2.222vw;
-    text-indent: -9999px;
     transform: rotate(0);
     transition: .3s transform;
+    content: '';
 }
-.market-card .active .btn-more {
+.market-card .active .btn-more:after {
     transform: rotate(-180deg);
 }
-.market-card .more-content {
-    background-color: #428c75;
-}
-.market-card ul {
-    padding: 1.852vw 0 1px;
-}
 .market-card ul li:not(:first-child) {
-    margin-top: 2.315vw;
+    margin-top: 1.852vw;
 }
-.market-card .address,
 .market-card ul li {
     position: relative;
     padding-left: 4.074vw;
 }
-.market-card .address:before,
 .market-card ul li:before {
     display: block;
     position: absolute;
@@ -2475,12 +2471,9 @@ input[type="range"]::-webkit-slider-thumb {
     width: 2.963vw;
     height: 3.241vw;
     background-position: center center;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     content: '';
-}
-.market-card .address:before {
-    background-image: url("../images/common/ico_location_w.png");
 }
 .market-card .tel:before {
     background-image: url("../images/common/ico_tel.png");
@@ -2498,6 +2491,23 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .market-label + .market-label {
     margin-left: 0.926vw;
+}
+/* 마켓 상세 */
+.market-desc-detail {
+    position: relative;
+}
+.market-desc-detail .tab li a {
+    color: #9e9e9e;
+}
+.market-desc-detail .tab li a.active {
+    color: #222;
+}
+.market-desc-detail .category-list {
+    padding-top: 20px;
+}
+.market-desc-detail .category-list.fixed {
+    top: 289px;
+    padding-top: 20px;
 }
 
 /* 상품 상세 */
@@ -4798,6 +4808,9 @@ input[type="range"]::-webkit-slider-thumb {
     .pt27 {
         padding-top: 8px;
     }
+    .pt30 {
+        padding-top: 9px;
+    }
     .pt36 {
         padding-top: 11px;
     }
@@ -5817,7 +5830,8 @@ input[type="range"]::-webkit-slider-thumb {
         padding: 15px;
         border-radius: 18px;
     }
-    .market-list .img-box {
+    .market-list .img-box,
+    .market-card .img-box {
         border-radius: 14px;
     }
     .market-list .name,
@@ -5845,7 +5859,7 @@ input[type="range"]::-webkit-slider-thumb {
         width: 14px;
         height: 13px;
     }
-    .market-card img {
+    /* .market-card img {
         border-radius: 18px;
     }
     .market-card .txt-box {
@@ -5858,22 +5872,21 @@ input[type="range"]::-webkit-slider-thumb {
     .market-card .address {
         width: calc(100% - 12px);
     }
-    .market-card .btn-more {
+    .market-card .btn-more:after {
         width: 7px;
         height: 12px;
+        margin-left: 3px;
         background-size: 7px;
     }
     .market-card ul {
         padding-top: 6px;
-    }
+    } */
     .market-card ul li:not(:first-child) {
-        margin-top: 7px;
+        margin-top: 6px;
     }
-    .market-card .address,
     .market-card ul li {
         padding-left: 13px;
     }
-    .market-card .address:before,
     .market-card ul li:before {
         width: 9px;
         height: 10px;
@@ -7024,6 +7037,9 @@ input[type="range"]::-webkit-slider-thumb {
     .pt27 {
         padding-top: 27px;
     }
+    .pt30 {
+        padding-top: 30px;
+    }
     .pt36 {
         padding-top: 36px;
     }
@@ -8135,7 +8151,9 @@ input[type="range"]::-webkit-slider-thumb {
         padding: 50px;
         border-radius: 64px;
     }
-    .market-list .img-box {
+    .market-list .img-box,
+    .market-card .img-box {
+        height: 400px;
         border-radius: 48px;
     }
     .market-list .name,
@@ -8165,7 +8183,11 @@ input[type="range"]::-webkit-slider-thumb {
         width: 48px;
         height: 43px;
     }
-    .market-card img {
+    .market-card .active .txt-body,
+    .market-card .active .txt-foot {
+        margin-top: 51px;
+    }
+    /* .market-card img {
         border-radius: 64px;
     }
     .market-card .txt-box {
@@ -8178,29 +8200,25 @@ input[type="range"]::-webkit-slider-thumb {
     .market-card .address {
         width: calc(100% - 40px);
     }
-    .market-card .btn-more {
+    .market-card .btn-more:after {
         width: 24px;
         height: 40px;
+        margin-left: 10px;
         background-image: url("../images/common/ico_arrow_w@2x.png");
         background-size: 24px;
     }
     .market-card ul {
         padding-top: 20px;
-    }
+    } */
     .market-card ul li:not(:first-child) {
-        margin-top: 25px;
+        margin-top: 20px;
     }
-    .market-card .address,
     .market-card ul li {
         padding-left: 44px;
     }
-    .market-card .address:before,
     .market-card ul li:before {
         width: 32px;
         height: 35px;
-    }
-    .market-card .address:before {
-        background-image: url("../images/common/ico_location_w@2x.png");
     }
     .market-card .tel:before {
         background-image: url("../images/common/ico_tel@2x.png");
