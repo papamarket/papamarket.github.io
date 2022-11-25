@@ -8,9 +8,11 @@
     <title>PAPAMARKET</title>
     <link rel="stylesheet" href="./asset/css/reset.css">
     <link rel="stylesheet" href="./asset/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./asset/css/nice-select.css">
     <link rel="stylesheet" href="./asset/css/style.css">
     <script src="./asset/js/jquery-3.6.1.js"></script>
     <script src="./asset/js/swiper-bundle.min.js"></script>
+    <script src="./asset/js/jquery.nice-select.min.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -38,60 +40,76 @@
             <div class="inner">
                 <!-- 정렬 -->
                 <div class="flex align-center justify-between mb50">
-                    <span class="checkbox-row mb30"><input type="checkbox" name="chkAll" id="chkAll" class="design-inp" title="전체동의"><label for="chkAll" class="fs36">전체동의</label></span>
+                    <span class="checkbox-row"><input type="checkbox" name="" id="chk-favorite" class="design-inp" title="관심마켓 우선보기"><label for="chk-favorite" class="fs36">관심마켓 우선보기</label></span>
                     <select id="" name="" class="select-custom sort-select fs33">
-                        <option value="">파파 추천순</option>
-                        <option value="">판매량순</option>
-                        <option value="">낮은 가격순</option>
-                        <option value="">높은 가격순</option>
-                        <option value="">높은 별점순</option>
-                        <option value="">신상품순</option>
+                        <option value="">거리순</option>
                         <option value="">후기 많은순</option>
+                        <option value="">인기 많은순</option>
+                        <option value="">이름순</option>
                     </select>
                 </div>
                 <ul class="market-list flex justify-between">
-                    <li>
-                        <a href="#"></a><img src="./asset/images/market_img01.jpg" alt="미소마트">
-                        <div class="txt-box flex align-center justify-between white bg-green">
-                            <div class="flex align-center">
-                                <p class="name fs48 fw700">미소마트</p>
+                    <li class="flex justify-between">
+                        <a href="#"></a>
+                        <div class="img-box"><img src="./asset/images/market_img05.jpg" alt="미소마트"></div>
+                        <div class="txt-box flex">
+                            <div class="flex align-start justify-between">
+                                <p class="name fs48 fw700"><span class="market-name">미소마트</span></p>
+                                <button class="btn btn-like heart-b active"></button>
+                            </div>
+                            <div class="">
                                 <p class="location fs33">300m</p>
-                                <p class="address fs33">서울시 동작구 신대방1가길 19</p>
+                                <p class="address mt20 fs33">서울시 금천구 시흥대로59길 10</p>
+                                <p class="flex mt20">
+                                    <span class="score-area star-score4"><em class="star-img">별점 4점</em><span class="hidden">5점 만점</span></span><span class="fs33">(20)</span>
+                                </p>
                             </div>
-                            <button class="btn btn-like heart-w"></button>
+                            <div class="">
+                                <p class="fs30"><span class="market-label white bg-green">픽업</span><span class="market-label white bg-green">배송</span></p>
+                                <p class="category mt20 fs33">과일, 채소, 수산물</p>
+                            </div>
                         </div>
                     </li>
-                    <li>
-                        <a href="#"></a><img src="./asset/images/market_img02.jpg" alt="부용마트">
-                        <div class="txt-box flex align-center justify-between white bg-green">
-                            <div class="flex align-center">
-                                <p class="name fs48 fw700">부용마트</p>
+                    <li class="flex justify-between">
+                        <a href="#"></a>
+                        <div class="img-box"><img src="./asset/images/market_img06.jpg" alt="부용마트"></div>
+                        <div class="txt-box flex">
+                            <div class="flex align-start justify-between">
+                                <p class="name fs48 fw700"><span class="market-name">미스터아빠 부용마트</span></p>
+                                <button class="btn btn-like heart-b"></button>
+                            </div>
+                            <div class="">
                                 <p class="location fs33">600m</p>
-                                <p class="address fs33">서울시 동작구 신대방1가길 19</p>
+                                <p class="address mt20 fs33">서울시 동작구 신대방1가길 19</p>
+                                <p class="flex mt20">
+                                    <span class="score-area star-score5"><em class="star-img">별점 5점</em><span class="hidden">5점 만점</span></span><span class="fs33">(8)</span>
+                                </p>
                             </div>
-                            <button class="btn btn-like heart-w"></button>
+                            <div class="">
+                                <p class="fs30"><span class="market-label black bg-yellowish">픽업</span></p>
+                                <p class="category mt20 fs33">과일, 채소, 정육, 수산물</p>
+                            </div>
                         </div>
                     </li>
-                    <li>
-                        <a href="#"></a><img src="./asset/images/market_img03.jpg" alt="미스터마트">
-                        <div class="txt-box flex align-center justify-between white bg-green">
-                            <div class="flex align-center">
-                                <p class="name fs48 fw700">미스터마트</p>
+                    <li class="flex justify-between">
+                        <a href="#"></a>
+                        <div class="img-box"><img src="./asset/images/market_img07.jpg" alt="미스터마트"></div>
+                        <div class="txt-box flex">
+                            <div class="flex align-start justify-between">
+                                <p class="name fs48 fw700"><span class="market-name">미스터마트</span></p>
+                                <button class="btn btn-like heart-b"></button>
+                            </div>
+                            <div class="">
                                 <p class="location fs33">1.5km</p>
-                                <p class="address fs33">서울시 동작구 신대방1가길 19</p>
+                                <p class="address mt20 fs33">서울시 동작구 신대방1가길 19</p>
+                                <p class="flex mt20">
+                                    <span class="score-area star-score0"><em class="star-img">별점 0점</em><span class="hidden">5점 만점</span></span><span class="fs33">(0)</span>
+                                </p>
                             </div>
-                            <button class="btn btn-like heart-w active"></button>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#"></a><img src="./asset/images/market_img04.jpg" alt="파파마트">
-                        <div class="txt-box flex align-center justify-between white bg-green">
-                            <div class="flex align-center">
-                                <p class="name fs48 fw700">파파마트</p>
-                                <p class="location fs33">3km</p>
-                                <p class="address fs33">서울시 동작구 신대방1가길 19</p>
+                            <div class="">
+                                <p class="fs30"><span class="market-label black bg-yellow">배송</span></p>
+                                <p class="category mt20 fs33">과일, 채소, 정육, 수산물, 가공식품</p>
                             </div>
-                            <button class="btn btn-like heart-w active"></button>
                         </div>
                     </li>
                 </ul>
@@ -266,5 +284,9 @@
         </div>
     </div>
     <script src="./asset/js/ui.js"></script>
+    <script>
+        /* select custom */
+        $(".select-custom").niceSelect();
+    </script>
 </body>
 </html>
