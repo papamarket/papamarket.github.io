@@ -4223,7 +4223,7 @@ input[type="range"]::-webkit-slider-thumb {
     line-height: 1.208em;
 }
 
-/* 나의 리뷰 */
+/* 나의 후기 */
 .review-to-write-list li:not(:first-child),
 .review-written-list li:not(:first-child) {
     border-top: 0.926vw solid #edeae2;
@@ -4348,7 +4348,7 @@ input[type="range"]::-webkit-slider-thumb {
     padding-top: 3.704vw;
 }
 
-/* 문의하기, 리뷰 작성 */
+/* 문의하기, 후기 작성 */
 .write-form .score-area {
     margin: 4.630vw auto 6.481vw;
 }
@@ -6563,7 +6563,7 @@ input[type="range"]::-webkit-slider-thumb {
         border-radius: 14px;
     }
 
-    /* 나의 리뷰 */
+    /* 나의 후기 */
     .review-to-write-list li:not(:first-child),
     .review-written-list li:not(:first-child) {
         border-top: 3px solid #edeae2;
@@ -6629,7 +6629,7 @@ input[type="range"]::-webkit-slider-thumb {
         padding-top: 12px;
     }
 
-    /* 문의하기, 리뷰 작성 */
+    /* 문의하기, 후기 작성 */
     .write-form .score-area {
         margin: 15px auto 20px;
     }
@@ -8951,7 +8951,7 @@ input[type="range"]::-webkit-slider-thumb {
         border-radius: 48px;
     }
 
-    /* 나의 리뷰 */
+    /* 나의 후기 */
     .review-to-write-list li:not(:first-child),
     .review-written-list li:not(:first-child) {
         border-top: 10px solid #edeae2;
@@ -9017,7 +9017,7 @@ input[type="range"]::-webkit-slider-thumb {
         padding-top: 40px;
     }
 
-    /* 문의하기, 리뷰 작성 */
+    /* 문의하기, 후기 작성 */
     .write-form .score-area {
         margin: 50px auto 70px;
     }

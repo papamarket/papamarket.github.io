@@ -42,7 +42,7 @@
                     <a href="#" class="after green fs42 fw700">후기쓰기</a>
                 </div>
             </div>
-            <!-- 사진리뷰 -->
+            <!-- 사진후기 -->
             <div class="review-photo-list">
                 <div class="inner">
                     <div class="review-photo-slide swiper">
@@ -406,11 +406,11 @@
             </ul>
         </div>
     </div>
-    <!-- 사진리뷰 팝업 -->
+    <!-- 사진후기 팝업 -->
     <div class="popup popup-review">
         <div class="popup-body bg-green">
-            <h4 class="tit mb80 white fs50 txt-center">사진리뷰</h4>
-            <button class="btn btn-popup-close">사진리뷰 팝업 닫기</button>
+            <h4 class="tit mb80 white fs50 txt-center">사진후기</h4>
+            <button class="btn btn-popup-close">사진후기 팝업 닫기</button>
             <div class="popup-review-slide normal-slide swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -489,7 +489,7 @@
             }
         });
 
-        /* 사진리뷰 슬라이드 */
+        /* 사진후기 슬라이드 */
         const photoReviewSlide = new Swiper(".review-photo-slide", {
             loop: false,
             slidesPerView: 4,
@@ -502,14 +502,14 @@
             }
         });
 
-        /* 사진리뷰 팝업 썸네일 슬라이드 */
+        /* 사진후기 팝업 썸네일 슬라이드 */
         const photoReviewPopupThumbnail = new Swiper(".popup-review-thumbnail", {
             slidesPerView: 5,
             spaceBetween: m20,
             watchSlidesProgress: true
         });
 
-        /* 사진리뷰 팝업 슬라이드 */
+        /* 사진후기 팝업 슬라이드 */
         const photoReviewPopupSlide = new Swiper(".popup-review-slide", {
             autoHeight: true,
             navigation: {
@@ -524,11 +524,11 @@
             },
         });
 
-        /* 사진리뷰 슬라이드, 사진리뷰 팝업 슬라이드 연결 */
+        /* 사진후기 슬라이드, 사진후기 팝업 슬라이드 연결 */
         photoReviewSlide.controller.control = photoReviewPopupSlide;
         photoReviewPopupSlide.controller.control = photoReviewSlide;
 
-        /* 사진리뷰 팝업 열기 */
+        /* 사진후기 팝업 열기 */
         $(".review-photo-slide .swiper-slide a").click(function(e) {
             e.preventDefault();
 
@@ -539,7 +539,7 @@
             $("body").addClass("no-scroll");
         });
 
-        /* 사진리뷰 팝업 닫기 */
+        /* 사진후기 팝업 닫기 */
         $(".btn-popup-close").click(function () {
             $(this).parents(".popup").hide();
             $("body").removeClass("no-scroll");
@@ -551,7 +551,7 @@
             } 
         });
 
-        /* 리뷰 더보기 클릭 시 */
+        /* 후기 더보기 클릭 시 */
         const moreBtn = $(".review-list .btn-more");
 
         moreBtn.on("click", function(e) {
@@ -567,7 +567,7 @@
             $target.show();
         });
 
-        /* 리뷰 이미지 클릭 시 */
+        /* 후기 이미지 클릭 시 */
         const reviewImg = $(".review-list .review-img a");
 
         reviewImg.on("click", function(e) {
@@ -584,7 +584,7 @@
             $target.show();
         });
 
-        /* 리뷰 더보기 슬라이드 */
+        /* 후기 더보기 슬라이드 */
         const reviewSlide = new Swiper(".review-img-slide", {
             autoHeight: true,
             loop: false,

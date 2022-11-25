@@ -18,7 +18,7 @@
         <h1 class="hidden">PAPAMARKET</h1>
         <div class="inner flex align-center justify-between">
             <a href="#" class="btn btn-back bg-white">뒤로 가기</a>
-            <p class="black fs50 fw700">나의 리뷰</p>
+            <p class="black fs50 fw700">나의 후기</p>
             <a href="#" class="btn btn-basket basket-b bg-white">장바구니 <span>25</span></a>
         </div>
     </header>
@@ -33,18 +33,18 @@
                 </div>
             </div>
         </div>
-        <!-- 나의 리뷰 -->
+        <!-- 나의 후기 -->
         <section class="pt89">
             <!-- sub-header -->
             <div class="sub-header">
                 <div class="inner">
                     <ul class="tab tab2 flex justify-between fs42 txt-center">
-                        <li><a href="#" rel="review-to-write" class="active">작성 가능한 리뷰</a></li>
-                        <li><a href="#" rel="review-written">작성한 리뷰</a></li>
+                        <li><a href="#" rel="review-to-write" class="active">작성 가능한 후기</a></li>
+                        <li><a href="#" rel="review-written">작성한 후기</a></li>
                     </ul>
                 </div>
             </div>
-            <!-- 작성 가능한 리뷰 -->
+            <!-- 작성 가능한 후기 -->
             <div class="tab-content" id="review-to-write">
                 <!-- 있을 때 -->
                 <ul class="review-to-write-list pb60">
@@ -63,7 +63,7 @@
                                         <p class="option fs36">기본옵션<span class="slash">/</span>1개</p>
                                     </div>
                                 </div>
-                                <a href="#" class="btn white fs36 fw500 bg-green">리뷰 작성</a>
+                                <a href="#" class="btn white fs36 fw500 bg-green">후기 작성</a>
                             </div>
                             <div class="box flex align-center justify-between">
                                 <div class="product-info flex align-center">
@@ -74,7 +74,7 @@
                                         <p class="option fs36">기본옵션<span class="slash">/</span>1개</span></p>
                                     </div>
                                 </div>
-                                <a href="#" class="btn white fs36 fw500 bg-green">리뷰 작성</a>
+                                <a href="#" class="btn white fs36 fw500 bg-green">후기 작성</a>
                             </div>
                         </div>
                     </li>
@@ -93,7 +93,7 @@
                                         <p class="option fs36">기본옵션<span class="slash">/</span>1개</p>
                                     </div>
                                 </div>
-                                <a href="#" class="btn white fs36 fw500 bg-green">리뷰 작성</a>
+                                <a href="#" class="btn white fs36 fw500 bg-green">후기 작성</a>
                             </div>
                         </div>
                     </li>
@@ -101,11 +101,11 @@
                 <!-- 없을 때 -->
                 <!-- <div class="no-list pt340 pb340">
                     <div class="inner">
-                        <p class="fs39">작성 가능한 리뷰가 없습니다.</p>
+                        <p class="fs39">작성 가능한 후기가 없습니다.</p>
                     </div>
                 </div> -->
             </div>
-            <!-- 작성한 리뷰 -->
+            <!-- 작성한 후기 -->
             <div class="tab-content" id="review-written">
                 <!-- 있을 때 -->
                 <ul class="review-written-list pb50">
@@ -222,7 +222,7 @@
                 <!-- 없을 때 -->
                 <!-- <div class="no-list pt340 pb340">
                     <div class="inner">
-                        <p class="fs39">작성한 리뷰가 없습니다.</p>
+                        <p class="fs39">작성한 후기가 없습니다.</p>
                     </div>
                 </div> -->
             </div>
@@ -436,7 +436,7 @@
         });
         $(".tab li:first-child a").trigger("click");
 
-        /* 작성한 리뷰 더보기 클릭 시 */
+        /* 작성한 후기 더보기 클릭 시 */
         const moreBtn = $(".review-body .btn-more");
 
         moreBtn.on("click", function(e) {
@@ -452,7 +452,7 @@
             $target.show();
         });
 
-        /* 작성한 리뷰 이미지 클릭 시 */
+        /* 작성한 후기 이미지 클릭 시 */
         const reviewImg = $(".review-body .review-img a");
 
         reviewImg.on("click", function(e) {
@@ -469,7 +469,7 @@
             $target.show();
         });
 
-        /*  작성한 리뷰 더보기 슬라이드 */
+        /*  작성한 후기 더보기 슬라이드 */
         const reviewSlide = new Swiper(".review-img-slide", {
             autoHeight: true,
             loop: false,
