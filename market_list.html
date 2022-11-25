@@ -36,264 +36,285 @@
             </div>
         </div>
         <!-- 주변 매장 -->
-        <article class="mb50">
-            <div class="inner">
-                <!-- 마켓 정보 -->
-                <div class="market-card">
-                    <img src="./asset/images/market_img02.jpg" alt="부용마트">
-                    <div class="txt-box flex justify-between white bg-green">
-                        <p class="name fs48 fw700">부용마트</p>
-                        <div>
-                            <div class="more-tit flex justify-between"><p class="address fs33">서울시 동작구 신대방1가길 19</p><a href="#" class="btn-more">더보기</a></div>
+        <section>
+            <!-- 마켓 정보 -->
+            <article class="inner">
+                <div class="market-card flex justify-between">
+                    <div class="img-box"><img src="./asset/images/market_img06.jpg" alt="부용마트"></div>
+                    <div class="txt-box flex">
+                        <div class="txt-head flex align-start justify-between">
+                            <p class="name fs48 fw700"><span class="market-name">부용마트</span></p>
+                            <button class="btn btn-like heart-b active"></button>
+                        </div>
+                        <div class="txt-body">
+                            <div class="more-tit flex justify-between">
+                                <p class="location fs33">600m</p><a href="#" class="btn-more black fs33">더보기</a>
+                                <p class="address mt20 fs33">서울시 동작구 신대방1가길 19</p>
+                            </div>
                             <div class="more-content" aria-hidden="true">
-                                <ul class="fs33">
-                                    <li class="tel"><a href="tel:02-836-5791" class="white">02-836-5791</a></li>
+                                <ul class="mt20 fs33">
+                                    <li class="tel"><a href="tel:02-836-5791" class="black">02-836-5791</a></li>
                                     <li class="time">오전 9:00~오후 10:00</li>
                                 </ul>
                             </div>
+                            <p class="flex mt20">
+                                <span class="score-area star-score5"><em class="star-img">별점 5점</em><span class="hidden">5점 만점</span></span><span class="fs33">(8)</span>
+                            </p>
+                        </div>
+                        <div class="txt-foot">
+                            <p class="fs30"><span class="market-label black bg-yellowish">픽업</span></p>
+                            <p class="category mt20 fs33">과일, 채소, 정육, 수산물</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </article>
-        <!-- 배너 -->
-        <article class="mb50">
-            <div class="inner">
-                <div class="banner"><img src="./asset/images/banner_market.jpg" alt="금주의 채소 최대 10% 할인"></div>
-            </div>
-        </article>
-        <section class="product-list-wrap pb30">
-            <div class="inner">
-                <!-- 카테고리 -->
-                <ul class="category-list flex fs33">
-                    <li><a href="#">전체보기</a></li>
-                    <li><a href="#" class="active">과일</a></li>
-                    <li><a href="#">채소</a></li>
-                    <li><a href="#">육류</a></li>
-                    <li><a href="#">수산물</a></li>
-                    <li><a href="#" class="sale">SALE</a></li>
-                </ul>
-                <!-- 정렬 -->
-                <div class="flex align-center justify-between mt40 mb50">
-                    <p class="sort-tit fs36">원하시는 상품을 확인하세요!</p>
-                    <select id="" name="" class="select-custom sort-select fs33">
-                        <option value="">파파 추천순</option>
-                        <option value="">판매량순</option>
-                        <option value="">낮은 가격순</option>
-                        <option value="">높은 가격순</option>
-                        <option value="">높은 별점순</option>
-                        <option value="">신상품순</option>
-                        <option value="">후기 많은순</option>
-                    </select>
+            </article>
+            <div class="market-desc-detail mt80 pt89">
+                <div class="sub-header">
+                    <ul class="tab tab4 flex align-center justify-center fs42 txt-center">
+                        <li><a href="#" rel="market-product" class="active">상품</a></li>
+                        <li><a href="#" rel="market-event">이벤트</a></li>
+                        <li><a href="#" rel="market-review">후기</a></li>
+                        <li><a href="#" rel="market-map">지도</a></li>
+                    </ul>
                 </div>
-                <!-- 상품 리스트 -->
-                <ul class="product-list flex justify-between">
-                    <li>
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="./asset/images/product_img18.jpg" alt="국내산 진주 애호박 1개 250g ">
-                            </a>
-                            <div class="basket-box flex">
-                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                <!-- 상품 -->
+                <div class="tab-content pt30" id="market-product">
+                    <div class="inner">
+                        <div class="product-list-wrap pb30">
+                            <!-- 카테고리 -->
+                            <ul class="category-list flex fs33">
+                                <li><a href="#">전체보기</a></li>
+                                <li><a href="#" class="active">과일</a></li>
+                                <li><a href="#">채소</a></li>
+                                <li><a href="#">육류</a></li>
+                                <li><a href="#">수산물</a></li>
+                                <li><a href="#" class="sale">SALE</a></li>
+                            </ul>
+                            <!-- 정렬 -->
+                            <div class="flex align-center justify-between mt40 mb50">
+                                <p class="sort-tit fs36">원하시는 상품을 확인하세요!</p>
+                                <select id="" name="" class="select-custom sort-select fs33">
+                                    <option value="">파파 추천순</option>
+                                    <option value="">판매량순</option>
+                                    <option value="">낮은 가격순</option>
+                                    <option value="">높은 가격순</option>
+                                    <option value="">높은 별점순</option>
+                                    <option value="">신상품순</option>
+                                    <option value="">후기 많은순</option>
+                                </select>
                             </div>
+                            <!-- 상품 리스트 -->
+                            <ul class="product-list flex justify-between">
+                                <li>
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="./asset/images/product_img18.jpg" alt="국내산 진주 애호박 1개 250g">
+                                        </a>
+                                        <div class="basket-box flex">
+                                            <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                            <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <a href="#">
+                                            <p class="name black fs36">국내산 진주 애호박 1개 250g</p>
+                                            <p class="price black fs36 fw700">1,800원</p>
+                                        </a>
+                                        <span class="label fs30 bg-yellowish">새벽배송</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="./asset/images/product_img19.jpg" alt="국내산 한돈 목살 500g">
+                                        </a>
+                                        <div class="basket-box flex">
+                                            <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                            <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <a href="#">
+                                            <p class="name black fs36">국내산 한돈 목살 500g</p>
+                                            <p class="price black fs36 fw700">10,900원</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="./asset/images/product_img15.jpg" alt="양송이 100g">
+                                        </a>
+                                        <div class="basket-box flex">
+                                            <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                            <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <a href="#">
+                                            <p class="name black fs36">양송이 100g</p>
+                                            <p class="price black fs36 fw700">3,000원</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="./asset/images/product_img20.jpg" alt="무농약 찜용 감자 1kg">
+                                        </a>
+                                        <div class="basket-box flex">
+                                            <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                            <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <a href="#">
+                                            <p class="name black fs36">무농약 찜용 감자 1kg</p>
+                                            <p class="price black fs36 fw700">4,400원</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="./asset/images/product_img11.jpg" alt="[해미래] 순살 고등어 [70~100g] 10팩">
+                                        </a>
+                                        <div class="basket-box flex">
+                                            <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                            <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <a href="#">
+                                            <p class="name black fs36">[해미래] 순살 고등어 [70~100g] 10팩</p>
+                                            <p class="price black fs36 fw700">7,500원</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="./asset/images/product_img21.jpg" alt="적양배추 1통">
+                                        </a>
+                                        <div class="basket-box flex">
+                                            <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                            <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <a href="#">
+                                            <p class="name black fs36">적양배추 1통</p>
+                                            <p class="price black fs36 fw700">4,000원</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="./asset/images/product_img22.jpg" alt="국내산 창녕 햇양파 1kg">
+                                        </a>
+                                        <div class="basket-box flex">
+                                            <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                            <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <a href="#">
+                                            <p class="name black fs36">국내산 창녕 햇양파 1kg</p>
+                                            <p class="price black fs36 fw700">2,900원</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-img">
+                                        <a href="#">
+                                            <img src="./asset/images/product_img23.jpg" alt="국내산 한돈 항정살 300g">
+                                        </a>
+                                        <div class="basket-box flex">
+                                            <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                            <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <a href="#">
+                                            <p class="name black fs36">국내산 한돈 항정살 300g</p>
+                                            <p class="price black fs36 fw700">18,600원</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="product-txt">
-                            <a href="#">
-                                <p class="name black fs36">국내산 진주 애호박 1개 250g</p>
-                                <p class="price black fs36 fw700">1,800원</p>
-                            </a>
-                            <span class="label fs30 bg-yellowish">새벽배송</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="./asset/images/product_img19.jpg" alt="국내산 한돈 목살 500g">
-                            </a>
-                            <div class="basket-box flex">
-                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                        <!-- 다른 매장 상품 -->
+                        <div class="more-product-box pb100">
+                            <div class="tit-wrap flex justify-between">
+                                <h4 class="fs48 fw300"><b class="fw700">파파마켓</b> 상품도 함께 확인해보세요!</h4>
+                                <a href="#" class="btn-more black fs36">전체보기</a>
                             </div>
-                        </div>
-                        <div class="product-txt">
-                            <a href="#">
-                                <p class="name black fs36">국내산 한돈 목살 500g</p>
-                                <p class="price black fs36 fw700">10,900원</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="./asset/images/product_img15.jpg" alt="양송이 100g">
-                            </a>
-                            <div class="basket-box flex">
-                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
-                            </div>
-                        </div>
-                        <div class="product-txt">
-                            <a href="#">
-                                <p class="name black fs36">양송이 100g</p>
-                                <p class="price black fs36 fw700">3,000원</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="./asset/images/product_img20.jpg" alt="무농약 찜용 감자 1kg">
-                            </a>
-                            <div class="basket-box flex">
-                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
-                            </div>
-                        </div>
-                        <div class="product-txt">
-                            <a href="#">
-                                <p class="name black fs36">무농약 찜용 감자 1kg</p>
-                                <p class="price black fs36 fw700">4,400원</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="./asset/images/product_img11.jpg" alt="[해미래] 순살 고등어 [70~100g] 10팩">
-                            </a>
-                            <div class="basket-box flex">
-                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
-                            </div>
-                        </div>
-                        <div class="product-txt">
-                            <a href="#">
-                                <p class="name black fs36">[해미래] 순살 고등어 [70~100g] 10팩</p>
-                                <p class="price black fs36 fw700">7,500원</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="./asset/images/product_img21.jpg" alt="적양배추 1통">
-                            </a>
-                            <div class="basket-box flex">
-                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
-                            </div>
-                        </div>
-                        <div class="product-txt">
-                            <a href="#">
-                                <p class="name black fs36">적양배추 1통</p>
-                                <p class="price black fs36 fw700">4,000원</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="./asset/images/product_img22.jpg" alt="국내산 창녕 햇양파 1kg">
-                            </a>
-                            <div class="basket-box flex">
-                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
-                            </div>
-                        </div>
-                        <div class="product-txt">
-                            <a href="#">
-                                <p class="name black fs36">국내산 창녕 햇양파 1kg</p>
-                                <p class="price black fs36 fw700">2,900원</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="./asset/images/product_img23.jpg" alt="국내산 한돈 항정살 300g">
-                            </a>
-                            <div class="basket-box flex">
-                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
-                            </div>
-                        </div>
-                        <div class="product-txt">
-                            <a href="#">
-                                <p class="name black fs36">국내산 한돈 항정살 300g</p>
-                                <p class="price black fs36 fw700">18,600원</p>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- 다른 매장 상품 -->
-        <section class="more-product-box pb100">
-            <div class="inner">
-                <div class="tit-wrap flex justify-between">
-                    <h4 class="fs48 fw300"><b class="fw700">파파마켓</b> 상품도 함께 확인해보세요!</h4>
-                    <a href="#" class="btn-more black fs36">전체보기</a>
-                </div>
-                <!-- Slider main container -->
-                <div class="product-slide swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="./asset/images/product_img01.jpg" alt="[제스프리] 골드키위 8-10입">
-                                </a>
-                                <div class="basket-box flex">
-                                    <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                    <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                            <!-- Slider main container -->
+                            <div class="product-slide swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="product-img">
+                                            <a href="#">
+                                                <img src="./asset/images/product_img01.jpg" alt="[제스프리] 골드키위 8-10입">
+                                            </a>
+                                            <div class="basket-box flex">
+                                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-txt">
+                                            <a href="#">
+                                                <p class="name black fs36">[제스프리] 골드키위 8-10입</p>
+                                                <p class="price black fs36 fw700">10,700원</p>
+                                            </a>
+                                            <span class="label fs30 bg-yellowish">새벽배송</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-img">
+                                            <a href="#">
+                                                <img src="./asset/images/product_img02.jpg" alt="국내산 대추 방울 토마토 500g">
+                                            </a>
+                                            <div class="basket-box flex">
+                                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-txt">
+                                            <a href="#">
+                                                <p class="name black fs36">국내산 대추 방울 토마토 500g</p>
+                                                <p class="price black fs36 fw700">6,900원</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-img">
+                                            <a href="#">
+                                                <img src="./asset/images/product_img03.jpg" alt="국내산 한돈 갈매기살 300g">
+                                            </a>
+                                            <div class="basket-box flex">
+                                                <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
+                                                <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-txt">
+                                            <a href="#">
+                                                <p class="name black fs36">국내산 한돈 갈매기살 300g</p>
+                                                <p class="price black fs36 fw700">15,800원</p>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="product-txt">
-                                <a href="#">
-                                    <p class="name black fs36">[제스프리] 골드키위 8-10입</p>
-                                    <p class="price black fs36 fw700">10,700원</p>
-                                </a>
-                                <span class="label fs30 bg-yellowish">새벽배송</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="./asset/images/product_img02.jpg" alt="국내산 대추 방울 토마토 500g">
-                                </a>
-                                <div class="basket-box flex">
-                                    <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                    <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
-                                </div>
-                            </div>
-                            <div class="product-txt">
-                                <a href="#">
-                                    <p class="name black fs36">국내산 대추 방울 토마토 500g</p>
-                                    <p class="price black fs36 fw700">6,900원</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="./asset/images/product_img03.jpg" alt="국내산 한돈 갈매기살 300g">
-                                </a>
-                                <div class="basket-box flex">
-                                    <div class="counter-box bg-green"><button class="plus btn"><span class="blind">더하기</span></button><span class="num">1</span><button class="minus btn"><span class="blind">빼기</span></button></div>
-                                    <a href="#" class="btn btn-basket basket-w bg-green">장바구니에 담기</a>
-                                </div>
-                            </div>
-                            <div class="product-txt">
-                                <a href="#">
-                                    <p class="name black fs36">국내산 한돈 갈매기살 300g</p>
-                                    <p class="price black fs36 fw700">15,800원</p>
-                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- 이벤트 -->
+                <!-- 후기 -->
+                <!-- 지도 -->
             </div>
         </section>
     </div>
@@ -473,26 +494,36 @@
         for (i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function(e) {
                 e.preventDefault();
-                this.parentElement.classList.toggle("active");
+                this.parentElement.parentElement.parentElement.classList.toggle("active");
                 var panel = this.parentElement.nextElementSibling;
                 
                 if (panel.style.maxHeight){
+                    $(this).text("더보기");
                     panel.style.maxHeight = null;
                     $(panel).attr("aria-hidden", "true");
                 } else {
+                    $(this).text("접기");
                     $(panel).attr("aria-hidden", "false");
                     panel.style.maxHeight = panel.scrollHeight + "px";
                 }
             });
         }
 
-        /* category-list fixed */
+        /* sub-header, category-list fixed */
         const headerOH = $("header").outerHeight();
+        const subHeaderOH = $(".sub-header").outerHeight();
+        const subHeaderT = $(".sub-header").offset().top - headerOH;
         const categoryOH = $(".category-list").outerHeight();
-        const categoryT = $(".category-list").offset().top - headerOH;
+        const categoryT = $(".category-list").offset().top - headerOH - subHeaderOH;
 
         $(window).scroll(function(){
             const scrollT = $(this).scrollTop();
+
+            if(scrollT >= subHeaderT){
+                $(".sub-header").addClass("fixed");
+            } else {
+                $(".sub-header").removeClass("fixed");
+            }
 
             if(scrollT >= categoryT){
                 $(".category-list").addClass("fixed");
@@ -502,6 +533,18 @@
                 $(".product-list-wrap").css("padding-top", "0px");
             }
         });
+
+        /* tab */
+        $(".tab a").click(function(e){
+            e.preventDefault();
+            const activeTab = $(this).attr("rel");
+
+            $(".tab a").removeClass("active");
+            $(this).addClass("active");
+            $(".tab-content").hide();
+            $("#" + activeTab).show();
+        });
+        $(".tab li:first-child a").trigger("click");
 
         /* 다른 매장 상품 */
         const productSlide = new Swiper(".product-slide", {
