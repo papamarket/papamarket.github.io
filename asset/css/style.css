@@ -3047,6 +3047,7 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 5.926vw;
     overflow: hidden;
 }
+.cart-product.soldout .product-img:after,
 .cart-product.end .product-img:after {
     display: flex;
     align-items: center;
@@ -3061,9 +3062,11 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: 500;
     background-color: rgba(128,128,128,.5);
     letter-spacing: -0.06em;
+}
+.cart-product.soldout .product-img:after {
     content: '품절';
 }
-.cart-product.end.cart-together-product .product-img:after {
+.cart-product.end .product-img:after {
     content: '공구 종료';
 }
 .cart-product .product-txt {
