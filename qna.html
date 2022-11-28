@@ -89,6 +89,23 @@
                     <div class="normal-body qna-body">
                         <div class="normal-txt qna-txt">
                             <p class="question fs36">오늘 주문했는데 언제 받아볼 수 있나요?</p>
+                            <div class="qna-img-view">
+                                <div class="qna-img-slide normal-slide swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./asset/images/main_banner01.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./asset/images/product_img05.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./asset/images/product_img03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-more gray fs33">더보기</a>
                         </div>
                     </div>
                 </li>
@@ -124,6 +141,22 @@
                     <div class="normal-body qna-body">
                         <div class="normal-txt qna-txt">
                             <p class="question fs36">상품 용량이 어떻게 되나요? 그리고 오늘 주문했는데 언제 받아볼 수 있을까요? 빨리 보내주세요! 빨리 먹고싶어요! 언제받아요? 맛있나요?</p>
+                            <div class="qna-img-view">
+                                <div class="qna-img-slide normal-slide swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./asset/images/main_banner01.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./asset/images/product_img05.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./asset/images/product_img03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
                             <p class="answer fs36">1 SET 당 500g 입니다.</p>
                             <a href="#" class="btn-more gray fs33">더보기</a>
                         </div>
@@ -357,9 +390,21 @@
             e.preventDefault();
 
             const $parent = $(this).parents(".qna-body");
+            const $target = $(this).siblings(".qna-img-view");
             
             $(this).hide();
             $parent.addClass("active");
+            $target.show();
+        });
+
+        /* 더보기 슬라이드 */
+        const qnaSlide = new Swiper(".qna-img-slide", {
+            autoHeight: true,
+            loop: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     </script>
 </body>
