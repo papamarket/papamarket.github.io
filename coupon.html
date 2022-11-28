@@ -19,15 +19,30 @@
         <div class="inner flex align-center justify-between">
             <a href="#" class="btn btn-back bg-white">뒤로 가기</a>
             <p class="black fs50 fw700">쿠폰</p>
+            <a href="#" class="btn btn-basket basket-b bg-white">장바구니 <span>25</span></a>
         </div>
     </header>
     <!-- content -->
     <div class="content">
-        <!-- 쿠폰 -->
-        <section class="coupon-wrap pt36 pb100">
+        <!-- 상품 검색 -->
+        <div class="searchbar-box">
             <div class="inner">
-                <!-- 할인 쿠폰 -->
-                <h5 class="fs45 fw700">할인 쿠폰</h5>
+                <div class="input-row">
+                    <button type="button" class="btn btn-search">검색</button>
+                    <input type="text" placeholder="원하시는 상품을 검색하세요!" class="inp fs35" title="원하시는 상품을 검색하세요!">
+                </div>
+            </div>
+        </div>
+        <!-- 쿠폰 -->
+        <section class="coupon-wrap pb100">
+            <div class="pt20 pb60 bb10-edeae2 txt-center">
+                <h4 class="fs42 fw400">쿠폰</h4>
+                <p class="point mt27 fs57 fw500">3장</p>
+                <p class="txt mt27 gray fs30 fw300">15일 이내 소멸 예정 쿠폰이 없습니다.</p>
+            </div>
+            <div class="inner pt70">
+                <!-- 발급 가능 쿠폰 -->
+                <h5 class="fs45 fw700">발급 가능 쿠폰</h5>
                 <div class="coupon-box flex justify-between mt50 pb80">
                     <div class="coupon coupon-download">
                         <a href="#">
@@ -49,57 +64,32 @@
                             <span class="state fs36 fw500">발급받기</span>
                         </a>
                     </div>
-                    <div class="coupon completed">
-                        <a href="#">
-                            <input type="radio" name="coupon" id="coupon1" class="design-inp" title="선택"><label for="coupon1" class="coupon-label">선택</label></span>
-                            <p>
-                                <span class="tit black fs42 fw700">1천원 쿠폰</span>
-                                <span class="txt gray2 fs30">2만원 이상 사용 가능</span>
-                                <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
-                            </p>
-                            <span class="state fs36 fw500">발급완료</span>
-                        </a>
-                    </div>
-                    <div class="coupon completed">
-                        <a href="#">
-                            <input type="radio" name="coupon" id="coupon2" class="design-inp" title="선택"><label for="coupon2" class="coupon-label">선택</label></span>
-                            <p>
-                                <span class="tit black fs42 fw700">2천원 쿠폰</span>
-                                <span class="txt gray2 fs30">3만원 이상 사용 가능</span>
-                                <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
-                            </p>
-                            <span class="state fs36 fw500">발급완료</span>
-                        </a>
-                    </div>
-                    <div class="coupon not">
-                        <a href="#">
-                            <input type="radio" name="coupon" id="coupon3" class="design-inp" title="선택 불가" disabled><label for="coupon3" class="coupon-label">선택 불가</label></span>
-                            <p>
-                                <span class="tit black fs42 fw700">5천원 쿠폰</span>
-                                <span class="txt gray2 fs30">5만원 이상 사용 가능</span>
-                                <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
-                            </p>
-                            <span class="state fs36 fw500">사용불가</span>
-                        </a>
-                    </div>
-                    <div class="coupon not">
-                        <a href="#">
-                            <input type="radio" name="coupon" id="coupon4" class="design-inp" title="선택 불가" disabled><label for="coupon4" class="coupon-label">선택 불가</label></span>
-                            <p>
-                                <span class="tit black fs42 fw700">1천원 쿠폰</span>
-                                <span class="txt gray2 fs30">2만원 이상 사용 가능</span>
-                                <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
-                            </p>
-                            <span class="state fs36 fw500">사용불가</span>
-                        </a>
-                    </div>
                 </div>
-                <!-- 중복 쿠폰 -->
-                <h5 class="fs45 fw700">중복 쿠폰</h5>
+                <!-- 발급된 쿠폰 -->
+                <h5 class="fs45 fw700">발급된 쿠폰</h5>
                 <div class="coupon-box flex justify-between mt50">
                     <div class="coupon completed">
                         <a href="#">
-                            <input type="radio" name="duplicateCoupon" id="duplicateCoupon1" class="design-inp" title="선택"><label for="duplicateCoupon1" class="coupon-label">선택</label></span>
+                            <p>
+                                <span class="tit black fs42 fw700">1천원 쿠폰</span>
+                                <span class="txt gray2 fs30">2만원 이상 사용 가능</span>
+                                <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
+                            </p>
+                            <span class="state fs36 fw500">발급완료</span>
+                        </a>
+                    </div>
+                    <div class="coupon completed">
+                        <a href="#">
+                            <p>
+                                <span class="tit black fs42 fw700">2천원 쿠폰</span>
+                                <span class="txt gray2 fs30">3만원 이상 사용 가능</span>
+                                <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
+                            </p>
+                            <span class="state fs36 fw500">발급완료</span>
+                        </a>
+                    </div>
+                    <div class="coupon completed">
+                        <a href="#">
                             <p>
                                 <span class="tit black fs42 fw700">1천원 쿠폰</span>
                                 <span class="txt gray2 fs30">2만원 이상 사용 가능</span>
@@ -111,37 +101,12 @@
                     </div>
                     <div class="coupon completed">
                         <a href="#">
-                            <input type="radio" name="duplicateCoupon" id="duplicateCoupon2" class="design-inp" title="선택"><label for="duplicateCoupon2" class="coupon-label">선택</label></span>
                             <p>
                                 <span class="tit black fs42 fw700">2천원 쿠폰</span>
                                 <span class="txt gray2 fs30">3만원 이상 사용 가능</span>
                                 <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
                             </p>
                             <span class="state fs36 fw500">발급완료</span>
-                        </a>
-                        <span class="txt-use white fs30 bg-green">부용마트 사용가능</span>
-                    </div>
-                    <div class="coupon not">
-                        <a href="#">
-                            <input type="radio" name="duplicateCoupon" id="duplicateCoupon3" class="design-inp" title="선택 불가" disabled><label for="duplicateCoupon3" class="coupon-label">선택 불가</label></span>
-                            <p>
-                                <span class="tit black fs42 fw700">5천원 쿠폰</span>
-                                <span class="txt gray2 fs30">5만원 이상 사용 가능</span>
-                                <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
-                            </p>
-                            <span class="state fs36 fw500">사용불가</span>
-                        </a>
-                        <span class="txt-use white fs30 bg-green">부용마트 사용가능</span>
-                    </div>
-                    <div class="coupon not">
-                        <a href="#">
-                            <input type="radio" name="duplicateCoupon" id="duplicateCoupon4" class="design-inp" title="선택 불가"disabled><label for="duplicateCoupon4" class="coupon-label">선택 불가</label></span>
-                            <p>
-                                <span class="tit black fs42 fw700">1천원 쿠폰</span>
-                                <span class="txt gray2 fs30">2만원 이상 사용 가능</span>
-                                <span class="date gray2 fs30">(2022-11-01 ~ 2022-11-30)</span>
-                            </p>
-                            <span class="state fs36 fw500">사용불가</span>
                         </a>
                         <span class="txt-use white fs30 bg-green">부용마트 사용가능</span>
                     </div>
@@ -156,9 +121,6 @@
                             <li>쿠폰과 적립금은 중복 사용 가능하며, 쿠폰 적용 가능 금액은 할인 전 금액으로 적용됩니다.</li>
                         </ul>
                     </div>
-                </div>
-                <div class="btn-wrap mt100">
-                    <button class="btn btn-wide white fs50 fw500 bg-green">선택완료</button>
                 </div>
             </div>
         </section>
