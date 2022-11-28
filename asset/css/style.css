@@ -2570,6 +2570,15 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-box-orient: initial;
     overflow: initial;
 }
+.market-desc-detail .market-event-content .content-box .img {
+    display: none;
+}
+.market-desc-detail .market-event-content .content-box.active .img {
+    display: block;
+}
+.market-desc-detail .market-event-content .content-box .img img {
+    width: 100%;
+}
 .market-desc-detail .market-event-content .content-box .btn-more {
     display: inline-flex;
     align-items: center;
