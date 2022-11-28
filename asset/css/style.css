@@ -343,6 +343,9 @@ body {
 .bg-gray2 {
     background-color: #a9a69c;
 }
+.bg-gray3 {
+    background-color: #9e9e9e;
+}
 .bg-gray4 {
     background-color: #b4b3af;
 }
@@ -2174,9 +2177,23 @@ input[type="range"]::-webkit-slider-thumb {
     height: 100%;
 }
 .btn.w460 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: calc(50% - 0.926vw);
+    height: 13.889vw;
     border-radius: 4.444vw;
-    line-height: 13.889vw;
+    letter-spacing: -0.06em;
+}
+/* 재입고 알림 */
+.btn-alert:before {
+    display: block;
+    width: 4.259vw;
+    height: 4.259vw;
+    margin-right: 1.852vw;
+    background: url("../images/common/ico_clock_g.png") no-repeat center center;
+    background-size: contain;
+    content: '';
 }
 
 /* recommend-list */
@@ -5851,8 +5868,14 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .btn.w460 {
         width: calc(50% - 3px);
+        height: 44px;
         border-radius: 14px;
-        line-height: 44px;
+    }
+    /* 재입고 알림 */
+    .btn-alert:before {
+        width: 14px;
+        height: 14px;
+        margin-right: 6px;
     }
 
     /* recommend-list */
@@ -8202,8 +8225,15 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .btn.w460 {
         width: calc(50% - 10px);
+        height: 150px;
         border-radius: 48px;
-        line-height: 150px;
+    }
+    /* 재입고 알림 */
+    .btn-alert:before {
+        width: 46px;
+        height: 46px;
+        margin-right: 20px;
+        background-image: url("../images/common/ico_clock_g.png");
     }
 
     /* recommend-list */
