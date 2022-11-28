@@ -3163,6 +3163,10 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* 쿠폰 */
+.coupon-wrap h4,
+.coupon-wrap .txt {
+    letter-spacing: -0.06em;
+}
 .coupon-wrap h5 {
     position: relative;
     letter-spacing: -0.06em;
