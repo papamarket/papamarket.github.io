@@ -40,7 +40,12 @@
         <section class="product-detail-wrap together-detail-wrap">
             <!-- 상품 이미지 -->
             <div class="product-img">
-                <p class="product-label fs55 fw700 bg-yellow">3일 후<br>종료</p>
+                <!-- 잔여일수 3일 이상 -->
+                <!-- <p class="product-label white fs55 fw700 bg-green">11일 후<br>종료</p> -->
+                <!-- 잔여일수 3일 이내 -->
+                <!-- <p class="product-label fs55 fw700 bg-yellow">3일 후<br>종료</p> -->
+                <!-- 공구 종료 시 -->
+                <p class="product-label white fs55 fw700 bg-gray3">공구<br>종료</p>
                 <!-- Slider main container -->
                 <div class="product-img-slide swiper">
                     <div class="swiper-wrapper">
@@ -61,7 +66,9 @@
                             <div class="swiper-slide"><img src="./asset/images/common/membership_person03.png" alt=""></div>
                         </div>
                     </div>
-                    <p class="txt white fs33 fw500 bg-green">53명 공구 참여 중</p>
+                    <!-- <p class="txt white fs33 fw500 bg-green">53명 공구 참여 중</p> -->
+                    <!-- 공구 종료 시 -->
+                    <p class="txt white fs33 fw500 bg-gray3">53명 공구 참여 중</p>
                 </div>
             </div>
             <!-- 상품 이름, 가격 등 -->
@@ -365,9 +372,14 @@
                     </div>
                 </div>
                 <!-- 장바구니, 구매하기 버튼 -->
-                <div class="inner flex align-center justify-between">
+                <!-- <div class="inner flex align-center justify-between">
                     <button class="btn w460 green fs50 bg-white btn-cart">장바구니</button>
                     <button class="btn w460 white fs50 bg-green btn-option">구매하기</button>
+                </div> -->
+                <!-- 다음 공구 알림, 공구 종료 버튼 -->
+                <div class="inner flex align-center justify-between">
+                    <button class="btn btn-alert w460 green fs50 bg-white">다음 공구 알림</button>
+                    <button class="btn w460 white fs50 bg-gray3">공구 종료</button>
                 </div>
             </div>
         </section>
