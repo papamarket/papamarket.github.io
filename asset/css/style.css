@@ -2275,6 +2275,10 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: rgba(0,0,0,.5);
     content: '';
 }
+.product-slide .soldout .counter-box,
+.product-slide .soldout .btn-basket,
+.product-list .soldout .counter-box,
+.product-list .soldout .btn-basket,
 .product-list.together-list .end .counter-box,
 .product-list.together-list .end .btn-basket,
 .together-list .end .product-img .txt-box,
