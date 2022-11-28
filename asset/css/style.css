@@ -2647,6 +2647,15 @@ input[type="range"]::-webkit-slider-thumb {
     background-size: 100%;
     content: '';
 }
+.product-info-box .label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.444vw;
+    margin-bottom: 1.852vw;
+    padding: 0 1.944vw;
+    border-radius: 2.222vw;
+}
 .product-info-box .sub-tit {
     margin-bottom: 1.852vw;
     letter-spacing: -0.06em;
@@ -6030,6 +6039,12 @@ input[type="range"]::-webkit-slider-thumb {
         height: 7px;
         margin-left: 4px;
     }
+    .product-info-box .label {
+        height: 14px;
+        margin-bottom: 6px;
+        padding: 0 6px;
+        border-radius: 8px;
+    }
     .product-info-box .name {
         margin-bottom: 18px;
     }
@@ -8379,6 +8394,12 @@ input[type="range"]::-webkit-slider-thumb {
         height: 24px;
         margin-left: 15px;
         background-image: url("../images/common/ico_more_g@2x.png");
+    }
+    .product-info-box .label {
+        height: 48px;
+        margin-bottom: 20px;
+        padding: 0 21px;
+        border-radius: 24px;
     }
     .product-info-box .name {
         margin-bottom: 60px;
