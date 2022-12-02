@@ -915,7 +915,7 @@ input[type="checkbox"] + label {
     background-color: rgba(255,255,255,.5);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    z-index: 20;
+    z-index: 1020;
 }
 .popup-body {
     position: relative;
@@ -1120,7 +1120,7 @@ header {
     width: 100%;
     padding: 4.259vw 0;
     background-color: #f5f2e9;
-    z-index: 10;
+    z-index: 1010;
 }
 header.scroll {
     -webkit-box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
@@ -1212,7 +1212,7 @@ footer .cs-info .btn-tel {
     padding: 0 7.407vw;
     border-radius: 4.630vw;
     box-sizing: border-box;
-    z-index: 20;
+    z-index: 1020;
 }
 .footer-menu .btn {
     width: 4.630vw;
@@ -1269,7 +1269,7 @@ footer .cs-info .btn-tel {
     -webkit-transition: background-color .3s,height 0s .3s;
     transition: background-color .3s,height 0s .3s;
     overflow: hidden;
-    z-index: 50;
+    z-index: 1050;
 }
 .gnb-menu.active {
     height: 100%;
@@ -1658,7 +1658,7 @@ input[type="range"]::-webkit-slider-thumb {
 .sub-header.fixed {
     position: fixed;
     top: 18.519vw;
-    z-index: 15;
+    z-index: 1015;
 }
 .sub-header h3,
 .sub-header a,
@@ -2065,7 +2065,7 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 0 6.481vw 1.852vw;
     -webkit-box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
     box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
-    z-index: 15;
+    z-index: 1015;
 }
 .category-list li {
     margin-bottom: 0.926vw;
@@ -2171,7 +2171,7 @@ input[type="range"]::-webkit-slider-thumb {
     left: 0;
     bottom: 25.556vw;
     width: 100%;
-    z-index: 19;
+    z-index: 1019;
 }
 .fixed-btn-wrap .inner {
     height: 100%;
@@ -2619,6 +2619,151 @@ input[type="range"]::-webkit-slider-thumb {
 .market-desc-detail .market-event-content .content-box .btn-more.active:after {
     transform: rotate(-180deg);
 }
+/* 마켓 지도 */
+.market-desc-detail .map {
+    position: relative;
+    width: 100%;
+    height: 111.111vw;
+}
+.market-desc-detail .map .button-wrap {
+    flex-wrap: wrap;
+    position: absolute;
+    top: 4.630vw;
+    left: 6.481vw;
+    z-index: 1;
+}
+.market-desc-detail .map .button-wrap .btn {
+    padding: 0 2.778vw;
+    border-radius: 3.519vw;
+    letter-spacing: -0.06em;
+    line-height: 7.037vw;
+}
+.market-desc-detail .map .button-wrap .btn:not(:first-child) {
+    margin-left: 1.852vw;
+}
+.market-desc-detail .map .market-info-box {
+    position: absolute;
+    left: 6.481vw;
+    bottom: 25px;
+    width: calc(100% - 12.963vw);
+    padding: 4.630vw;
+    border-radius: 5.556vw;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.market-desc-detail .map .market-info-box p {
+    letter-spacing: -0.06em;
+}
+.market-desc-detail .map .market-info-box .btn-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11.389vw;
+    height: 4.444vw;
+    border-radius: 2.222vw;
+    letter-spacing: -0.06em;
+}
+.map .marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 44px;
+    padding: 0 9px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+.map .marker.all {
+    color: #fff;
+    background-color: #428c75;
+}
+.map .marker.pickup {
+    color: #222;
+    background-color: #a9e09d;
+}
+.map .marker.deilvery {
+    color: #222;
+    background-color: #ffdf5f;
+}
+.map .marker.closed {
+    color: #fff;
+    background-color: #9e9e9e;
+}
+.map .marker.active {
+    padding: 0 7px;
+    color: #222;
+    background-color: #fff;
+    border: 2px solid #222;
+}
+.map .marker:after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 6px;
+    height: 6px;
+    box-sizing: border-box;
+    transform: translate(-50%, 0) rotate(55deg) skew(17deg);
+    content: '';
+}
+.map .marker.all:after {
+    background-color: #428c75;
+}
+.map .marker.pickup:after {
+    background-color: #a9e09d;
+}
+.map .marker.deilvery:after {
+    background-color: #ffdf5f;
+}
+.map .marker.closed:after {
+    background-color: #9e9e9e;
+}
+.map .marker.active:after {
+    background-color: #fff;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: transparent #222 #222 transparent;
+}
+.map .marker p {
+    width: 100%;
+    text-align: center;
+}
+.map .marker .market-name {
+    display: block;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.map .marker .location:before {
+    display: block;
+    width: 9px;
+    height: 10px;
+    margin-right: 3px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+}
+.map .marker.all .location:before,
+.map .marker.closed .location:before {
+    background-image: url("../images/common/ico_location_w.png");
+}
+.map .marker.pickup .location:before,
+.map .marker.deilvery .location:before,
+.map .marker.active .location:before {
+    background-image: url("../images/common/ico_location.png");
+}
+.map .marker .location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 10px;
+}
 
 /* 상품 상세 */
 .product-detail-wrap .product-img {
@@ -2841,7 +2986,7 @@ input[type="range"]::-webkit-slider-thumb {
     top: 18.519vw;
     -webkit-box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
     box-shadow: 0.926vw 0.926vw 1.481vw 0 rgba(162,162,162,.05);
-	z-index: 15;
+	z-index: 1015;
 }
 .desc-detail .detail-tab li {
     height: 100%;
@@ -4071,7 +4216,7 @@ input[type="range"]::-webkit-slider-thumb {
 .review-photo-list.fixed {
     position: fixed;
     top: 28.519vw;
-    z-index: 15;
+    z-index: 1015;
 }
 .review-photo-list .review-photo-slide a {
     display: block;
@@ -6052,6 +6197,34 @@ input[type="range"]::-webkit-slider-thumb {
         width: 7px;
         height: 7px;
         margin-left: 4px;
+    }
+    /* 마켓 지도 */
+    .market-desc-detail .map {
+        height: 356px;
+    }
+    .market-desc-detail .map .button-wrap {
+        top: 15px;
+        left: 20px;
+    }
+    .market-desc-detail .map .button-wrap .btn {
+        padding: 0 9px;
+        border-radius: 11px;
+        line-height: 22px;
+    }
+    .market-desc-detail .map .button-wrap .btn:not(:first-child) {
+        margin-left: 6px;
+    }
+    .market-desc-detail .map .market-info-box {
+        left: 20px;
+        /* bottom: 15px; */
+        width: calc(100% - 40px);
+        padding: 15px;
+        border-radius: 18px;
+    }
+    .market-desc-detail .map .market-info-box .btn-copy {
+        width: 36px;
+        height: 14px;
+        border-radius: 7px;
     }
 
     /* 상품 상세 */
@@ -8418,6 +8591,34 @@ input[type="range"]::-webkit-slider-thumb {
         height: 24px;
         margin-left: 15px;
         background-image: url("../images/common/ico_arrow@2x.png");
+    }
+    /* 마켓 지도 */
+    .market-desc-detail .map {
+        height: 1200px;
+    }
+    .market-desc-detail .map .button-wrap {
+        top: 50px;
+        left: 70px;
+    }
+    .market-desc-detail .map .button-wrap .btn {
+        padding: 0 30px;
+        border-radius: 76px;
+        line-height: 38px;
+    }
+    .market-desc-detail .map .button-wrap .btn:not(:first-child) {
+        margin-left: 20px;
+    }
+    .market-desc-detail .map .market-info-box {
+        left: 70px;
+        bottom: 50px;
+        width: calc(100% - 140px);
+        padding: 50px;
+        border-radius: 60px;
+    }
+    .market-desc-detail .map .market-info-box .btn-copy {
+        width: 123px;
+        height: 48px;
+        border-radius: 24px;
     }
 
     /* 상품 상세 */

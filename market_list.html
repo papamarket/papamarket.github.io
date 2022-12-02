@@ -13,6 +13,7 @@
     <script src="./asset/js/jquery-3.6.1.js"></script>
     <script src="./asset/js/swiper-bundle.min.js"></script>
     <script src="./asset/js/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=rsi1k7i313"></script>
 </head>
 <body>
     <!-- header -->
@@ -620,7 +621,22 @@
                 </div>
                 <!-- 지도 -->
                 <div class="tab-content pb100" id="market-map">
-                    <div id="map"></div>
+                    <div class="map" id="map">
+                        <div class="button-wrap flex align-center">
+                            <button class="btn green fs39 fw500 bg-white">대중교통</button>
+                            <button class="btn green fs39 fw500 bg-white">자동차</button>
+                            <button class="btn green fs39 fw500 bg-white">도보</button>
+                            <button class="btn green fs39 fw500 bg-white">주변마켓</button>
+                        </div>
+                        <div class="market-info-box bg-white">
+                            <p class="fs45 fw700">부용마트</p>
+                            <div class="flex align-center mt30">
+                                <p class="mr20 fs36">서울시 동작구 신대방1가길 19</p>
+                                <a href="#" class="btn btn-copy white fs36 bg-green">복사</a>
+                            </div>
+                            <p class="mt20 gray3 fs36">[지번] 서울특별시 동작구 신대방동 695-30</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -945,6 +961,23 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+        });
+
+        /* 지도 */
+        var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.4868402,126.9088475),
+            zoom: 15
+        });
+
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.4868402,126.9088475),
+            map: map,
+            title: '부용마트',
+            icon: {
+                content: '<div class="marker all active"><p><span class="market-name">미스터아빠 부용마트 부용마트</span><span class="location">600m</span></p></div>',
+                size: new naver.maps.Size(78, 44),
+                anchor: new naver.maps.Point(39, 44)
+            }
         });
     </script>
 </body>
