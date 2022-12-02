@@ -2653,6 +2653,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .market-desc-detail .map .market-info-box p {
     letter-spacing: -0.06em;
+    line-height: 1.109em;
 }
 .market-desc-detail .map .market-info-box .btn-copy {
     display: flex;
