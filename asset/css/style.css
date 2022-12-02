@@ -2635,6 +2635,8 @@ input[type="range"]::-webkit-slider-thumb {
 .market-desc-detail .map .button-wrap .btn {
     padding: 0 2.778vw;
     border-radius: 3.519vw;
+    -webkit-box-shadow: 0 0 1.667vw 0.926vw rgba(162,162,162,.2);
+    box-shadow: 0 0 1.667vw 0.926vw rgba(162,162,162,.2);
     letter-spacing: -0.06em;
     line-height: 7.037vw;
 }
@@ -6210,6 +6212,8 @@ input[type="range"]::-webkit-slider-thumb {
     .market-desc-detail .map .button-wrap .btn {
         padding: 0 9px;
         border-radius: 11px;
+        -webkit-box-shadow: 0 0 5px 3px rgba(162,162,162,.2);
+        box-shadow: 0 0 5px 3px rgba(162,162,162,.2);
         line-height: 22px;
     }
     .market-desc-detail .map .button-wrap .btn:not(:first-child) {
@@ -8603,8 +8607,10 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .market-desc-detail .map .button-wrap .btn {
         padding: 0 30px;
-        border-radius: 76px;
-        line-height: 38px;
+        border-radius: 38px;
+        -webkit-box-shadow: 0 0 18px 10px rgba(162,162,162,.2);
+        box-shadow: 0 0 18px 10px rgba(162,162,162,.2);
+        line-height: 76px;
     }
     .market-desc-detail .map .button-wrap .btn:not(:first-child) {
         margin-left: 20px;
