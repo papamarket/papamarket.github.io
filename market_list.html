@@ -872,6 +872,23 @@
             $(".content-box .btn-more").text("더보기").removeClass("active");
             $(".event-list").show();
             $(".market-event-content").hide();
+
+            /* 지도 */
+            var map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.4868402,126.9088475),
+                zoom: 15
+            });
+
+            var marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(37.4868402,126.9088475),
+                map: map,
+                title: '부용마트',
+                icon: {
+                    content: '<div class="marker all active"><p><span class="market-name">미스터아빠 부용마트 부용마트</span><span class="location">600m</span></p></div>',
+                    size: new naver.maps.Size(78, 44),
+                    anchor: new naver.maps.Point(39, 44)
+                }
+            });
         });
         $(".tab li:first-child a").trigger("click");
 
@@ -961,23 +978,6 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
-        });
-
-        /* 지도 */
-        var map = new naver.maps.Map('map', {
-            center: new naver.maps.LatLng(37.4868402,126.9088475),
-            zoom: 15
-        });
-
-        var marker = new naver.maps.Marker({
-            position: new naver.maps.LatLng(37.4868402,126.9088475),
-            map: map,
-            title: '부용마트',
-            icon: {
-                content: '<div class="marker all active"><p><span class="market-name">미스터아빠 부용마트 부용마트</span><span class="location">600m</span></p></div>',
-                size: new naver.maps.Size(78, 44),
-                anchor: new naver.maps.Point(39, 44)
-            }
         });
     </script>
 </body>
