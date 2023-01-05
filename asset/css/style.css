@@ -4002,9 +4002,9 @@ input[type="range"]::-webkit-slider-thumb {
     max-height: 43.333vw;
 }
 .ui-timepicker-standard {
-    background-color: #428c75;
     padding: 0;
     font-size: 3.333vw;
+    background-color: #428c75;
     border: 0;
     border-radius: 3.333vw;
 }
@@ -4012,8 +4012,8 @@ input[type="range"]::-webkit-slider-thumb {
     border-top: 1px solid #f5f2e9;
 }
 .ui-timepicker-standard a {
-    color: #fff;
     padding: 0;
+    color: #fff;
     border: 0;
     line-height: 2.500em;
 }
