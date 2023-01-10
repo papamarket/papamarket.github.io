@@ -85,7 +85,6 @@ textarea {
 select {
     font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
 	border-radius: 0;
-	/*-webkit-border-radius:1px;*/
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
