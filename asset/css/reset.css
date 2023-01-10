@@ -116,7 +116,7 @@ input[type="button"],
 button {
     background: none;
     border: 0;
-	border-radius:0;
+	border-radius: 0;
 	font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
     color: inherit;
     line-height: normal;
