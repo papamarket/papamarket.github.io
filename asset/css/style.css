@@ -1,6 +1,20 @@
 @charset "utf-8";
 
 /* common */
+body {
+    background-color: #f5f2e9;
+}
+.no-scroll {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.inner {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 6.481vw;
+}
 .hidden {
     position: absolute;
     left: -10000px;
@@ -26,20 +40,6 @@
     display: block;
     clear: both;
     content: '';
-}
-body {
-    background-color: #f5f2e9;
-}
-.no-scroll {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-}
-.inner {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 6.481vw;
 }
 .block {
     display: block;
@@ -337,7 +337,7 @@ body {
 .bg-white {
     background-color: #fff;
 }
-.bg-lightgray {
+.bg-lightGray {
     background-color: #edeae2;
 }
 .bg-gray2 {
@@ -355,7 +355,7 @@ body {
 .bg-yellow {
     background-color: #ffdf5f;
 }
-.bg-red {
+.bg-softRed {
     background-color: #e6766a;
 }
 .bg-yellowish {
@@ -482,7 +482,7 @@ select {
     border-radius: 3.333vw;
     outline: initial;
 }
-.select-custom.bg-lightgray {
+.select-custom.bg-lightGray {
     background-color: #edeae2;
 }
 .select-custom .current {
